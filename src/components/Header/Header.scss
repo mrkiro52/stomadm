@@ -1,0 +1,30 @@
+@import '../../styles/variables';
+
+.Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    &_logo {
+        width: 150px;
+    }
+    &_links {
+        display: flex;
+        gap: 16px;
+        &__link {
+            padding: 0px 24px;
+            border-radius: 20px;
+            background-color: $white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30px;
+            color: $text;
+            &.selected {
+                background-color: $primary;
+                color: $white;
+            }
+        }
+    }
+    
+}
