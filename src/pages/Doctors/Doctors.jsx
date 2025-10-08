@@ -1,9 +1,9 @@
-import './Home.scss';
+import './Doctors.scss';
 import Header from '../../components/Header/Header';
 
-export default function Home() {
+export default function Doctors() {
     return (
-        <div className="Home">
+        <div className="Doctors">
             <Header/>
         </div>
     )
