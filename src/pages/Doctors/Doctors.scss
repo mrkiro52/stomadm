@@ -2,19 +2,23 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-sizing: border-box;
+  background: #d9d9d9;
+  @media (max-width: 1320px) {
+    width: 100%;
+  }
+}
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
 }
 .doctors-block {
-  background: #d9d9d9;
   color: #333;
-  padding: 60px;
+  box-sizing: border-box;
+  padding: 60px 0px;
   font-family: "Helvetica Neue", sans-serif;
   @media (max-width: 768px) {
-    padding: 80px 15px 80px 15px;
-  }
-
-  .container {
-    max-width: 1320px;
-    margin: 0 auto;
+    padding: 24px 15px 80px 15px;
   }
 
   .doctors-header {
@@ -22,15 +26,6 @@
     margin-bottom: 60px;
     @media (max-width: 768px) {
       margin-bottom: 40px;
-    }
-
-    .tag {
-      display: inline-block;
-      background: #fff;
-      color: #3a281e;
-      padding: 8px 30px;
-      border-radius: 30px;
-      font-size: 15px;
     }
 
     .title {

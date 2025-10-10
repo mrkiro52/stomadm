@@ -4,18 +4,26 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 60px;
+    height: 70px;
+    background-color: $white;
+    width: 100%;
+
     & > .wrapper {
         width: 1320px;
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
     }
+
     &_logo {
         width: 150px;
     }
+
     &_links {
         display: flex;
         gap: 16px;
+
         &__link {
             padding: 0px 24px;
             border-radius: 20px;
@@ -25,10 +33,170 @@
             align-items: center;
             height: 30px;
             color: $text;
+            transition: background .2s, color .2s;
+
             &.selected {
                 background-color: $primary;
                 color: $white;
             }
         }
     }
+
+    &_btns {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        &__link {
+            padding: 0px 24px;
+            border-radius: 20px;
+            background-color: $white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30px;
+            color: $text;
+            transition: background .2s, color .2s;
+
+            &.selected {
+                background-color: $primary;
+                color: $white;
+            }
+        }
+
+        & > .lang {
+            background-color: transparent;
+            border: 1px solid $primary;
+            width: 112px;
+            display: flex;
+            justify-content: space-between;
+            height: 30px;
+            border-radius: 21px;
+            align-items: center;
+            padding: 0px 9px;
+            cursor: pointer;
+
+            & > span {
+                font-size: 15px;
+                font-weight: 400;
+                color: $primary;
+            }
+        }
+    }
+
+    &_burger {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        display: none;
+        padding: 6px;
+
+        svg { display:block; }
+
+        &.is-open {
+            opacity: .9;
+        }
+    }
+}
+
+/* Overlay для затемнения фона */
+.Header_overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0);
+  transition: background .35s ease;
+  pointer-events: none;
+  z-index: 50;
+
+  &.open {
+    background: rgba(0,0,0,0.45);
+    pointer-events: auto;
+  }
+}
+
+/* Мобильная панель */
+.Header_mobile {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw; /* ширина меню */
+  height: 100vh;
+  background: $white;
+  box-shadow: -10px 0 30px rgba(0,0,0,0.12);
+  transform: translateX(110%);
+  transition: transform .35s cubic-bezier(.2,.9,.2,1);
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+  will-change: transform;
+
+  &.open {
+    transform: translateX(0);
+  }
+
+  &__top {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    .Header_mobile__logo {
+      width:120px;
+    }
+
+    .Header_mobile__close {
+      background: transparent;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      line-height: 1;
+      padding: 6px;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  &__link {
+    display: block;
+    padding: 12px 16px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: $text;
+    font-weight: 500;
+    background: transparent;
+    transition: background .18s, transform .18s;
+
+    &:active { transform: translateY(1px); }
+
+    &.selected {
+      background: $primary;
+      color: $white;
+    }
+  }
+}
+
+/* Мобильная адаптация */
+@media screen and (max-width: 1320px) {
+  .Header {
+    width: 100%;
+    padding: 0px 24px;
+
+    &_links {
+      display: none;
+    }
+
+    &_btns {
+      display: none;
+    }
+
+    &_burger {
+      display: block;
+    }
+  }
 }
