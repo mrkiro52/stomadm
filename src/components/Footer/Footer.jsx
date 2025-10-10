@@ -25,37 +25,41 @@ export default function Footer() {
           </div>
 
           <div className="Footer_list">
-            <h4 className="Footer_title">Services</h4>
+            <h4 className="Footer_title">Cosmetic Dentistry</h4>
             <a href="#">Filling</a>
-            <a href="#">Root Canal Treatment</a>
             <a href="#">Teeth Cleaning</a>
             <a href="#">Teeth Whitening</a>
-            <a href="#">Sinus Lifting</a>
-            <a href="#">Bone Grafting</a>
-          </div>
-
-          <div className="Footer_list no-title">
-            <a href="#">Zirconia Crown</a>
-            <a href="#">E-max Crown</a>
             <a href="#">E-max Veneers</a>
-            <a href="#">Night Guard</a>
+            <a href="#">E-max Crown</a>
             <a href="#">Gingivoplasty</a>
+            <a href="#">Botox</a>
           </div>
 
-          <div className="Footer_list no-title">
-            <a href="#">Flap Surgery</a>
+          <div className="Footer_list">
+            <h4 className="Footer_title">Dental Implants</h4>
+            <a href="#">Zirconia Crown on Tooth</a>
+            <a href="#">Zirconia Crown on Implant</a>
+            <a href="#">Bone Grafting</a>
+            <a href="#">Sinus Lifting</a>
+            <a href="#">Piezolifting</a>
+          </div>
+
+          <div className="Footer_list">
+            <h4 className="Footer_title">Specialty Treatments</h4>
+            <a href="#">Root Canal Treatment</a>
             <a href="#">Tooth Extraction</a>
             <a href="#">Wisdom Tooth Extraction</a>
             <a href="#">Cystectomy</a>
             <a href="#">Apicoectomy</a>
-            <a href="#">Braces</a>
+            <a href="#">Flap Surgery</a>
+            <a href="#">Curettage</a>
           </div>
 
-          <div className="Footer_list no-title">
+          <div className="Footer_list">
+            <h4 className="Footer_title">Orthodontics</h4>
+            <a href="#">Braces</a>
             <a href="#">Aligners</a>
-            <a href="#">Curettage</a>
-            <a href="#">Piezolifting</a>
-            <a href="#">Botox</a>
+            <a href="#">Night Guard</a>
           </div>
         </div>
       </div>

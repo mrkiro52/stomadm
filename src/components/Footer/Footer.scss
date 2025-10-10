@@ -4,15 +4,26 @@
   background-color: #4e3629;
   color: #afa8a4;
   width: 100%;
-  padding: 60px 0px 0px 0px;
+  padding: 60px 20px 0px; // padding слева/справа уменьшен для мобилки
 
   .wrapper {
+    max-width: 1320px;
     margin: 0 auto;
-    width: 1320px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     gap: 80px;
+
+    @media (max-width: 1024px) {
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
   }
 
   .Footer_info_wrapper {
@@ -21,14 +32,27 @@
     gap: 20px;
     max-width: 260px;
 
+    @media (max-width: 768px) {
+      align-items: center;
+    }
+
     .Footer_logo {
       width: 150px;
+
+      @media (max-width: 768px) {
+        width: 120px;
+      }
     }
 
     .Footer_address {
       font-size: 14px;
       line-height: 1.6;
       color: #afa8a4;
+      text-align: left;
+
+      @media (max-width: 768px) {
+        text-align: center;
+      }
     }
   }
 
@@ -38,11 +62,39 @@
     flex: 1;
     gap: 60px;
 
+    @media (max-width: 1024px) {
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    @media (max-width: 912px) {
+      justify-content: flex-start;
+      gap: 60px;
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+
+      .Footer_list {
+        align-items: center;
+        text-align: center;
+      }
+    }
+    @media (max-width: 782px) {
+      justify-content: center; // центрируем нижние колонки
+      gap: 30px;
+
+      .Footer_list {
+        flex: 1 1 40%; // каждая колонка занимает около 40% ширины контейнера
+        min-width: 200px; // минимальная ширина, чтобы колонки не сжимались слишком сильно
+      }
+    }
     .Footer_list {
       display: flex;
       flex-direction: column;
       gap: 8px;
-      min-width: 160px;
 
       .Footer_title {
         font-weight: 600;
@@ -60,32 +112,40 @@
           color: #afa8a4;
         }
 
-        &:hover {
-          color: #ffffff;
-        }
-
+        &:hover,
         &:active {
           color: #ffffff;
         }
-      }
-      &.no-title {
-        margin-top: 38px;
       }
     }
   }
 }
 
 .Footer_bottom {
-  background-color: #3b2820;
+  background-color: #4e3629;
   margin-top: 60px;
-  padding: 20px 0;
+  padding: 20px 20px;
 
   .Footer_bottom_wrapper {
-    width: 1320px;
+    max-width: 1320px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: 939px) {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      flex-direction: column-reverse;
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 30px;
+      text-align: center;
+      flex-direction: column-reverse;
+    }
 
     p {
       font-size: 14px;
@@ -94,7 +154,10 @@
 
     .Footer_socials {
       display: flex;
-      gap: 40px;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding-left: 20px;
 
       a {
         color: #afa8a4;

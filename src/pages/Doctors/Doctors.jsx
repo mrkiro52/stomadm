@@ -7,7 +7,6 @@ import doctor2 from "./images/doctor2.jpg";
 export default function Doctors() {
   return (
     <div className="Doctors">
-      <Header />
       <section className="doctors-block">
         <div className="container">
           <header className="doctors-header">
