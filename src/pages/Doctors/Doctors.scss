@@ -27,6 +27,14 @@
     @media (max-width: 768px) {
       margin-bottom: 40px;
     }
+    .tag {
+      display: inline-block;
+      background: #fff;
+      color: #3a281e;
+      padding: 8px 30px;
+      border-radius: 30px;
+      font-size: 15px;
+    }
 
     .title {
       color: #3a281e;

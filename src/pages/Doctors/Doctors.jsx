@@ -5,13 +5,14 @@ import doctor1 from "./images/doctor1.jpg";
 import doctor2 from "./images/doctor2.jpg";
 
 export default function Doctors() {
-  localStorage.setItem('page', 'doctors');
+  localStorage.setItem("page", "doctors");
   return (
     <div className="Doctors">
-      <Header/>
+      <Header />
       <div className="container">
-      <section className="doctors-block">
+        <section className="doctors-block">
           <header className="doctors-header">
+            <span className="tag">Doctors</span>
             <h1 className="title">
               Dental experts <br />
               <span className="subtitle">you can trust</span>
@@ -55,8 +56,8 @@ export default function Doctors() {
               <img src={doctor2} alt="Doctor 2" />
             </div>
           </div>
-          </section>
-        </div>
+        </section>
+      </div>
       <Footer />
     </div>
   );
