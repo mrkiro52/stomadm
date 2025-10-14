@@ -16,6 +16,7 @@ import gallery9 from "./images/gallery9.jpg";
 import gallery10 from "./images/gallery10.jpg";
 import gallery11 from "./images/gallery11.jpg";
 import gallery12 from "./images/gallery12.jpg";
+import Form from "../../components/Form/Form";
 
 // Массив изображений
 const images = [
@@ -53,6 +54,7 @@ export default function Gallery() {
         ))}
       </div>
 
+      <Form/>
       <Footer />
     </section>
   );

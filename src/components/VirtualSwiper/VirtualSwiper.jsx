@@ -19,52 +19,52 @@ export default function VirtualSwiper() {
 
   const reviews = [
     {
-      name: "Анна К.",
+      name: "Anna Ivanova",
       photo: review1,
-      rating: 5.0,
-      text: "Очень довольна лечением, врачи внимательные и профессиональные.",
+      rating: "5.0",
+      text: "I had a truly great experience at this dental clinic. The staff welcomed me warmly and immediately created a comfortable, trusting atmosphere. The doctor explained everything in detail, discussed different treatment options, and helped me choose the best one. The procedure was done very carefully, absolutely pain-free, and with great attention to detail. It’s clear that the clinic uses modern equipment and high-quality materials.",
     },
     {
-      name: "Дмитрий С.",
+      name: "Anna Ivanova",
       photo: review1,
-      rating: 4.8,
-      text: "Сделали чистку и отбеливание — результат превзошёл ожидания!",
+      rating: "5.0",
+      text: "I had a truly great experience at this dental clinic. The staff welcomed me warmly and immediately created a comfortable, trusting atmosphere. The doctor explained everything in detail, discussed different treatment options, and helped me choose the best one. The procedure was done very carefully, absolutely pain-free, and with great attention to detail. It’s clear that the clinic uses modern equipment and high-quality materials.",
     },
     {
-      name: "Мария Л.",
+      name: "Anna Ivanova",
       photo: review1,
-      rating: 5.0,
-      text: "Современная клиника, приветливый персонал и отличное оборудование.",
+      rating: "5.0",
+      text: "I had a truly great experience at this dental clinic. The staff welcomed me warmly and immediately created a comfortable, trusting atmosphere. The doctor explained everything in detail, discussed different treatment options, and helped me choose the best one. The procedure was done very carefully, absolutely pain-free, and with great attention to detail. It’s clear that the clinic uses modern equipment and high-quality materials.",
     },
     {
-      name: "Алексей П.",
+      name: "Anna Ivanova",
       photo: review1,
-      rating: 4.9,
-      text: "Быстро помогли с болью, всё объяснили, очень рекомендую.",
+      rating: "5.0",
+      text: "I had a truly great experience at this dental clinic. The staff welcomed me warmly and immediately created a comfortable, trusting atmosphere. The doctor explained everything in detail, discussed different treatment options, and helped me choose the best one. The procedure was done very carefully, absolutely pain-free, and with great attention to detail. It’s clear that the clinic uses modern equipment and high-quality materials.",
     },
     {
-      name: "Светлана Г.",
+      name: "Anna Ivanova",
       photo: review1,
-      rating: 5.0,
-      text: "Теперь лечусь только здесь, всё на высшем уровне!",
+      rating: "5.0",
+      text: "I had a truly great experience at this dental clinic. The staff welcomed me warmly and immediately created a comfortable, trusting atmosphere. The doctor explained everything in detail, discussed different treatment options, and helped me choose the best one. The procedure was done very carefully, absolutely pain-free, and with great attention to detail. It’s clear that the clinic uses modern equipment and high-quality materials.",
     },
     {
-      name: "Игорь Т.",
+      name: "Anna Ivanova",
       photo: review1,
-      rating: 4.7,
-      text: "Чисто, современно, комфортно — очень понравилось.",
+      rating: "5.0",
+      text: "I had a truly great experience at this dental clinic. The staff welcomed me warmly and immediately created a comfortable, trusting atmosphere. The doctor explained everything in detail, discussed different treatment options, and helped me choose the best one. The procedure was done very carefully, absolutely pain-free, and with great attention to detail. It’s clear that the clinic uses modern equipment and high-quality materials.",
     },
     {
-      name: "Ольга Н.",
+      name: "Anna Ivanova",
       photo: review1,
-      rating: 5.0,
-      text: "Спасибо врачу за внимательность и чуткость, теперь улыбаюсь без стеснения!",
+      rating: "5.0",
+      text: "I had a truly great experience at this dental clinic. The staff welcomed me warmly and immediately created a comfortable, trusting atmosphere. The doctor explained everything in detail, discussed different treatment options, and helped me choose the best one. The procedure was done very carefully, absolutely pain-free, and with great attention to detail. It’s clear that the clinic uses modern equipment and high-quality materials.",
     },
     {
-      name: "Николай В.",
+      name: "Anna Ivanova",
       photo: review1,
-      rating: 4.9,
-      text: "Качественно, быстро, без боли — супер!",
+      rating: "5.0",
+      text: "I had a truly great experience at this dental clinic. The staff welcomed me warmly and immediately created a comfortable, trusting atmosphere. The doctor explained everything in detail, discussed different treatment options, and helped me choose the best one. The procedure was done very carefully, absolutely pain-free, and with great attention to detail. It’s clear that the clinic uses modern equipment and high-quality materials.",
     },
   ];
 
@@ -80,11 +80,6 @@ export default function VirtualSwiper() {
         >
           ←
         </button>
-
-        <div className="swiper-fraction">
-          {currentPage} / {totalPages}
-        </div>
-
         <button
           className={`swiper-button next ${isEnd ? "disabled" : ""}`}
           onClick={() => swiperRef.current?.slideNext()}
@@ -113,15 +108,23 @@ export default function VirtualSwiper() {
         {reviews.map((review, index) => (
           <SwiperSlide key={index}>
             <div className="slide-content">
-              <img
-                src={review.photo}
-                alt={review.name}
-                className="review-photo"
-              />
-              <h4 className="review-name">{review.name}</h4>
-              <div className="review-rating">
-                <img src={star} alt="star" />
-                <span>{review.rating}</span>
+              <div className="top">
+                <img
+                  src={review.photo}
+                  alt={review.name}
+                  className="review-photo"
+                />
+                <div className="right">
+                  <h4 className="review-name">{review.name}</h4>
+                  <div className="review-rating">
+                    <img src={star} alt="star" />
+                    <img src={star} alt="star" />
+                    <img src={star} alt="star" />
+                    <img src={star} alt="star" />
+                    <img src={star} alt="star" />
+                    <span>{review.rating}</span>
+                  </div>
+                </div>
               </div>
               <p className="review-text">{review.text}</p>
             </div>

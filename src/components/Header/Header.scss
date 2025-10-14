@@ -5,7 +5,7 @@
     justify-content: space-between;
     align-items: center;
     height: 70px;
-    background-color: $white;
+    background-color: rgba(217, 217, 217, 1);
     width: 100%;
 
     & > .wrapper {
@@ -14,40 +14,45 @@
         justify-content: space-between;
         align-items: center;
         margin: 0 auto;
-    }
-
-    &_logo {
-        width: 150px;
-    }
-
-    &_links {
-        display: flex;
-        gap: 16px;
-
-        &__link {
-            padding: 0px 24px;
-            border-radius: 20px;
-            background-color: $white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 30px;
-            color: $text;
-            transition: background .2s, color .2s;
-
-            &.selected {
-                background-color: $primary;
-                color: $white;
+        & > .left {
+          display: flex;
+          gap: 32px;
+          & > a {
+            & > .Header_logo {
+              width: 150px;
             }
+          }
+    
+          & > .Header_links {
+              display: flex;
+              gap: 16px;
+    
+              & > .Header_links__link {
+                  padding: 0px 24px;
+                  border-radius: 4px;
+                  background-color: rgba(255, 255, 255, 0.3);
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  height: 30px;
+                  color: $text;
+                  transition: background .2s, color .2s;
+    
+                  &.selected {
+                      background-color: $primary;
+                      color: $white;
+                  }
+              }
+          }
         }
     }
 
-    &_btns {
+    .Header_btns {
         display: flex;
         align-items: center;
         gap: 20px;
 
-        &__link {
+        .Header_links__link {
             padding: 0px 24px;
             border-radius: 20px;
             background-color: $white;
@@ -63,10 +68,14 @@
                 color: $white;
             }
         }
-
-        & > .lang {
+        .language-wrapper {
+          position: relative;
+          display: inline-block;
+          z-index: 100; // базовый z-index
+        
+          .lang {
             background-color: transparent;
-            border: 1px solid $primary;
+            border: 1px solid #352100;
             width: 112px;
             display: flex;
             justify-content: space-between;
@@ -75,16 +84,57 @@
             align-items: center;
             padding: 0px 9px;
             cursor: pointer;
-
-            & > span {
-                font-size: 15px;
-                font-weight: 400;
-                color: $primary;
+            font-size: 15px;
+            font-weight: 400;
+            color: #352100;
+            position: relative;
+            z-index: 101;
+          }
+        
+          .lang-menu {
+            position: absolute;
+            top: 40px;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            pointer-events: none;
+            z-index: 100;
+        
+            &.open {
+              opacity: 1;
+              transform: translateY(0);
+              pointer-events: auto;
             }
+        
+            .lang-item {
+              width: 112px;
+              height: 30px;
+              border-radius: 21px;
+              border: 1px solid #352100;
+              background: white;
+              cursor: pointer;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 15px;
+              font-weight: 400;
+              color: #352100;
+              transition: background 0.2s;
+        
+              &:hover {
+                background: #dedede;
+              }
+            }
+          }
         }
+        
     }
 
-    &_burger {
+    .Header_burger {
         background: transparent;
         border: none;
         cursor: pointer;
@@ -198,5 +248,17 @@
     &_burger {
       display: block;
     }
+  }
+}
+
+
+
+.Header_links__inner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  svg {
+    flex-shrink: 0;
   }
 }

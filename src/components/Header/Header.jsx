@@ -19,11 +19,24 @@ export default function Header() {
     }, [menuOpen]);
 
     const links = [
+        { path: "/service", label: "Services", key: "services", hasArrow: true },
         { path: "/about", label: "About us", key: "about" },
-        { path: "/", label: "Services", key: "services" },
         { path: "/doctors", label: "Doctors", key: "doctors" },
         { path: "/reviews", label: "Reviews", key: "reviews" },
-    ];
+        { path: "/gallery", label: "Gallery", key: "gallery"},
+    ];    
+
+    const [selected, setSelected] = useState("EN"); // выбранный язык
+    const [open, setOpen] = useState(false); // открыто ли меню
+
+    const languages = ["EN", "RU", "TR", "ES"]; // английский, русский, турецкий, испанский
+    const otherLanguages = languages.filter(lang => lang !== selected);
+
+    const handleSelect = (lang) => {
+        setSelected(lang);
+        setOpen(false);
+    };
+
 
     // Новый обработчик
     const handleNavigate = (path, key) => {
@@ -42,36 +55,64 @@ export default function Header() {
     return (
         <div className="Header">
             <div className="wrapper">
-                <Link to="/" onClick={() => handleNavigate("/", "services")}>
-                    <img src={logo} alt="logo" className='Header_logo'/>
-                </Link>
+                <div className="left">
+                    <Link to="/" onClick={() => handleNavigate("/", "services")}>
+                        <img src={logo} alt="logo" className='Header_logo'/>
+                    </Link>
 
-                <div className="Header_links">
-                    {links.map((link) => (
-                        <Link
-                            key={link.key}
-                            to={link.path}
-                            className={`Header_links__link ${activePage === link.key ? "selected" : ""}`}
-                            onClick={(e) => {
-                                e.preventDefault(); // отменяем мгновенный переход
-                                handleNavigate(link.path, link.key);
-                            }}
-                        >
-                            {link.label}
-                        </Link>
-                    ))}
+                    <div className="Header_links">
+                        {links.map((link) => (
+                            <Link
+                                key={link.key}
+                                to={link.path}
+                                className={`Header_links__link ${activePage === link.key ? "selected" : ""}`}
+                            >
+                                <span className="Header_links__inner">
+                                    {link.label}
+                                    {link.label === "Services" && (
+                                        <svg
+                                            width="12"
+                                            height="6"
+                                            viewBox="0 0 12 6"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M11.0037 0.210132C11.2949 0.490332 11.2951 0.944591 11.0037 1.22463L6.25022 5.78987C5.95855 6.07004 5.48578 6.07004 5.19412 5.78987L0.440685 1.22463C0.149194 0.944591 0.149466 0.490332 0.440685 0.210132C0.732351 -0.0700439 1.20609 -0.0700439 1.49776 0.210132L5.72217 4.26812L9.94658 0.210132C10.2382 -0.0700439 10.712 -0.0700439 11.0037 0.210132Z"
+                                                fill="#352100"
+                                            />
+                                        </svg>
+                                    )}
+                                </span>
+                            </Link>
+                        ))}
+                    </div>
                 </div>
 
                 <div className="Header_btns">
-                    <button className="lang">
-                        <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <div className="language-wrapper">
+                    <button className="lang" onClick={() => setOpen(!open)}>
+                        <svg style={{opacity: 0}} width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M10.7815 0.210132C11.0727 0.490332 11.073 0.944591 10.7815 1.22463L6.02805 5.78987C5.73639 6.07004 5.26361 6.07004 4.97195 5.78987L0.218517 1.22463C-0.0729742 0.944591 -0.0727024 0.490332 0.218517 0.210132C0.510183 -0.0700439 0.983926 -0.0700439 1.27559 0.210132L5.5 4.26812L9.72441 0.210132C10.0161 -0.0700439 10.4898 -0.0700439 10.7815 0.210132Z" fill="#352100"/>
                         </svg>
-                        <span>EN</span>
+                        <span>{selected}</span>
                         <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M10.7815 0.210132C11.0727 0.490332 11.073 0.944591 10.7815 1.22463L6.02805 5.78987C5.73639 6.07004 5.26361 6.07004 4.97195 5.78987L0.218517 1.22463C-0.0729742 0.944591 -0.0727024 0.490332 0.218517 0.210132C0.510183 -0.0700439 0.983926 -0.0700439 1.27559 0.210132L5.5 4.26812L9.72441 0.210132C10.0161 -0.0700439 10.4898 -0.0700439 10.7815 0.210132Z" fill="#352100"/>
                         </svg>
                     </button>
+
+                    <div className={`lang-menu ${open ? "open" : ""}`}>
+                        {otherLanguages.map((lang, idx) => (
+                        <button
+                            key={idx}
+                            className="lang-item"
+                            onClick={() => handleSelect(lang)}
+                        >
+                            {lang}
+                        </button>
+                        ))}
+                    </div>
+                    </div>
                     <Link
                         to="/contacts"
                         className={`Header_links__link ${activePage === 'contacts' ? "selected" : ""}`}
@@ -106,7 +147,7 @@ export default function Header() {
             <nav className={`Header_mobile ${menuOpen ? 'open' : ''}`}>
                 <div className="Header_mobile__top">
                     <Link
-                        to="/"
+                        to="/service"
                         onClick={(e) => {
                             e.preventDefault();
                             handleNavigate("/", "services");

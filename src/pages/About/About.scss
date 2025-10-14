@@ -1,5 +1,465 @@
+@import '../../styles/variables';
+
 .About {
     display: flex;
     flex-direction: column;
     align-items: center;
+    & > .Startscreen {
+      display: flex;
+      justify-content: center;
+      padding: 80px 0px;
+      background-color: rgba(217, 217, 217, 1);
+      width: 100%;
+      & > .wrapper {
+        width: 1320px;
+        .Startscreen_container {
+          display: flex;
+          gap: 20px;
+          width: 100%;
+        }
+      
+        .Startscreen_left,
+        .Startscreen_right {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          position: relative;
+        }
+      
+        /* Заголовок и описание */
+        .Startscreen_left {
+          & > h2 {
+            font-size: 90px;
+            font-weight: 700;
+            color: $primary;
+            font-family: "Helvetica Neue";
+            line-height: 87%;
+            z-index: 10;
+            letter-spacing: -4%;
+            margin-bottom: 40px;
+          }
+      
+          .Startscreen_subtextBlock {
+            z-index: 10;
+            display: flex;
+            align-items: start;
+            width: 630px;
+            gap: 24px;
+            margin-bottom: 40px;
+      
+            & > img {
+              width: 60px;
+              height: 60px;
+            }
+      
+            & > p {
+              font-weight: 400;
+              font-size: 24px;
+              color: $primary;
+              letter-spacing: -4%;
+            }
+          }
+      
+          .Startscreen_imageLeft {
+            flex-grow: 1;
+            height: 370px;
+            border-radius: 16px;
+            background-image: url("./images/start1.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+          }
+        }
+      
+        /* Правая часть */
+        .Startscreen_right {
+          border-radius: 16px;
+          background-image: url("./images/start2.jpg");
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+      
+        /* Адаптив */
+        @media (max-width: 992px) {
+          .Startscreen_container {
+            flex-direction: column;
+          }
+      
+          .Startscreen_left,
+          .Startscreen_right {
+            width: 100%;
+          }
+      
+          .Startscreen_left h2 {
+            font-size: 60px;
+          }
+      
+          .Startscreen_subtextBlock {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .Journey {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background-color: rgb(255, 255, 255);
+        .wrapper {
+            width: 1320px;
+            display: flex;
+            flex-direction: column;
+            padding: 60px 0px;
+            gap: 50px;
+            & > .topBlock {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                .tab {
+                    background-color: rgba(217, 217, 217, 1);
+                    width: 135px;
+                    height: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 20px;
+                    span {
+                        color: $primary;
+                        font-weight: 400;
+                        font-size: 15px;
+                        letter-spacing: -4%;
+                    }
+                  }
+          
+                  h2 {
+                    font-size: 64px;
+                    font-weight: 500;
+                    color: black;
+                    line-height: 95%;
+                    letter-spacing: -4%;
+                    span {
+                        font-family: "Arapey", serif;
+                        font-style: italic;
+                    }
+                  }
+            }
+            & > .bottomBlock {
+                display: flex;
+                gap: 20px;
+                & > .block {
+                    width: calc((100% - 60px)/4);
+                    padding: 20px 12px;
+                    border-radius: 16px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    height: 381px;
+                    border: 1px solid rgba(217, 217, 217, 1);
+                    & > .circle {
+                        width: 65px;
+                        height: 65px;
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: rgba(217, 217, 217, 1);
+                        & > span {
+                            font-family: "Arapey", serif;
+                            font-style: italic;
+                            font-size: 48px;
+                            color: $primary;
+                        }
+                    }
+                    & > .texts {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        & > h3 {
+                            font-size: 24px;
+                            font-weight: 500;
+                            letter-spacing: -4%;
+                            & > span {
+                                font-family: "Arapey", serif;
+                                font-style: italic;
+                            }
+                        }
+                        & > p {
+                            font-size: 15px;
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .Advantages {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background-color: rgba(217, 217, 217, 1);
+        .wrapper {
+            width: 1320px;
+            display: flex;
+            flex-direction: column;
+            padding: 60px 0px;
+            gap: 50px;
+            & > .topBlock {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                .tab {
+                    background-color: white;
+                    width: 135px;
+                    height: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 20px;
+                    span {
+                        color: $primary;
+                        font-weight: 400;
+                        font-size: 15px;
+                        letter-spacing: -4%;
+                    }
+                  }
+          
+                  h2 {
+                    font-size: 64px;
+                    font-weight: 500;
+                    color: black;
+                    line-height: 95%;
+                    letter-spacing: -4%;
+                    span {
+                        font-family: "Arapey", serif;
+                        font-style: italic;
+                    }
+                  }
+            }
+            & > .bottomGrid {
+              display: flex;
+              flex-direction: column;
+              width: 100%;
+              gap: 10px 10px;
+              & > .row {
+                display: flex;
+                gap: 10px 10px;
+                width: 100%;
+                height: 640px;
+                & > .block {
+                  display: flex;
+                  gap: 10px 10px;
+                  width: calc(50% - 5px);
+                  display: flex;
+                  height: 100%;
+                  flex-wrap: wrap;
+                  border-radius: 16px;
+                  flex-shrink: 0;
+                  &.girl {
+                    background: url('./images/orangeGirl.png');
+                    background-size: cover;
+                  }
+                  & > .block_el {
+                    border-radius: 16px;
+                    flex-shrink: 0;
+                    width: calc(50% - 5px);
+                    height: calc(50% - 5px);
+                    border: 1px solid $primary;
+                    padding: 24px;
+                    font-size: 24px;
+                    font-weight: 400;
+                    text-align: $primary;
+                    &.doctors {
+                      background: url('./images/lildoctor.png');
+                      background-size: cover;
+                    }
+                    &.zub {
+                      background: url('./images/lilzub.png');
+                      background-size: cover;
+                    }
+                    &.empty {
+                      opacity: 0;
+                    }
+                  }
+                }
+              }
+            }
+        }
+    }
+    .Results {
+        background-color: white;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        & > .wrapper {
+            width: 1320px;
+            display: flex;
+            flex-direction: column;
+            padding: 60px 0px;
+            gap: 20px;
+            & > .topBlock {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                .tab {
+                    background-color: rgba(217, 217, 217, 1);
+                    width: 108px;
+                    height: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 20px;
+                    span {
+                        color: $primary;
+                        font-weight: 400;
+                        font-size: 15px;
+                        letter-spacing: -4%;
+                    }
+                  }
+          
+                  h2 {
+                    font-size: 64px;
+                    font-weight: 500;
+                    color: black;
+                    line-height: 95%;
+                    letter-spacing: -4%;
+                    span {
+                        font-family: "Arapey", serif;
+                        font-style: italic;
+                    }
+                  }
+            }
+            .bottomBlock {
+                width: 100%;
+                height: auto;
+                border-radius: 16px;
+                display: flex;
+                justify-content: space-between;
+                overflow: hidden;
+                align-items: flex-end;
+                gap: 20px;
+              
+                .compareBlock {
+                  width: 50%;
+                  height: 520px; // ✅ высота слайдера
+                  border-radius: 16px;
+                  overflow: hidden;
+                  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+              
+                  .react-compare-slider {
+                    width: 100%;
+                    height: 100%; // ✅ занимает всю высоту блока
+                    border-radius: 16px;
+                  }
+              
+                  .react-compare-slider-image {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                  }
+                }
+                & > button {
+                    background-color: $primary;
+                    color: $white;
+                    border-radius: 20px;
+                    height: 100px;
+                    outline: none;
+                    border: none;
+                    font-weight: 400;
+                    font-size: 24px;
+                    width: 50%;
+                    cursor: pointer;
+                    letter-spacing: -4%;
+                    transition: all 0.3s;
+                    &:hover {
+                        background-color: rgba(217, 217, 217, 1);
+                        color: $primary;
+                    }
+                }
+            }    
+            .lastBlock {
+                display: flex;
+                gap: 20px;
+                align-items: center;
+                & > .circle {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: rgba(243, 245, 246, 1);
+                    &.active {
+                        background-color: rgba(78, 54, 41, 1);
+                    }
+                }
+            }          
+        }
+    }
+    .Recognized {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      background-color: rgba(217, 217, 217, 1);
+      .wrapper {
+          width: 1320px;
+          display: flex;
+          flex-direction: column;
+          padding: 60px 0px;
+          gap: 50px;
+          & > .topBlock {
+              display: flex;
+              flex-direction: column;
+              gap: 20px;
+              .tab {
+                  background-color: white;
+                  width: 135px;
+                  height: 30px;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  border-radius: 20px;
+                  span {
+                      color: $primary;
+                      font-weight: 400;
+                      font-size: 15px;
+                      letter-spacing: -4%;
+                  }
+                }
+        
+                h2 {
+                  font-size: 64px;
+                  font-weight: 500;
+                  color: black;
+                  line-height: 95%;
+                  letter-spacing: -4%;
+                  span {
+                      font-family: "Arapey", serif;
+                      font-style: italic;
+                  }
+                }
+          }
+          & > .bottomBlock {
+            display: flex;
+            align-items: flex-start;
+            gap: 48px;
+            & > img {
+              width: 300px;
+              height: auto;
+            }
+            & > .text {
+              display: flex;
+              flex-direction: column;
+              gap: 20px;
+              & > p {
+                font-size: 20px;
+                line-height: 105%;
+                letter-spacing: -4%;
+                font-weight: 400;
+              }
+            }
+          }
+      }
+    }
 }

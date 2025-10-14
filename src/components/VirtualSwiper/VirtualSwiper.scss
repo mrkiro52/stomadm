@@ -54,7 +54,7 @@
 }
 
 .custom-swiper {
-  height: 300px;
+  height: auto;
 }
 
 .swiper-slide {
@@ -65,6 +65,26 @@
   background-color: white;
   border-radius: 16px;
   padding: 20px;
+  & > .slide-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    & > .top {
+      display: flex;
+      & > .right {
+        display: flex;
+        flex-direction: column;
+        & > .review-rating {
+          display: flex;
+          align-items: center;
+          & > img {
+            width: 13px;
+            height: 13px;
+          }
+        }
+      }
+    }
+  }
 }
 
 .review-card {
@@ -114,7 +134,9 @@
 }
 
 .review-text {
-  font-size: 14px;
-  color: #333;
+  font-size: 15px;
+  color: rgba(53, 33, 0, 1);
   margin: 0;
+  line-height: 150%;
+  letter-spacing: 0%;
 }

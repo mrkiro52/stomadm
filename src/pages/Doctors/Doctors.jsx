@@ -3,6 +3,7 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import doctor1 from "./images/doctor1.jpg";
 import doctor2 from "./images/doctor2.jpg";
+import Form from "../../components/Form/Form";
 
 export default function Doctors() {
   localStorage.setItem("page", "doctors");
@@ -57,6 +58,9 @@ export default function Doctors() {
             </div>
           </div>
         </section>
+      </div>
+      <div className="wrapper-form">
+        <Form/>
       </div>
       <Footer />
     </div>
