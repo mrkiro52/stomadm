@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/stomadm/static/css/main.ce8dd4bc.css",
-    "main.js": "/stomadm/static/js/main.521063d9.js",
+    "main.css": "/stomadm/static/css/main.f9496859.css",
+    "main.js": "/stomadm/static/js/main.7c9baea4.js",
     "static/js/453.d7b3ff8f.chunk.js": "/stomadm/static/js/453.d7b3ff8f.chunk.js",
     "static/media/smile.png": "/stomadm/static/media/smile.074ccbdd92324b40becd.png",
     "static/media/orangeGirl.png": "/stomadm/static/media/orangeGirl.9ef0e1c3eb882692d6fb.png",
@@ -32,6 +32,7 @@
     "static/media/before1.png": "/stomadm/static/media/before1.d14327e5d02d48f7328f.png",
     "static/media/before2.png": "/stomadm/static/media/before2.8dd1fa63217a0e2b7f22.png",
     "static/media/before6.png": "/stomadm/static/media/before6.82e5c4f6be39259e6af1.png",
+    "static/media/logoIstanbul.png": "/stomadm/static/media/logoIstanbul.d05f90073b2f35696f11.png",
     "static/media/doctor1.jpg": "/stomadm/static/media/doctor1.b211f895995e6af37e12.jpg",
     "static/media/before3.png": "/stomadm/static/media/before3.be5983cef56ba8423cf0.png",
     "static/media/doctor2.jpg": "/stomadm/static/media/doctor2.f5619e96cd8a78106ba1.jpg",
@@ -47,12 +48,12 @@
     "static/media/arrow.svg": "/stomadm/static/media/arrow.37915ddfe17f86bd25edc528ef14653b.svg",
     "static/media/icon3.svg": "/stomadm/static/media/icon3.f135450d4be9621811b0742d3e471471.svg",
     "index.html": "/stomadm/index.html",
-    "main.ce8dd4bc.css.map": "/stomadm/static/css/main.ce8dd4bc.css.map",
-    "main.521063d9.js.map": "/stomadm/static/js/main.521063d9.js.map",
+    "main.f9496859.css.map": "/stomadm/static/css/main.f9496859.css.map",
+    "main.7c9baea4.js.map": "/stomadm/static/js/main.7c9baea4.js.map",
     "453.d7b3ff8f.chunk.js.map": "/stomadm/static/js/453.d7b3ff8f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ce8dd4bc.css",
-    "static/js/main.521063d9.js"
+    "static/css/main.f9496859.css",
+    "static/js/main.7c9baea4.js"
   ]
 }
