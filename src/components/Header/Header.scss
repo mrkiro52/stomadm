@@ -2,18 +2,97 @@
 
 .Header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 70px;
-    background-color: rgba(217, 217, 217, 1);
+    flex-direction: column;
     width: 100%;
+    position: fixed;
+    z-index: 1000;
+    background-color: $background;
+    transition: all 0.3s ease-in-out;
+    & > .blur {
+      height: 100vh;
+      width: 100vw;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(12px);
+      z-index: 10;
+    }
+    &.opened {
+      background-color: transparent;
+      & > .wrapper {
+        z-index: 3000;
+        & > .left {
+          & > .Header_links {
+            & > .Header_links__link.services {
+              background-color: rgba(217, 217, 217, 1);
+            }
+          }
+        }
+        & > .Header_btns {
+          & > .Header_links__link.contacts {
+            background-color: rgba(217, 217, 217, 1);
+          }
+        }
+      }
+    }
 
+    & > .layers {
+      width: 1320px;
+      margin: 0 auto;
+      height: auto; // или auto, если контент разный
+      padding: 48px 24px;
+      background-color: white;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease-in-out;
+      pointer-events: none; // чтобы не кликабельно, когда скрыто
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+
+      & > .col {
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+        & > span {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 20px;
+          letter-spacing: 0%;
+          color: rgba(58, 40, 30, 1);
+          margin-bottom: 16px;
+        }
+        & > a {
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 24px;
+          letter-spacing: 0%;
+          color: rgba(58, 40, 30, 1);
+          margin-bottom: 20px;
+        }
+      }
+  
+      &.shown {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        border-radius: 0px 0px 16px 16px;
+      }
+    }
     & > .wrapper {
+        transition: all 0.3s ease-in-out;
+        z-index: 1000;
         width: 1320px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin: 0 auto;
+        padding: 24px;
+        background-color: $background;
+        &.opened {
+          background-color: white;
+        }
         & > .left {
           display: flex;
           gap: 32px;
@@ -37,6 +116,9 @@
                   height: 30px;
                   color: $text;
                   transition: background .2s, color .2s;
+                  border: none;
+                  outline: none;
+                  cursor: pointer;
     
                   &.selected {
                       background-color: $primary;
@@ -55,13 +137,14 @@
         .Header_links__link {
             padding: 0px 24px;
             border-radius: 20px;
-            background-color: $white;
+            background-color: rgba(255, 255, 255, 0.3);
             display: flex;
             justify-content: center;
             align-items: center;
             height: 30px;
             color: $text;
             transition: background .2s, color .2s;
+            z-index: 2000;
 
             &.selected {
                 background-color: $primary;
@@ -71,7 +154,7 @@
         .language-wrapper {
           position: relative;
           display: inline-block;
-          z-index: 100; // базовый z-index
+          z-index: 2000;
         
           .lang {
             background-color: transparent;
@@ -88,7 +171,7 @@
             font-weight: 400;
             color: #352100;
             position: relative;
-            z-index: 101;
+            z-index: 2000;
           }
         
           .lang-menu {
@@ -100,14 +183,15 @@
             gap: 6px;
             opacity: 0;
             transform: translateY(-10px);
-            transition: all 0.3s ease;
+            transition: all 0.2s ease;
             pointer-events: none;
-            z-index: 100;
+            z-index: 2000;
         
             &.open {
               opacity: 1;
               transform: translateY(0);
               pointer-events: auto;
+              z-index: 2000;
             }
         
             .lang-item {
@@ -124,6 +208,7 @@
               font-weight: 400;
               color: #352100;
               transition: background 0.2s;
+              z-index: 2000;
         
               &:hover {
                 background: #dedede;
@@ -154,7 +239,7 @@
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0);
-  transition: background .35s ease;
+  transition: background .2 ease;
   pointer-events: none;
   z-index: 50;
 
@@ -174,7 +259,7 @@
   background: $white;
   box-shadow: -10px 0 30px rgba(0,0,0,0.12);
   transform: translateX(110%);
-  transition: transform .35s cubic-bezier(.2,.9,.2,1);
+  transition: transform .2 cubic-bezier(.2,.9,.2,1);
   z-index: 60;
   display: flex;
   flex-direction: column;
@@ -257,6 +342,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
+  font-size: 14px;
 
   svg {
     flex-shrink: 0;

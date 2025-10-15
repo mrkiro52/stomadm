@@ -35,6 +35,7 @@ const images = [
 ];
 
 export default function Gallery() {
+  localStorage.setItem("page", "gallery");
   return (
     <section className="gallery">
       <Header />

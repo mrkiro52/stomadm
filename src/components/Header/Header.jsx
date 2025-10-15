@@ -8,6 +8,17 @@ export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
     const navigate = useNavigate();
 
+    const [menuLayered, setMenuLayered] = useState(false);
+    const [showLayer, setShowLayer] = useState(false);
+    
+    useEffect(() => {
+      if (menuLayered) setShowLayer(true); // показываем сразу
+      else {
+        const timer = setTimeout(() => setShowLayer(false), 350); // удаляем после анимации
+        return () => clearTimeout(timer);
+      }
+    }, [menuLayered]);
+
     useEffect(() => {
         const page = localStorage.getItem("page");
         if (page) setActivePage(page);
@@ -49,43 +60,127 @@ export default function Header() {
         // ждём завершения анимации transform (.35s)
         setTimeout(() => {
             navigate(path);
-        }, 350); // sync с transition в scss
+        }, 300); // sync с transition в scss
     };
 
+    const servicesData = [
+        {
+          category: "Cosmetic Dentistry",
+          services: [
+            "Filling",
+            "Teeth Cleaning", 
+            "Teeth Whitening",
+            "E-max Veneers",
+            "E-max Crown",
+            "Gingivoplasty",
+            "Botox"
+          ]
+        },
+        {
+          category: "Dental Implants", 
+          services: [
+            "Zirconia Crown on Tooth",
+            "Zirconia Crown on Implant", 
+            "Bone Grafting",
+            "Sinus Lifting",
+            "Piezolifting"
+          ]
+        },
+        {
+          category: "Specialty Treatments",
+          services: [
+            "Root Canal Treatment",
+            "Tooth Extraction", 
+            "Wisdom Tooth Extraction",
+            "Cystectomy",
+            "Apicoectomy", 
+            "Flap Surgery",
+            "Curottage"
+          ]
+        },
+        {
+          category: "Orthodontics",
+          services: [
+            "Braces",
+            "Aligners",
+            "Night Guard"
+          ]
+        }
+      ];
+
+
+      useEffect(() => {
+        if (!showLayer) return; // если слой скрыт, ничего не делаем
+    
+        function handleClick(event) {
+          // проверяем, кликнули ли именно по blur
+          if (event.target.classList.contains("blur")) {
+            setShowLayer(false);
+            setMenuLayered(false); // закрываем также menuLayered
+          }
+        }
+    
+        document.addEventListener("click", handleClick);
+    
+        return () => {
+          document.removeEventListener("click", handleClick);
+        };
+      }, [showLayer, setShowLayer, setMenuLayered]);
+
     return (
-        <div className="Header">
-            <div className="wrapper">
+        <div className={menuLayered ? "Header opened" : "Header"}>
+            {showLayer && <div className="blur"></div>}
+            <div className={menuLayered ? "wrapper opened" : "wrapper"}>
                 <div className="left">
                     <Link to="/" onClick={() => handleNavigate("/", "services")}>
                         <img src={logo} alt="logo" className='Header_logo'/>
                     </Link>
 
                     <div className="Header_links">
-                        {links.map((link) => (
+                        {links.map((link) => {
+                            if (link.key === "services") {
+                            // Для Services используем кнопку
+                            return (
+                                <button
+                                key={link.key}
+                                type="button"
+                                className="Header_links__link services"
+                                onClick={() => {
+                                    setMenuLayered(!menuLayered);
+                                    setTimeout(() => setShowLayer(!menuLayered), 50); // маленькая задержка
+                                }}
+                                >
+                                <span className="Header_links__inner">
+                                    {link.label}
+                                    <svg
+                                    width="12"
+                                    height="6"
+                                    viewBox="0 0 12 6"
+                                    style={showLayer ? {transform: 'rotate(180deg)', transition: 'all 0.2s'} : {transform: 'rotate(0deg)', transition: 'all 0.2s'}}
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                    <path
+                                        d="M11.0037 0.210132C11.2949 0.490332 11.2951 0.944591 11.0037 1.22463L6.25022 5.78987C5.95855 6.07004 5.48578 6.07004 5.19412 5.78987L0.440685 1.22463C0.149194 0.944591 0.149466 0.490332 0.440685 0.210132C0.732351 -0.0700439 1.20609 -0.0700439 1.49776 0.210132L5.72217 4.26812L9.94658 0.210132C10.2382 -0.0700439 10.712 -0.0700439 11.0037 0.210132Z"
+                                        fill="#352100"
+                                    />
+                                    </svg>
+                                </span>
+                                </button>
+                            );
+                            }
+
+                            // Остальные ссылки остаются Link
+                            return (
                             <Link
                                 key={link.key}
                                 to={link.path}
                                 className={`Header_links__link ${activePage === link.key ? "selected" : ""}`}
                             >
-                                <span className="Header_links__inner">
-                                    {link.label}
-                                    {link.label === "Services" && (
-                                        <svg
-                                            width="12"
-                                            height="6"
-                                            viewBox="0 0 12 6"
-                                            fill="none"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                        >
-                                            <path
-                                                d="M11.0037 0.210132C11.2949 0.490332 11.2951 0.944591 11.0037 1.22463L6.25022 5.78987C5.95855 6.07004 5.48578 6.07004 5.19412 5.78987L0.440685 1.22463C0.149194 0.944591 0.149466 0.490332 0.440685 0.210132C0.732351 -0.0700439 1.20609 -0.0700439 1.49776 0.210132L5.72217 4.26812L9.94658 0.210132C10.2382 -0.0700439 10.712 -0.0700439 11.0037 0.210132Z"
-                                                fill="#352100"
-                                            />
-                                        </svg>
-                                    )}
-                                </span>
+                                <span className="Header_links__inner">{link.label}</span>
                             </Link>
-                        ))}
+                            );
+                        })}
                     </div>
                 </div>
 
@@ -96,7 +191,7 @@ export default function Header() {
                             <path d="M10.7815 0.210132C11.0727 0.490332 11.073 0.944591 10.7815 1.22463L6.02805 5.78987C5.73639 6.07004 5.26361 6.07004 4.97195 5.78987L0.218517 1.22463C-0.0729742 0.944591 -0.0727024 0.490332 0.218517 0.210132C0.510183 -0.0700439 0.983926 -0.0700439 1.27559 0.210132L5.5 4.26812L9.72441 0.210132C10.0161 -0.0700439 10.4898 -0.0700439 10.7815 0.210132Z" fill="#352100"/>
                         </svg>
                         <span>{selected}</span>
-                        <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg style={open ? {transform: 'rotate(180deg)', transition: 'all 0.2s'} : {transform: 'rotate(0deg)', transition: 'all 0.2s'}} width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M10.7815 0.210132C11.0727 0.490332 11.073 0.944591 10.7815 1.22463L6.02805 5.78987C5.73639 6.07004 5.26361 6.07004 4.97195 5.78987L0.218517 1.22463C-0.0729742 0.944591 -0.0727024 0.490332 0.218517 0.210132C0.510183 -0.0700439 0.983926 -0.0700439 1.27559 0.210132L5.5 4.26812L9.72441 0.210132C10.0161 -0.0700439 10.4898 -0.0700439 10.7815 0.210132Z" fill="#352100"/>
                         </svg>
                     </button>
@@ -115,7 +210,7 @@ export default function Header() {
                     </div>
                     <Link
                         to="/contacts"
-                        className={`Header_links__link ${activePage === 'contacts' ? "selected" : ""}`}
+                        className={`Header_links__link contacts ${activePage === 'contacts' ? "selected" : ""}`}
                         onClick={(e) => {
                             e.preventDefault();
                             handleNavigate("/contacts", "contacts");
@@ -136,6 +231,19 @@ export default function Header() {
                     </svg>
                 </button>
             </div>
+
+            {showLayer && (
+                <div className={`layers ${menuLayered ? 'shown' : ''}`}>
+                {servicesData.map((category, index) => (
+                  <div className="col" key={index}>
+                    <span>{category.category}</span>
+                    {category.services.map((service, serviceIndex) => (
+                      <a href="#" key={serviceIndex}>{service}</a>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            )}
 
             {/* overlay */}
             <div
