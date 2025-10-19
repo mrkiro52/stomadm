@@ -1,0 +1,88 @@
+{
+    "service": "Услуга",
+
+    "service_filling_title": "Пломба",
+    "service_filling_description": "Процедура удаления кариеса и восстановления зуба с помощью пломбировочного материала для защиты от дальнейшего повреждения.",
+  
+    "service_teeth_cleaning_title": "Чистка зубов",
+    "service_teeth_cleaning_description": "Профессиональная чистка зубов для удаления налета, камня и пятен, улучшения здоровья полости рта и профилактики заболеваний десен.",
+  
+    "service_teeth_whitening_title": "Отбеливание зубов",
+    "service_teeth_whitening_description": "Косметическая процедура, направленная на осветление зубов путем удаления пятен и изменения цвета эмали.",
+  
+    "service_e_max_veneers_title": "Виниры Emax",
+    "service_e_max_veneers_description": "Тонкие индивидуальные керамические накладки на зубы для улучшения внешнего вида, формы и положения зубов.",
+  
+    "service_e_max_crown_title": "Коронка Emax",
+    "service_e_max_crown_description": "Прочная и эстетичная коронка, устанавливаемая на поврежденный или разрушенный зуб для восстановления функции и внешнего вида.",
+  
+    "service_gingivoplasty_title": "Гингивопластика",
+    "service_gingivoplasty_description": "Моделирование и контурирование десневой ткани для улучшения эстетики и здоровья десневого края.",
+  
+    "service_botox_title": "Ботокс",
+    "service_botox_description": "Инъекция ботулинического токсина для расслабления лицевых мышц, уменьшения морщин и улучшения внешнего вида.",
+  
+    "service_zirconia_crown_on_tooth_title": "Циркониевая коронка на зуб",
+    "service_zirconia_crown_on_tooth_description": "Прочная и эстетичная циркониевая коронка, устанавливаемая на натуральный зуб для восстановления структуры и функции.",
+  
+    "service_zirconia_crown_on_implant_title": "Циркониевая коронка на имплант",
+    "service_zirconia_crown_on_implant_description": "Циркониевая коронка, устанавливаемая на зубной имплант для восстановления функции и эстетики зуба.",
+  
+    "service_bone_grafting_title": "Костная пластика",
+    "service_bone_grafting_description": "Хирургическая процедура по восстановлению или увеличению объема костной ткани челюсти для поддержки имплантов или других реставраций.",
+  
+    "service_sinus_lifting_title": "Синус-лифтинг",
+    "service_sinus_lifting_description": "Процедура поднятия слизистой пазухи и добавления костного материала для подготовки места под имплант.",
+  
+    "service_piezolifting_title": "Пьезолифтинг",
+    "service_piezolifting_description": "Ультразвуковое поднятие кости для увеличения объема челюсти и подготовки места для зубного импланта.",
+  
+    "service_root_canal_treatment_title": "Лечение каналов",
+    "service_root_canal_treatment_description": "Удаление инфицированной или поврежденной пульпы внутри зуба и восстановление его с помощью пломбы или коронки.",
+  
+    "service_tooth_extraction_title": "Удаление зуба",
+    "service_tooth_extraction_description": "Удаление поврежденного или разрушенного зуба для предотвращения проблем с полостью рта.",
+  
+    "service_wisdom_tooth_extraction_title": "Удаление зуба мудрости",
+    "service_wisdom_tooth_extraction_description": "Хирургическое удаление одного или нескольких проблемных зубов мудрости.",
+  
+    "service_cystectomy_title": "Цистэктомия",
+    "service_cystectomy_description": "Хирургическое удаление кисты из челюсти или мягких тканей рта для предотвращения инфекции или осложнений.",
+  
+    "service_apicoectomy_title": "Апикоэктомия",
+    "service_apicoectomy_description": "Хирургическая процедура удаления кончика корня зуба и окружающей инфицированной ткани для сохранения зуба.",
+  
+    "service_flap_surgery_title": "Лоскутная операция",
+    "service_flap_surgery_description": "Пародонтологическая хирургия с откидыванием десны, очисткой инфицированных участков и восстановлением здоровья десен.",
+  
+    "service_curottage_title": "Кюретаж",
+    "service_curottage_description": "Удаление инфицированной ткани десны и очистка корней зубов для лечения заболеваний пародонта.",
+  
+    "service_braces_title": "Брекеты",
+    "service_braces_description": "Ортодонтическое лечение с использованием брекетов и дуг для выравнивания зубов со временем.",
+  
+    "service_aligners_title": "Элайнеры",
+    "service_aligners_description": "Прозрачные съемные каппы, которые постепенно перемещают зубы для коррекции прикуса и выравнивания.",
+  
+    "service_night_guard_title": "Ночная каппа",
+    "service_night_guard_description": "Индивидуальный ночной прибор для защиты зубов от скрежета и сжатия во сне.",
+
+    "form_tab": "Бронирование",
+    "form_title": "Форма онлайн-записи",
+    "form_label_name": "Имя",
+    "form_label_phone": "Телефон",
+    "form_label_email": "Электронная почта",
+    "form_label_service": "Услуга",
+    "form_label_message": "Ваше сообщение",
+    "form_send": "Отправить",
+    "form_message_placeholder": "Напишите ваше сообщение...",
+    "form_name_placeholder": "Введите ваше имя",
+    "form_phone_placeholder": "Введите ваш телефон",
+    "form_email_placeholder": "Введите вашу почту",
+    "form_service_service": "Выберите услугу",
+
+    "results_tab": "Результаты",
+    "results_title": "Посмотрите трансформацию",
+    "results_button": "Хочу так же"
+  }
+  

@@ -172,6 +172,9 @@
             color: #352100;
             position: relative;
             z-index: 2000;
+            & > span {
+              text-transform: uppercase;
+            }
           }
         
           .lang-menu {
@@ -209,6 +212,7 @@
               color: #352100;
               transition: background 0.2s;
               z-index: 2000;
+              text-transform: uppercase;
         
               &:hover {
                 background: #dedede;

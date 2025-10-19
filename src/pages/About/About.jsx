@@ -20,6 +20,7 @@ import arrow from "./images/arrow.svg";
 import start1 from "./images/start1.jpg";
 import start2 from "./images/start2.jpg";
 import logo from './images/logoIstanbul.png';
+import Results from '../../components/Results/Results';
 
 export default function About() {
     localStorage.setItem('page', 'about');
@@ -155,64 +156,7 @@ export default function About() {
                 </div>
                 </div>
             </div>
-            <div className="Results">
-                <div className="wrapper">
-                <div className="topBlock">
-                    <div className="tab">
-                        <span>Results</span>
-                    </div>
-                    <h2>See the <span>Transformation</span></h2>
-                </div>
-                <div className="bottomBlock">
-                    <div className="compareBlock">
-                    <ReactCompareSlider
-                    itemOne={
-                        <ReactCompareSliderImage
-                        src={current.before}
-                        alt={`Before ${resultsPage + 1}`}
-                        />
-                    }
-                    itemTwo={
-                        <ReactCompareSliderImage
-                        src={current.after}
-                        alt={`After ${resultsPage + 1}`}
-                        />
-                    }
-                    />
-                    </div>
-                    <button>I want same like that</button>
-                </div>
-                <div className="lastBlock">
-                <div
-                className={`circle ${resultsPage > 0 ? "active" : ""}`}
-                onClick={handlePrev}
-                >
-                <svg width="7" height="12" viewBox="0 0 7 12" fill="none">
-                    <path
-                    d="M6 11L0.921865 6.76822C0.44211 6.36843 0.442111 5.63157 0.921865 5.23178L6 1"
-                    stroke={(resultsPage === 0) ? "#4E3629" : "white"}
-                    strokeLinecap="round"
-                    />
-                </svg>
-                </div>
-
-                <span>{resultsPage+1}/{images.length}</span>
-
-                <div
-                className={`circle ${(resultsPage+1) < images.length ? "active" : ""}`}
-                onClick={handleNext}
-                >
-                <svg width="7" height="12" viewBox="0 0 7 12" fill="none">
-                    <path
-                    d="M1 1L6.07814 5.23178C6.55789 5.63157 6.55789 6.36843 6.07813 6.76822L1 11"
-                    stroke={(resultsPage+1) < images.length ? "white" : "#4E3629"}
-                    strokeLinecap="round"
-                    />
-                </svg>
-                </div>
-            </div>
-                </div>
-            </div>
+            <Results/>
             <div className="Recognized">
                 <div className="wrapper">
                     <div className="topBlock">

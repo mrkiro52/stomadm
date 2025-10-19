@@ -1,12 +1,15 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from "react";
 import logo from './images/logo.png';
+import { useTranslation } from "react-i18next";
 import './Header.scss';
 
 export default function Header() {
     const [activePage, setActivePage] = useState("");
     const [menuOpen, setMenuOpen] = useState(false);
     const navigate = useNavigate();
+
+    const { i18n } = useTranslation();
 
     const [menuLayered, setMenuLayered] = useState(false);
     const [showLayer, setShowLayer] = useState(false);
@@ -37,13 +40,18 @@ export default function Header() {
         { path: "/gallery", label: "Gallery", key: "gallery"},
     ];    
 
-    const [selected, setSelected] = useState("EN"); // выбранный язык
+    const [selected, setSelected] = useState("en"); // выбранный язык
     const [open, setOpen] = useState(false); // открыто ли меню
 
-    const languages = ["EN", "RU", "TR", "ES"]; // английский, русский, турецкий, испанский
+    useEffect(() => {
+        console.log(selected);
+    }, [selected])
+
+    const languages = ["en", "ru", "tr"]; // английский, русский, турецкий
     const otherLanguages = languages.filter(lang => lang !== selected);
 
     const handleSelect = (lang) => {
+        i18n.changeLanguage(lang);
         setSelected(lang);
         setOpen(false);
     };
@@ -234,15 +242,32 @@ export default function Header() {
 
             {showLayer && (
                 <div className={`layers ${menuLayered ? 'shown' : ''}`}>
-                {servicesData.map((category, index) => (
-                  <div className="col" key={index}>
-                    <span>{category.category}</span>
-                    {category.services.map((service, serviceIndex) => (
-                      <a href="#" key={serviceIndex}>{service}</a>
+                    {servicesData.map((category, index) => (
+                    <div className="col" key={index}>
+                        <span>{category.category}</span>
+                        {category.services.map((service, serviceIndex) => {
+                        // формируем url для роутинга
+                        const path = "/service/" + service
+                            .toLowerCase()
+                            .replace(/[^a-z0-9]+/g, '-')  // заменяем пробелы и символы на тире
+                            .replace(/^-+|-+$/g, '');     // убираем лишние тире в начале/конце
+                        
+                        return (
+                            <Link
+                            key={serviceIndex}
+                            to={path}
+                            onClick={() => {
+                                setMenuLayered(false);
+                                setShowLayer(false);
+                            }}
+                            >
+                            {service}
+                            </Link>
+                        );
+                        })}
+                    </div>
                     ))}
-                  </div>
-                ))}
-              </div>
+                </div>
             )}
 
             {/* overlay */}

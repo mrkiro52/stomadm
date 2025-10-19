@@ -1,0 +1,88 @@
+{
+    "service": "Hizmet",
+
+    "service_filling_title": "Dolgu",
+    "service_filling_description": "Diş çürüğünü temizleyip dolgu malzemesi ile restore ederek dişi koruma altına alma prosedürü.",
+  
+    "service_teeth_cleaning_title": "Diş Temizliği",
+    "service_teeth_cleaning_description": "Dişlerdeki plak, tartar ve lekeleri temizleyerek ağız sağlığını iyileştiren profesyonel temizlik.",
+  
+    "service_teeth_whitening_title": "Diş Beyazlatma",
+    "service_teeth_whitening_description": "Diş rengini açmak için lekeleri ve renk değişimlerini gideren kozmetik prosedür.",
+  
+    "service_e_max_veneers_title": "Emax Lamina",
+    "service_e_max_veneers_description": "Dişlerin görünümünü, şeklini ve hizasını iyileştirmek için ince, özel yapılmış porselen kaplamalar.",
+  
+    "service_e_max_crown_title": "Emax Kaplama",
+    "service_e_max_crown_description": "Hasar görmüş veya çürümüş dişi işlev ve görünümünü geri kazandırmak için yerleştirilen dayanıklı ve estetik kaplama.",
+  
+    "service_gingivoplasty_title": "Gingivoplasti",
+    "service_gingivoplasty_description": "Diş eti hattının estetiğini ve sağlığını iyileştirmek için diş eti dokusunun şekillendirilmesi ve konturlanması.",
+  
+    "service_botox_title": "Botoks",
+    "service_botox_description": "Yüz kaslarını gevşetmek, kırışıklıkları azaltmak ve görünümü iyileştirmek için yapılan botulinum toksin enjeksiyonu.",
+  
+    "service_zirconia_crown_on_tooth_title": "Diş Üzerine Zirkonya Kaplama",
+    "service_zirconia_crown_on_tooth_description": "Doğal diş üzerine yerleştirilen güçlü ve estetik zirkonya kaplama ile dişin yapısı ve fonksiyonu restore edilir.",
+  
+    "service_zirconia_crown_on_implant_title": "İmplant Üzerine Zirkonya Kaplama",
+    "service_zirconia_crown_on_implant_description": "Bir diş implantına yerleştirilen zirkonya kaplama ile dişin fonksiyonu ve estetiği geri kazandırılır.",
+  
+    "service_bone_grafting_title": "Kemik Grefti",
+    "service_bone_grafting_description": "İmplant veya diğer restorasyonlar için çene kemiği hacmini artırmak veya yeniden oluşturmak amacıyla yapılan cerrahi işlem.",
+  
+    "service_sinus_lifting_title": "Sinüs Lifting",
+    "service_sinus_lifting_description": "İmplant yerleştirme için sinüs membranını yükseltmek ve kemik grefti eklemek amacıyla yapılan prosedür.",
+  
+    "service_piezolifting_title": "Piezolifting",
+    "service_piezolifting_description": "Çene kemiği hacmini artırmak ve implant için alan hazırlamak amacıyla ultrasonik kemik kaldırma işlemi.",
+  
+    "service_root_canal_treatment_title": "Kanal Tedavisi",
+    "service_root_canal_treatment_description": "Dişin içindeki enfekte veya hasarlı pulpayı çıkarıp dolgu veya kaplama ile restore etme tedavisi.",
+  
+    "service_tooth_extraction_title": "Diş Çekimi",
+    "service_tooth_extraction_description": "Hasar görmüş veya çürümüş dişi ağız sağlığını korumak için çekme işlemi.",
+  
+    "service_wisdom_tooth_extraction_title": "20’lik Diş Çekimi",
+    "service_wisdom_tooth_extraction_description": "Gömülü veya problemli 20’lik dişlerin cerrahi olarak çıkarılması.",
+  
+    "service_cystectomy_title": "Kist Çıkarma",
+    "service_cystectomy_description": "Enfeksiyon veya komplikasyonları önlemek için çene veya ağız dokusundaki kistin cerrahi olarak çıkarılması.",
+  
+    "service_apicoectomy_title": "Apikoektomi",
+    "service_apicoectomy_description": "Diş kökünün ucunu ve çevresindeki enfekte dokuyu çıkararak dişi kurtarma işlemi.",
+  
+    "service_flap_surgery_title": "Doku Kaldırma Cerrahisi",
+    "service_flap_surgery_description": "Diş etini kaldırıp enfekte alanları temizleyerek diş etlerinin sağlıklı şekilde yeniden tutunmasını sağlayan periodontal cerrahi.",
+  
+    "service_curottage_title": "Kürretaj",
+    "service_curottage_description": "Periodontal hastalığı tedavi etmek için enfekte diş eti dokusunun ve diş köklerinin temizlenmesi.",
+  
+    "service_braces_title": "Diş Teli",
+    "service_braces_description": "Dişleri hizalamak ve düzeltmek için braket ve tellerle uygulanan ortodontik tedavi.",
+  
+    "service_aligners_title": "Şeffaf Plaklar",
+    "service_aligners_description": "Dişleri zamanla düzeltmek ve ısırışı uyumlu hale getirmek için şeffaf, çıkarılabilir plaklar.",
+  
+    "service_night_guard_title": "Gece Plağı",
+    "service_night_guard_description": "Uyurken diş gıcırdatma ve sıkmayı önlemek için kullanılan özel gece aparatı.",
+
+    "form_tab": "Rezervasyon",
+    "form_title": "Online randevu formu",
+    "form_label_name": "İsim",
+    "form_label_phone": "Telefon",
+    "form_label_email": "E-posta",
+    "form_label_service": "Hizmet",
+    "form_label_message": "Mesajınız",
+    "form_send": "Gönder",
+    "form_message_placeholder": "Mesajınızı yazın...",
+    "form_name_placeholder": "Adınızı girin",
+    "form_phone_placeholder": "Telefonunuzu girin",
+    "form_email_placeholder": "E-postanızı girin",
+    "form_service_service": "Bir hizmet seçin",
+
+    "results_tab": "Sonuçlar",
+    "results_title": "Dönüşümü gör",
+    "results_button": "Ben de böyle istiyorum"
+  }
+  

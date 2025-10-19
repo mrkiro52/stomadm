@@ -1,7 +1,9 @@
 import { useState } from "react";
 import "./Form.scss";
+import { useTranslation } from "react-i18next";
 
 export default function Form() {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -40,31 +42,31 @@ export default function Form() {
       <div className="booking-container">
         {/* Левая часть */}
         <div className="booking-left">
-          <span className="booking-span">Booking</span>
-          <h2 className="booking-title">Online <span>appointment form</span></h2>
+          <span className="booking-span">{t("form_tab")}</span>
+          <h2 className="booking-title">{t("form_title")}</h2>
 
           <form onSubmit={handleSubmit}>
             <div className="row">
               <div className="input-group">
-                <label>Name</label>
+                <label>{t("form_label_name")}</label>
                 <input
                   type="text"
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  placeholder="Enter your name"
+                  placeholder={t("form_name_placeholder")}
                 />
                 {errors.name && <p className="error">{errors.name}</p>}
               </div>
 
               <div className="input-group">
-                <label>Phone</label>
+                <label>{t("form_label_phone")}</label>
                 <input
                   type="text"
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  placeholder="Enter your phone"
+                  placeholder={t("form_phone_placeholder")}
                 />
                 {errors.phone && <p className="error">{errors.phone}</p>}
               </div>
@@ -72,25 +74,25 @@ export default function Form() {
 
             <div className="row">
               <div className="input-group">
-                <label>Email</label>
+                <label>{t("form_label_email")}</label>
                 <input
                   type="email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  placeholder="Enter your email"
+                  placeholder={t("form_email_placeholder")}
                 />
                 {errors.email && <p className="error">{errors.email}</p>}
               </div>
 
               <div className="input-group">
-                <label>Service</label>
+                <label>{t("form_label_service")}</label>
                 <select
                   name="service"
                   value={formData.service}
                   onChange={handleChange}
                 >
-                  <option value="">Select a service</option>
+                  <option value="">{t("form_service_service")}</option>
                   <option>Hollywood Smile</option>
                   <option>Implants</option>
                   <option>Veneers</option>
@@ -102,19 +104,19 @@ export default function Form() {
             </div>
 
             <div className="textarea-group">
-              <label style={{marginBottom: '8px', fontWeight: 500}}>Your message</label>
+              <label style={{marginBottom: '8px', fontWeight: 500}}>{t("form_label_message")}</label>
               <textarea
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                placeholder="Write your message..."
+                placeholder={t("form_message_placeholder")}
                 maxLength="300"
               />
               <span className="char-count">[{formData.message.length}/300]</span>
             </div>
 
             <button type="submit" className="send-btn">
-              Send
+              {t("form_send")}
             </button>
           </form>
 

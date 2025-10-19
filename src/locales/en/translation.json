@@ -1,0 +1,88 @@
+{
+    "service": "Service",
+    
+    "service_filling_title": "Filling",
+    "service_filling_description": "A procedure to remove tooth decay and restore the tooth with a filling material, protecting it from further damage.",
+  
+    "service_teeth_cleaning_title": "Teeth Cleaning",
+    "service_teeth_cleaning_description": "Professional cleaning of teeth to remove plaque, tartar, and stains, improving oral health and preventing gum disease.",
+  
+    "service_teeth_whitening_title": "Teeth Whitening",
+    "service_teeth_whitening_description": "A cosmetic procedure to lighten teeth color by removing stains and discoloration for a brighter smile.",
+  
+    "service_e_max_veneers_title": "Emax Veneers",
+    "service_e_max_veneers_description": "Thin custom-made porcelain shells bonded to teeth to improve aesthetics, shape, and alignment.",
+  
+    "service_e_max_crown_title": "Emax Crown",
+    "service_e_max_crown_description": "A durable and natural-looking crown placed over a damaged or decayed tooth to restore function and appearance.",
+  
+    "service_gingivoplasty_title": "Gingivoplasty",
+    "service_gingivoplasty_description": "Reshaping and contouring of the gum tissue to improve aesthetics and health of the gum line.",
+  
+    "service_botox_title": "Botox",
+    "service_botox_description": "Injection of botulinum toxin to relax facial muscles, reduce wrinkles, and improve appearance.",
+  
+    "service_zirconia_crown_on_tooth_title": "Zirconia Crown on Tooth",
+    "service_zirconia_crown_on_tooth_description": "A strong and aesthetic zirconia crown placed on a natural tooth to restore structure and function.",
+  
+    "service_zirconia_crown_on_implant_title": "Zirconia Crown on Implant",
+    "service_zirconia_crown_on_implant_description": "A zirconia crown attached to a dental implant, restoring tooth function and appearance.",
+  
+    "service_bone_grafting_title": "Bone Grafting",
+    "service_bone_grafting_description": "A surgical procedure to restore or augment jawbone volume to support implants or other dental restorations.",
+  
+    "service_sinus_lifting_title": "Sinus Lifting",
+    "service_sinus_lifting_description": "A procedure to elevate the sinus membrane and add bone graft material to prepare for implant placement.",
+  
+    "service_piezolifting_title": "Piezolifting",
+    "service_piezolifting_description": "Ultrasonic bone lifting procedure to increase jawbone volume and prepare the site for dental implants.",
+  
+    "service_root_canal_treatment_title": "Root Canal Treatment",
+    "service_root_canal_treatment_description": "Treatment to remove infected or damaged pulp inside the tooth and restore it with a filling or crown.",
+  
+    "service_tooth_extraction_title": "Tooth Extraction",
+    "service_tooth_extraction_description": "Removal of a damaged or decayed tooth to prevent further oral health issues.",
+  
+    "service_wisdom_tooth_extraction_title": "Wisdom Tooth Extraction",
+    "service_wisdom_tooth_extraction_description": "Surgical removal of one or more impacted or problematic wisdom teeth.",
+  
+    "service_cystectomy_title": "Cystectomy",
+    "service_cystectomy_description": "Surgical removal of a cyst from the jaw or oral tissue to prevent infection or complications.",
+  
+    "service_apicoectomy_title": "Apicoectomy",
+    "service_apicoectomy_description": "Surgical procedure removing the tip of a tooth root and surrounding infection to save the tooth.",
+  
+    "service_flap_surgery_title": "Flap Surgery",
+    "service_flap_surgery_description": "Periodontal surgery to lift gums, clean infected areas, and promote reattachment for healthy gums.",
+  
+    "service_curottage_title": "Curettage",
+    "service_curottage_description": "Removal of infected gum tissue and cleaning of tooth roots to treat periodontal disease.",
+  
+    "service_braces_title": "Braces",
+    "service_braces_description": "Orthodontic treatment using brackets and wires to align and straighten teeth over time.",
+  
+    "service_aligners_title": "Aligners",
+    "service_aligners_description": "Clear removable trays that gradually move teeth to correct alignment and bite.",
+  
+    "service_night_guard_title": "Night Guard",
+    "service_night_guard_description": "Custom appliance worn at night to protect teeth from grinding and clenching during sleep.",
+
+    "form_tab": "Booking",
+    "form_title": "Online appointment form",
+    "form_label_name": "Name",
+    "form_label_phone": "Phone",
+    "form_label_email": "Email",
+    "form_label_service": "Service",
+    "form_label_message": "Your message",
+    "form_send": "Send",
+    "form_message_placeholder": "Write your message...",
+    "form_name_placeholder": "Enter your name",
+    "form_phone_placeholder": "Enter your phone",
+    "form_email_placeholder": "Enter your email",
+    "form_service_service": "Select a service",
+
+    "results_tab": "Results",
+    "results_title": "See the transformation",
+    "results_button": "I want same like that"
+  }
+  
