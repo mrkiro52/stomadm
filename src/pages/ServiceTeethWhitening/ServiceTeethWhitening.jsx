@@ -99,28 +99,28 @@ export default function ServiceTeethWhitening() {
                       }}
                     >
                         <span>{t("service_teeth_whitening_title")}</span>
-                        <button>Book a Consultation now</button>
+                        <button>{t("book_a_consultation")}</button>
                     </div>
                 </div>
             </div>
             <div className="Description">
                 <div className="wrapper">
                     <div className="tab">
-                        <span>Description</span>
+                        <span>{t("description")}</span>
                     </div>
-                    <h2>A smile that changes<br/><span>everything</span></h2>
+                    <h2>{t("service_teeth_whitening_shorttitle")}</h2>
                     <div className="block">
                         <div className="row">
-                            <span>Why do we use it?</span>
-                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                            <span>{t("service_teeth_whitening_question1")}</span>
+                            <p>{t("service_teeth_whitening_answer1")}</p>
                         </div>
                         <div className="row">
-                            <span>What is Lorem Ipsum?</span>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            <span>{t("service_teeth_whitening_question2")}</span>
+                            <p>{t("service_teeth_whitening_answer2")}</p>
                         </div>
                         <div className="row">
-                            <span>Where can I get some?</span>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. <br/><br/>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. <br/><br/>All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.</p>
+                            <span>{t("service_teeth_whitening_question3")}</span>
+                            <p>{t("service_teeth_whitening_answer3")}</p>
                         </div>
                     </div>
                 </div>
