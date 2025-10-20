@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/stomadm/static/css/main.c545b4e1.css",
-    "main.js": "/stomadm/static/js/main.033d218e.js",
+    "main.js": "/stomadm/static/js/main.a75650e0.js",
     "static/js/453.d7b3ff8f.chunk.js": "/stomadm/static/js/453.d7b3ff8f.chunk.js",
-    "static/media/smile.png": "/stomadm/static/media/smile.074ccbdd92324b40becd.png",
     "static/media/orangeGirl.png": "/stomadm/static/media/orangeGirl.9ef0e1c3eb882692d6fb.png",
     "static/media/lildoctor.png": "/stomadm/static/media/lildoctor.cf598f355cbffd0452cc.png",
     "static/media/girlform.png": "/stomadm/static/media/girlform.337f486535e0856572ae.png",
     "static/media/gallery3.jpg": "/stomadm/static/media/gallery3.dc417cd17947912e46a2.jpg",
+    "static/media/smile.png": "/stomadm/static/media/smile.074ccbdd92324b40becd.png",
     "static/media/lilzub.png": "/stomadm/static/media/lilzub.b4ad4cc69607b2018c80.png",
     "static/media/gallery8.jpg": "/stomadm/static/media/gallery8.d8317b26594782d76e35.jpg",
     "static/media/clinic.jpg": "/stomadm/static/media/clinic.40a6b37c0eb0fad03dd2.jpg",
@@ -50,11 +50,11 @@
     "static/media/icon3.svg": "/stomadm/static/media/icon3.f135450d4be9621811b0742d3e471471.svg",
     "index.html": "/stomadm/index.html",
     "main.c545b4e1.css.map": "/stomadm/static/css/main.c545b4e1.css.map",
-    "main.033d218e.js.map": "/stomadm/static/js/main.033d218e.js.map",
+    "main.a75650e0.js.map": "/stomadm/static/js/main.a75650e0.js.map",
     "453.d7b3ff8f.chunk.js.map": "/stomadm/static/js/453.d7b3ff8f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c545b4e1.css",
-    "static/js/main.033d218e.js"
+    "static/js/main.a75650e0.js"
   ]
 }
