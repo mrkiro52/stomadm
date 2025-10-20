@@ -239,5 +239,17 @@
 
   "results_tab": "Sonuçlar",
   "results_title": "Dönüşümü görün",
-  "results_button": "Aynısını istiyorum"
+  "results_button": "Aynısını istiyorum",
+
+  "header_link_services": "Hizmetler",
+  "header_link_aboutus": "Hakkımızda",
+  "header_link_doctors": "Doktorlar",
+  "header_link_reviews": "Yorumlar",
+  "header_link_gallery": "Galeri",
+  "header_link_contacts": "İletişim",
+
+  "header_topics_cosmetic_dentistry": "Kozmetik Diş Hekimliği",
+  "header_topics_dental_implants": "Diş İmplantları",
+  "header_topics_specialty_treatments": "Özel Tedaviler",
+  "header_topics_orthodontics": "Ortodonti"
 }

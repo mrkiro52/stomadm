@@ -239,6 +239,18 @@
 
     "results_tab": "Results",
     "results_title": "See the transformation",
-    "results_button": "I want same like that"
+    "results_button": "I want same like that",
+
+    "header_link_services": "Services",
+    "header_link_aboutus": "About us",
+    "header_link_doctors": "Doctors",
+    "header_link_reviews": "Reviews",
+    "header_link_gallery": "Gallery",
+    "header_link_contacts": "Contacts",
+
+    "header_topics_cosmetic_dentistry": "Cosmetic Dentistry",
+    "header_topics_dental_implants": "Dental Implants",
+    "header_topics_specialty_treatments": "Specialty Treatments",
+    "header_topics_orthodontics": "Orthodontics"
   }
   

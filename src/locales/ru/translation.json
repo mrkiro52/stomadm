@@ -239,5 +239,17 @@
 
   "results_tab": "Результаты",
   "results_title": "Посмотрите на преображение",
-  "results_button": "Хочу такой же результат"
+  "results_button": "Хочу такой же результат",
+
+  "header_link_services": "Услуги",
+  "header_link_aboutus": "О нас",
+  "header_link_doctors": "Врачи",
+  "header_link_reviews": "Отзывы",
+  "header_link_gallery": "Галерея",
+  "header_link_contacts": "Контакты",
+
+  "header_topics_cosmetic_dentistry": "Эстетическая стоматология",
+  "header_topics_dental_implants": "Зубные имплантаты",
+  "header_topics_specialty_treatments": "Специализированные процедуры",
+  "header_topics_orthodontics": "Ортодонтия"
 }
