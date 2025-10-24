@@ -63,6 +63,7 @@ import ServiceCurottage from "./pages/ServiceCurottage/ServiceCurottage";
 import ServiceBraces from "./pages/ServiceBraces/ServiceBraces";
 import ServiceAligners from "./pages/ServiceAligners/ServiceAligners";
 import ServiceNightGuard from "./pages/ServiceNightGuard/ServiceNightGuard";
+import Services from "./pages/Services/Services";
 
 function App() {
   return (
@@ -75,7 +76,8 @@ function App() {
           <Route path="/doctors" element={<Doctors />} />
           <Route path="/reviews" element={<Reviews />} />
           <Route path="/gallery" element={<Gallery />} />
-          
+          <Route path="/services" element={<Services />} />
+
           <Route path="/service/filling" element={<ServiceFilling />} />
           <Route path="/service/teeth-cleaning" element={<ServiceTeethCleaning />} />
           <Route path="/service/teeth-whitening" element={<ServiceTeethWhitening />} />

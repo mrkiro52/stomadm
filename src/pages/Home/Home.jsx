@@ -68,27 +68,27 @@ export default function Home() {
   const journeyData = [
     {
       image: icon1,
-      title: "Meet & ",
-      spanTitle: "Transfer",
-      text: "We welcome you at the airport and arrange a comfortable transfer to the city.",
+      title: t("journey_step1_title"),
+      spanTitle: t("journey_step1_span"),
+      text: t("journey_step1_text"),
     },
     {
       image: icon2,
-      title: "Hotel ",
-      spanTitle: "Accommodation",
-      text: "We assist with booking and check-in to make you feel at home.",
+      title: t("journey_step2_title"),
+      spanTitle: t("journey_step2_span"),
+      text: t("journey_step2_text"),
     },
     {
       image: icon3,
-      title: "Guidance & ",
-      spanTitle: "Treatment",
-      text: "Your personal coordinator will accompany you during all clinic visits, ensuring comfort and translation if needed.",
+      title: t("journey_step3_title"),
+      spanTitle: t("journey_step3_span"),
+      text: t("journey_step3_text"),
     },
     {
       image: icon4,
-      title: "Post-Treatment  ",
-      spanTitle: "Support",
-      text: "We stay in touch, provide recommendations, and monitor your recovery process.",
+      title: t("journey_step4_title"),
+      spanTitle: t("journey_step4_span"),
+      text: t("journey_step4_text"),
     }
   ]
   return (
@@ -96,10 +96,10 @@ export default function Home() {
       <Header />
       <div className="Startscreen">
         <div className="wrapper">
-          <h2>Title</h2>
+          <h2>{t("home_title")}</h2>
           <div className="Startscreen_subtextBlock">
             <img src={arrow} alt="arrow" />
-            <p>A modern dental clinic in Istanbul, where patients from different countries receive high-quality treatment with support in their native language.</p>
+            <p>{t("home_subtitle")}</p>
           </div>
           <div className="Startscreen_bottom">
             <div className="Startscreen_blocks">
@@ -108,17 +108,17 @@ export default function Home() {
                   <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="#020045"/>
                   <path d="M18 15L23.0781 19.2318C23.5579 19.6316 23.5579 20.3684 23.0781 20.7682L18 25" stroke="#020045" stroke-linecap="round"/>
                 </svg>
-                <span>Discount 5% for Pensioners</span>
+                <span>{t("home_promo1")}</span>
               </div>
               <div className="Startscreen_blocks__block block2">
                 <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="#ffffff"/>
                   <path d="M18 15L23.0781 19.2318C23.5579 19.6316 23.5579 20.3684 23.0781 20.7682L18 25" stroke="#ffffff" stroke-linecap="round"/>
                 </svg>
-                <span>Discount 5% for Pensioners</span>
+                <span>{t("home_promo2")}</span>
               </div>
             </div>
-            <button className="Startscreen_button">Get new smile</button>
+            <button className="Startscreen_button">{t("home_button")}</button>
           </div>
           <img src={girl} alt="smile" />
         </div>
@@ -154,9 +154,9 @@ export default function Home() {
         <div className="wrapper">
           <div className="topBlock">
             <div className="tab">
-              <span>Сustomer journey</span>
+              <span>{t("journey_tab")}</span>
             </div>
-            <h2>Your Journey to a Perfect Smile <br/>— <span>in 4 Steps</span></h2>
+            <h2>{t("journey_title")} <br/>— <span>{t("journey_subtitle")}</span></h2>
           </div>
           <div className="bottomBlock">
             {journeyData.map((element, index) => (
@@ -165,7 +165,7 @@ export default function Home() {
                   <img src={element.image} alt="icon" />
                 </div>
                 <div className="texts">
-                  <h3 style={index % 2 === 0 ? {color: 'black'} : {color: 'white'}}>{element.title}<span>{element.spanTitle}</span></h3>
+                  <h3 style={index % 2 === 0 ? {color: 'black'} : {color: 'white'}}>{element.title} {element.spanTitle}</h3>
                   <p style={index % 2 === 0 ? {color: 'black'} : {color: 'white'}}>{element.text}</p>
                 </div>
               </div>

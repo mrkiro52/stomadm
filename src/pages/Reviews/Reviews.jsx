@@ -2,6 +2,7 @@ import "./Reviews.scss";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import React from "react";
+import { useTranslation } from 'react-i18next';
 import arrow from './images/arrow.svg';
 import girl from './images/smile.png';
 import icon1 from './images/icon1.svg';
@@ -29,16 +30,15 @@ import VirtualSwiper from "../../components/VirtualSwiper/VirtualSwiper";
 import Results from "../../components/Results/Results";
 
 export default function Reviews() {
+  const { t } = useTranslation();
   localStorage.setItem("page", "reviews");
   const slides = [
-    "Тбилиси, Грузия",
-    "Батуми, Грузия",
-    "Москва, Россия",
-    "Ереван, Армения",
-    "Тбилиси, Грузия",
-    "Батуми, Грузия",
-    "Москва, Россия",
-    "Ереван, Армения",
+    t("reviews_review_1"),
+    t("reviews_review_2"),
+    t("reviews_review_3"),
+    t("reviews_review_4"),
+    t("reviews_review_5"),
+    t("reviews_review_6"),
   ];
   const [resultsPage, setResultsPage] = useState(0);
   const images = [
@@ -67,10 +67,10 @@ export default function Reviews() {
     <div className="Reviews">
       <Header />
       <header className="reviews-header">
-        <span className="tag">Reviews</span>
+        <span className="tag">{t("reviews_tag")}</span>
         <h1 className="title">
-          What people
-          <span className="subtitle"> write about us?</span>
+          {t("reviews_title")}
+          <span className="subtitle">{t("reviews_subtitle")}</span>
         </h1>
       </header>
       <VirtualSwiper items={slides} slidesPerView={4} />
@@ -78,9 +78,9 @@ export default function Reviews() {
         <div className="wrapper">
             <div className="topBlock">
                 <div className="tab">
-                    <span>Videos</span>
+                    <span>{t("reviews_videos_tag")}</span>
                 </div>
-                <h2>What people <span>say about us?</span></h2>
+                <h2>{t("reviews_videos_title")}<span>{t("reviews_videos_title_span")}</span></h2>
           </div>
           <div className="bottomBlock">
             <a

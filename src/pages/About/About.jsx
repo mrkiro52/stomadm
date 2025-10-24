@@ -1,6 +1,7 @@
 import './About.scss';
 import Header from '../../components/Header/Header';
 import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider';
+import { useTranslation } from 'react-i18next';
 import before1 from '../Home/images/before1.png';
 import after1 from '../Home/images/after1.png';
 import before2 from '../Home/images/before2.png';
@@ -23,6 +24,7 @@ import logo from './images/logoIstanbul.png';
 import Results from '../../components/Results/Results';
 
 export default function About() {
+    const { t } = useTranslation();
     localStorage.setItem('page', 'about');
 
     const images = [
@@ -50,24 +52,24 @@ export default function About() {
 
     const journeyData = [
         {
-          title: "Excellence in ",
-          spanTitle: "Care",
-          text: "Delivering outstanding patient care that exceeds international standards",
+          title: t("about_journey_1_title"),
+          spanTitle: t("about_journey_1_span"),
+          text: t("about_journey_1_text"),
         },
         {
-          title: "Trust &  ",
-          spanTitle: "Relationships",
-          text: "Building trust and lasting relationships with our patients.",
+          title: t("about_journey_2_title"),
+          spanTitle: t("about_journey_2_span"),
+          text: t("about_journey_2_text"),
         },
         {
-          title: "Innovation in ",
-          spanTitle: "Dentistry",
-          text: "Continuously innovating to provide the best dental solutions.",
+          title: t("about_journey_3_title"),
+          spanTitle: t("about_journey_3_span"),
+          text: t("about_journey_3_text"),
         },
         {
-          title: "Culture & ",
-          spanTitle: "Compassion",
-          text: "Fostering a culture of teamwork compassion and growth within our organization.",
+          title: t("about_journey_4_title"),
+          spanTitle: t("about_journey_4_span"),
+          text: t("about_journey_4_text"),
         }
     ]
 
@@ -79,12 +81,12 @@ export default function About() {
                     <div className="Startscreen_container">
                     {/* Левая часть */}
                     <div className="Startscreen_left">
-                        <h2>About us.</h2>
+                        <h2>{t("about_title")}</h2>
 
                         <div className="Startscreen_subtextBlock">
                         <img src={arrow} alt="arrow" />
                         <p>
-                            A modern dental clinic in Istanbul, where patients from different countries receive high-quality treatment with support in their native language.
+                            {t("about_subtitle")}
                         </p>
                         </div>
 
@@ -100,9 +102,9 @@ export default function About() {
                 <div className="wrapper">
                 <div className="topBlock">
                     <div className="tab">
-                    <span>Our mission</span>
+                    <span>{t("about_mission_tab")}</span>
                     </div>
-                    <h2>Creating healthy,<br/>confident smiles<br/><span>every day</span></h2>
+                    <h2>{t("about_mission_title")}<br/>{t("about_mission_title_line2")}<br/><span>{t("about_mission_title_span")}</span></h2>
                 </div>
                 <div className="bottomBlock">
                     {journeyData.map((element, index) => (
@@ -123,9 +125,9 @@ export default function About() {
                 <div className="wrapper">
                 <div className="topBlock">
                     <div className="tab">
-                    <span>Advantages</span>
+                    <span>{t("about_advantages_tab")}</span>
                     </div>
-                    <h2>Why people <span>choose us?</span></h2>
+                    <h2>{t("about_advantages_title")}<span>{t("about_advantages_title_span")}</span></h2>
                 </div>
                 <div className="bottomGrid">
                     <div className="row">
@@ -133,16 +135,16 @@ export default function About() {
                         {/* girls image background */}
                     </div>
                     <div className="block">
-                        <div className="block_el">01<br/>Accredited by<br/>the Ministry of Health</div>
+                        <div className="block_el">01<br/>{t("about_advantage_1")}</div>
                         <div className="block_el doctors">{/* doctors little image */}</div>
                         <div className="block_el empty"></div>
-                        <div className="block_el">02<br/>High Google rating</div>
+                        <div className="block_el">02<br/>{t("about_advantage_2")}</div>
                     </div>
                     </div>
                     <div className="row">
                     <div className="block">
                         <div className="block_el empty"></div>
-                        <div className="block_el">03<br/>Top-rated<br/>on TripAdvisor</div>
+                        <div className="block_el">03<br/>{t("about_advantage_3")}</div>
                         <div className="block_el empty"></div>
                         <div className="block_el empty"></div>
                     </div>
@@ -150,7 +152,7 @@ export default function About() {
                         <div className="block_el zub">{/* teeth little image */}</div>
                         <div className="block_el empty"></div>
                         <div className="block_el empty"></div>
-                        <div className="block_el">04<br/>Sertified Specialists</div>
+                        <div className="block_el">04<br/>{t("about_advantage_4")}</div>
                     </div>
                     </div>
                 </div>
@@ -161,24 +163,24 @@ export default function About() {
                 <div className="wrapper">
                     <div className="topBlock">
                         <div className="tab">
-                        <span>Advantages</span>
+                        <span>{t("about_recognized_tab")}</span>
                         </div>
-                        <h2>Why people <span>choose us?</span></h2>
+                        <h2>{t("about_recognized_title")}<span>{t("about_recognized_title_span")}</span></h2>
                     </div>
                     <div className="bottomBlock">
                         <img src={logo} alt="logo" />
                         <div className="text">
                             <p>
-                                Our clinic operates under full certification and official license issued by the Turkish Ministry of Health — T.C. Sağlık Bakanlığı, Istanbul. This means that all our medical processes, hygiene standards, and patient care systems strictly comply with the legal and professional requirements of the Republic of Türkiye.
+                                {t("about_recognized_p1")}
                             </p>
                             <p>
-                                We are proud to meet international standards of dental excellence, ensuring that every patient receives treatment in a fully accredited and medically controlled environment. From modern sterilization protocols to the use of certified dental materials — every aspect of our work passes regular inspections and quality audits.
+                                {t("about_recognized_p2")}
                             </p>
                             <p>
-                                Each of our doctors holds internationally recognized certificates confirming their continuous education and advanced training in leading dental centers across Europe. We constantly invest in professional development, technology, and innovation to provide world-class results with maximum safety and comfort for our patients.
+                                {t("about_recognized_p3")}
                             </p>
                             <p>
-                            Each of our doctors holds internationally recognized certificates confirming their continuous education and advanced training in leading dental centers across Europe. We constantly invest in professional development, technology, and innovation to provide world-class results with maximum safety and comfort for our patients.
+                                {t("about_recognized_p4")}
                             </p>
                         </div>
                     </div>

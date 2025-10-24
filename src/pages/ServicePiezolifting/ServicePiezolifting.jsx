@@ -148,42 +148,7 @@ export default function ServicePiezolifting() {
                 </div>
                 </div>
             </div>
-            <div className="Prices">
-                <div className="wrapper">
-                    <div className="topBlock">
-                        <div className="tab">
-                            <span>Prices</span>
-                        </div>
-                        <h2>A Beautiful Smile<br/><span>Is Priceless</span></h2>
-                    </div>
-                    <div className="bottomBlock">
-                        <div className="block">
-                            <div className="circle">
-                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.715729 29.2843L29 1M29 1V21M29 1H9" stroke="#3A281E"/>
-                            </svg>
-                            </div>
-                            <span>Standart Package</span>
-                            <div className="bottom">
-                                <p>Delivering outstanding patient care that exceeds international standards</p>
-                                <span>[from 900$]</span>
-                            </div>
-                        </div>
-                        <div className="block">
-                            <div className="circle">
-                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.715729 29.2843L29 1M29 1V21M29 1H9" stroke="#3A281E"/>
-                            </svg>
-                            </div>
-                            <span>Premium Package</span>
-                            <div className="bottom">
-                                <p>Delivering outstanding patient care that exceeds international standards. Delivering outstanding patient care that exceeds international standards</p>
-                                <span>[from 1500$]</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
             <Results/>
             <Form/>
             <Footer/>

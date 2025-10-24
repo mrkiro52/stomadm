@@ -1,83 +1,83 @@
 import "./Footer.scss";
 import logo from "./images/logo_white.png";
+import { useTranslation } from "react-i18next";
 
 export default function Footer() {
+  const { t } = useTranslation();
   return (
     <footer className="Footer">
       <div className="wrapper">
         <div className="Footer_info_wrapper">
           <img src={logo} alt="Logo" className="Footer_logo" />
           <p className="Footer_address">
-            Address: <br />
-            Esentepe, Büyükdere Cd. <br />
-            No: 112B, 34394 Şişli/ <br />
-            İstanbul, Türkiye
+            {t("footer_address_label")} <br />
+            {t("footer_address_text")}
           </p>
         </div>
         <div className="Footer_menu_wrapper">
           <div className="Footer_list">
-            <h4 className="Footer_title">Menu</h4>
-            <a href="#">Customer journey</a>
-            <a href="#">Results</a>
-            <a href="#">Advantages</a>
-            <a href="#">Doctors</a>
-            <a href="#">Reviews</a>
+            <h4 className="Footer_title">{t("footer_menu_title")}</h4>
+            <a href="#">{t("footer_menu_customer_journey")}</a>
+            <a href="#">{t("footer_menu_results")}</a>
+            <a href="#">{t("footer_menu_advantages")}</a>
+            <a href="#">{t("footer_menu_doctors")}</a>
+            <a href="#">{t("footer_menu_reviews")}</a>
           </div>
 
           <div className="Footer_list">
-            <h4 className="Footer_title">Cosmetic Dentistry</h4>
-            <a href="#">Filling</a>
-            <a href="#">Teeth Cleaning</a>
-            <a href="#">Teeth Whitening</a>
-            <a href="#">E-max Veneers</a>
-            <a href="#">E-max Crown</a>
-            <a href="#">Gingivoplasty</a>
-            <a href="#">Botox</a>
+            <h4 className="Footer_title">{t("footer_cosmetic_title")}</h4>
+            <a href="#">{t("footer_filling")}</a>
+            <a href="#">{t("footer_teeth_cleaning")}</a>
+            <a href="#">{t("footer_teeth_whitening")}</a>
+            <a href="#">{t("footer_emax_veneers")}</a>
+            <a href="#">{t("footer_emax_crown")}</a>
+            <a href="#">{t("footer_gingivoplasty")}</a>
+            <a href="#">{t("footer_botox")}</a>
           </div>
 
           <div className="Footer_list">
-            <h4 className="Footer_title">Dental Implants</h4>
-            <a href="#">Zirconia Crown on Tooth</a>
-            <a href="#">Zirconia Crown on Implant</a>
-            <a href="#">Bone Grafting</a>
-            <a href="#">Sinus Lifting</a>
-            <a href="#">Piezolifting</a>
+            <h4 className="Footer_title">{t("footer_implants_title")}</h4>
+            <a href="#">{t("footer_zirconia_tooth")}</a>
+            <a href="#">{t("footer_zirconia_implant")}</a>
+            <a href="#">{t("footer_bone_grafting")}</a>
+            <a href="#">{t("footer_sinus_lifting")}</a>
+            <a href="#">{t("footer_piezolifting")}</a>
           </div>
 
           <div className="Footer_list">
-            <h4 className="Footer_title">Specialty Treatments</h4>
-            <a href="#">Root Canal Treatment</a>
-            <a href="#">Tooth Extraction</a>
-            <a href="#">Wisdom Tooth Extraction</a>
-            <a href="#">Cystectomy</a>
-            <a href="#">Apicoectomy</a>
-            <a href="#">Flap Surgery</a>
-            <a href="#">Curettage</a>
+            <h4 className="Footer_title">{t("footer_specialty_title")}</h4>
+            <a href="#">{t("footer_root_canal")}</a>
+            <a href="#">{t("footer_tooth_extraction")}</a>
+            <a href="#">{t("footer_wisdom_extraction")}</a>
+            <a href="#">{t("footer_cystectomy")}</a>
+            <a href="#">{t("footer_apicoectomy")}</a>
+            <a href="#">{t("footer_flap_surgery")}</a>
+            <a href="#">{t("footer_curettage")}</a>
           </div>
 
           <div className="Footer_list">
-            <h4 className="Footer_title">Orthodontics</h4>
-            <a href="#">Braces</a>
-            <a href="#">Aligners</a>
-            <a href="#">Night Guard</a>
+            <h4 className="Footer_title">{t("footer_orthodontics_title")}</h4>
+            <a href="#">{t("footer_braces")}</a>
+            <a href="#">{t("footer_aligners")}</a>
+            <a href="#">{t("footer_night_guard")}</a>
           </div>
         </div>
       </div>
       <div className="Footer_bottom">
         <div className="Footer_bottom_wrapper">
-          <p>© 2025 All rights reserved.</p>
+          <p>{t("footer_rights")}</p>
           <div className="Footer_socials">
             <a href="#" target="_blank" rel="noopener noreferrer">
-              Instagram: <span>@dismimarisi</span>
+              {t("footer_instagram")} <span>@dismimarisi</span>
             </a>
             <a href="#" target="_blank" rel="noopener noreferrer">
-              Facebook: <span>@dismimarisi</span>
+              {t("footer_facebook")} <span>@dismimarisi</span>
             </a>
             <a href="#" target="_blank" rel="noopener noreferrer">
-              TikTok: <span>@dismimarisi</span>
+              {t("footer_tiktok")} <span>@dismimarisi</span>
             </a>
             <a href="#" target="_blank" rel="noopener noreferrer">
-              VK: <span>@dismimarisi</span>
+              {t("footer_vk")} <span>@dismimarisi</span>
             </a>
           </div>
         </div>

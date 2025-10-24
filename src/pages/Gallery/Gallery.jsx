@@ -2,6 +2,7 @@ import React from "react";
 import "./Gallery.scss";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
+import { useTranslation } from 'react-i18next';
 
 // Статический импорт всех изображений
 import gallery1 from "./images/gallery1.jpg";
@@ -35,15 +36,16 @@ const images = [
 ];
 
 export default function Gallery() {
+  const { t } = useTranslation();
   localStorage.setItem("page", "gallery");
   return (
     <section className="gallery">
       <Header />
       <header className="gallery-header">
-        <span className="tag">Gallery</span>
+        <span className="tag">{t("gallery_tag")}</span>
         <h1 className="title">
-          Through the eyes
-          <span className="subtitle"> of the client</span>
+          {t("gallery_title")}
+          <span className="subtitle">{t("gallery_subtitle")}</span>
         </h1>
       </header>
 

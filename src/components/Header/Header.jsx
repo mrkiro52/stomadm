@@ -35,7 +35,7 @@ export default function Header() {
 
     // Navigation links with translated labels
     const links = [
-        { path: '/service', label: t('header_link_services'), key: 'services', hasArrow: true },
+        { path: '/services', label: t('header_link_services'), key: 'services', hasArrow: true },
         { path: '/about', label: t('header_link_aboutus'), key: 'about' },
         { path: '/doctors', label: t('header_link_doctors'), key: 'doctors' },
         { path: '/reviews', label: t('header_link_reviews'), key: 'reviews' },
@@ -142,20 +142,15 @@ export default function Header() {
                         {links.map(link => {
                             if (link.key === 'services') {
                                 return (
-                                    <button
+                                    <Link
                                         key={link.key}
-                                        type="button"
-                                        className="Header_links__link services"
-                                        onClick={() => {
-                                            setMenuLayered(!menuLayered);
-                                            setTimeout(() => setShowLayer(!menuLayered), 50);
-                                        }}
-                                        aria-label={t('header_link_services')}
-                                        aria-expanded={menuLayered}
+                                        to={link.path}
+                                        className={`Header_links__link services ${activePage === link.key ? 'selected' : ''}`}
+                                        onClick={() => handleNavigate(link.path, link.key)}
                                     >
                                         <span className="Header_links__inner">
                                             {link.label}
-                                            <svg
+                                            {/* <svg
                                                 width="12"
                                                 height="6"
                                                 viewBox="0 0 12 6"
@@ -171,9 +166,9 @@ export default function Header() {
                                                     d="M11.0037 0.210132C11.2949 0.490332 11.2951 0.944591 11.0037 1.22463L6.25022 5.78987C5.95855 6.07004 5.48578 6.07004 5.19412 5.78987L0.440685 1.22463C0.149194 0.944591 0.149466 0.490332 0.440685 0.210132C0.732351 -0.0700439 1.20609 -0.0700439 1.49776 0.210132L5.72217 4.26812L9.94658 0.210132C10.2382 -0.0700439 10.712 -0.0700439 11.0037 0.210132Z"
                                                     fill="#352100"
                                                 />
-                                            </svg>
+                                            </svg> */}
                                         </span>
-                                    </button>
+                                    </Link>
                                 );
                             }
 
