@@ -22,8 +22,13 @@
 .doctors-block {
   color: #333;
   box-sizing: border-box;
-  padding: 60px 0px;
+  padding: 80px 0px;
+  max-width: 1320px;
   font-family: "Helvetica Neue", sans-serif;
+  @media screen and (max-width: 1380px) {
+    padding: 60px 24px;
+    width: 100%;
+  }
   @media (max-width: 768px) {
     padding: 24px 15px 80px 15px;
   }

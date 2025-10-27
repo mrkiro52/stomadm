@@ -1,4 +1,4 @@
-@import '../../styles/variables';
+@import "../../styles/variables";
 
 .Reviews {
   display: flex;
@@ -11,55 +11,55 @@
     display: flex;
     justify-content: center;
   }
-.Videos {
-  background-color: white;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  & > .wrapper {
+  .Videos {
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    & > .wrapper {
       width: 1320px;
       display: flex;
       flex-direction: column;
       padding: 60px 0px;
       gap: 20px;
       & > .topBlock {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .tab {
+          background-color: rgba(217, 217, 217, 1);
+          padding: 0px 24px;
+          width: max-content;
+          height: 30px;
           display: flex;
-          flex-direction: column;
-          gap: 20px;
-          .tab {
-              background-color: rgba(217, 217, 217, 1);
-              padding: 0px 24px;
-              width: max-content;
-              height: 30px;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              border-radius: 20px;
-              span {
-                  color: $primary;
-                  font-weight: 400;
-                  font-size: 15px;
-                  letter-spacing: -4%;
-              }
-            }
-    
-            h2 {
-              font-size: 64px;
-              font-weight: 500;
-              color: black;
-              line-height: 95%;
-              letter-spacing: -4%;
-              span {
-                  font-family: "Arapey", serif;
-                  font-style: italic;
-              }
-            }
+          justify-content: center;
+          align-items: center;
+          border-radius: 20px;
+          span {
+            color: $primary;
+            font-weight: 400;
+            font-size: 15px;
+            letter-spacing: -4%;
+          }
+        }
+
+        h2 {
+          font-size: 64px;
+          font-weight: 500;
+          color: black;
+          line-height: 95%;
+          letter-spacing: -4%;
+          span {
+            font-family: "Arapey", serif;
+            font-style: italic;
+          }
+        }
       }
       & > .bottomBlock {
         display: flex;
         gap: 20px;
         width: 100%;
-      
+
         & > .block {
           width: 25%;
           border-radius: 16px;
@@ -71,11 +71,11 @@
           overflow: hidden;
           cursor: pointer;
           transition: transform 0.3s ease;
-      
+
           &:hover {
             transform: scale(1.02);
           }
-      
+
           .overlay {
             position: absolute;
             top: 50%;
@@ -87,16 +87,16 @@
             pointer-events: none;
           }
         }
-      }      
+      }
+    }
   }
-}
 }
 .reviews-header {
   text-align: left;
   margin-bottom: -40px;
   max-width: 1320px;
   width: 100%;
-  padding-top: 130px;
+  padding-top: 80px;
   @media (max-width: 768px) {
     margin-bottom: -40px;
   }

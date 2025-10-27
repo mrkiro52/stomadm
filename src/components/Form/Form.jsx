@@ -104,7 +104,9 @@ export default function Form() {
             </div>
 
             <div className="textarea-group">
-              <label style={{marginBottom: '8px', fontWeight: 500}}>{t("form_label_message")}</label>
+              <label style={{ marginBottom: "8px", fontWeight: 500 }}>
+                {t("form_label_message")}
+              </label>
               <textarea
                 name="message"
                 value={formData.message}
@@ -112,7 +114,9 @@ export default function Form() {
                 placeholder={t("form_message_placeholder")}
                 maxLength="300"
               />
-              <span className="char-count">[{formData.message.length}/300]</span>
+              <span className="char-count">
+                [{formData.message.length}/300]
+              </span>
             </div>
 
             <button type="submit" className="send-btn">
@@ -125,9 +129,9 @@ export default function Form() {
               <span>Instagram:</span>
               <p>@dismimarisi</p>
             </div>
-            <div className="info-block" style={{alignItems: 'flex-end'}}>
+            <div className="info-block" style={{ alignItems: "flex-end" }}>
               <span>Address:</span>
-              <p style={{textAlign: 'end'}}>
+              <p style={{ textAlign: "end" }}>
                 Esentepe, Büyükdere Cd. No: 112B, 34394 Şişli/İstanbul, Türkiye
               </p>
             </div>
