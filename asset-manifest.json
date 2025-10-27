@@ -1,10 +1,22 @@
 {
   "files": {
-    "main.css": "/stomadm/static/css/main.c545b4e1.css",
-    "main.js": "/stomadm/static/js/main.833274c2.js",
+    "main.css": "/stomadm/static/css/main.4e794dc4.css",
+    "main.js": "/stomadm/static/js/main.567e961e.js",
     "static/js/453.d7b3ff8f.chunk.js": "/stomadm/static/js/453.d7b3ff8f.chunk.js",
+    "static/media/after2.jpg": "/stomadm/static/media/after2.21ab77f32e0dd56c059d.jpg",
+    "static/media/before2.jpg": "/stomadm/static/media/before2.cc8421ab7b000caba1ad.jpg",
+    "static/media/before6.jpg": "/stomadm/static/media/before6.b062c534cc6f14dc2fbc.jpg",
+    "static/media/after4.jpg": "/stomadm/static/media/after4.6c057439efe4f9013c5d.jpg",
+    "static/media/before5.jpg": "/stomadm/static/media/before5.b8742c79c2c54d9b4171.jpg",
     "static/media/orangeGirl.png": "/stomadm/static/media/orangeGirl.9ef0e1c3eb882692d6fb.png",
+    "static/media/before4.jpg": "/stomadm/static/media/before4.f187ba8191fc757aeb13.jpg",
+    "static/media/after6.jpg": "/stomadm/static/media/after6.be75dd7df7acd0e96b17.jpg",
     "static/media/lildoctor.png": "/stomadm/static/media/lildoctor.cf598f355cbffd0452cc.png",
+    "static/media/after5.jpg": "/stomadm/static/media/after5.61fc3b6b5f1e5520ee94.jpg",
+    "static/media/after1.jpg": "/stomadm/static/media/after1.ff3ee8e4408eecd9a012.jpg",
+    "static/media/after3.jpg": "/stomadm/static/media/after3.1e1031609d27673e4e76.jpg",
+    "static/media/before1.jpg": "/stomadm/static/media/before1.a716fa527d8165521b06.jpg",
+    "static/media/before3.jpg": "/stomadm/static/media/before3.85067a47ef7fba8d3a49.jpg",
     "static/media/girlform.png": "/stomadm/static/media/girlform.337f486535e0856572ae.png",
     "static/media/gallery3.jpg": "/stomadm/static/media/gallery3.dc417cd17947912e46a2.jpg",
     "static/media/smile.png": "/stomadm/static/media/smile.074ccbdd92324b40becd.png",
@@ -49,12 +61,12 @@
     "static/media/arrow.svg": "/stomadm/static/media/arrow.37915ddfe17f86bd25edc528ef14653b.svg",
     "static/media/icon3.svg": "/stomadm/static/media/icon3.f135450d4be9621811b0742d3e471471.svg",
     "index.html": "/stomadm/index.html",
-    "main.c545b4e1.css.map": "/stomadm/static/css/main.c545b4e1.css.map",
-    "main.833274c2.js.map": "/stomadm/static/js/main.833274c2.js.map",
+    "main.4e794dc4.css.map": "/stomadm/static/css/main.4e794dc4.css.map",
+    "main.567e961e.js.map": "/stomadm/static/js/main.567e961e.js.map",
     "453.d7b3ff8f.chunk.js.map": "/stomadm/static/js/453.d7b3ff8f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c545b4e1.css",
-    "static/js/main.833274c2.js"
+    "static/css/main.4e794dc4.css",
+    "static/js/main.567e961e.js"
   ]
 }
