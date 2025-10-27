@@ -24,26 +24,26 @@ export default function ServiceTeethWhitening() {
     const { t } = useTranslation();
     localStorage.setItem('page', 'service');
     const journeyData = [
-      {
-        title: "Consultation and implant ",
-        spanTitle: "evaluation",
-        text: "The dentist examines the implant site, takes imaging, and ensures the implant is fully integrated and ready to support a zirconia crown.",
-      },
-      {
-        title: "Impression taking and crown ",
-        spanTitle: "design",
-        text: "A digital or physical impression of the implant and surrounding teeth is taken to create a custom zirconia crown that fits perfectly and matches your natural teeth.",
-      },
-      {
-        title: "Crown fabrication and trial ",
-        spanTitle: "fitting",
-        text: "The zirconia crown is manufactured for strength and aesthetics. The dentist checks the fit and bite before final placement to ensure comfort and functionality.",
-      },
-      {
-        title: "Crown placement and final ",
-        spanTitle: "adjustment",
-        text: "The zirconia crown is permanently attached to the implant. Final adjustments are made to shape, bite, and appearance, achieving a natural and durable restoration.",
-      },
+        {
+          title: t("journey_teeth_whitening_step1_title"),
+          spanTitle: t("journey_teeth_whitening_step1_span"),
+          text: t("journey_teeth_whitening_step1_text"),
+        },
+        {
+          title: t("journey_teeth_whitening_step2_title"),
+          spanTitle: t("journey_teeth_whitening_step2_span"),
+          text: t("journey_teeth_whitening_step2_text"),
+        },
+        {
+          title: t("journey_teeth_whitening_step3_title"),
+          spanTitle: t("journey_teeth_whitening_step3_span"),
+          text: t("journey_teeth_whitening_step3_text"),
+        },
+        {
+          title: t("journey_teeth_whitening_step4_title"),
+          spanTitle: t("journey_teeth_whitening_step4_span"),
+          text: t("journey_teeth_whitening_step4_text"),
+        },
     ];
     
     
@@ -129,9 +129,9 @@ export default function ServiceTeethWhitening() {
                 <div className="wrapper">
                 <div className="topBlock">
                     <div className="tab">
-                    <span>Our Process</span>
+                    <span>{t("our_process")}</span>
                     </div>
-                    <h2>Smile Transformation<br/><span>Journey</span></h2>
+                    <h2>{t("journey_teeth_whitening_title")}</h2>
                 </div>
                 <div className="bottomBlock">
                     {journeyData.map((element, index) => (
@@ -140,7 +140,7 @@ export default function ServiceTeethWhitening() {
                             <span>{index + 1}</span>
                         </div>
                         <div className="texts">
-                            <h3 style={{color: 'black'}}>{element.title}<span>{element.spanTitle}</span></h3>
+                            <h3 style={{color: 'black'}}>{element.title} <span>{element.spanTitle}</span></h3>
                             <p style={{color: 'black'}}>{element.text}</p>
                         </div>
                     </div>

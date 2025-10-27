@@ -1,6 +1,9 @@
 import "./Home.scss";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import { useRef } from "react";
 import arrow from "./images/arrow.svg";
 import girl from "./images/smile.png";
 import icon1 from "./images/icon1.svg";
@@ -30,11 +33,15 @@ import Form from "../../components/Form/Form";
 import VirtualSwiper from "../../components/VirtualSwiper/VirtualSwiper";
 import { useTranslation } from "react-i18next";
 import Results from "../../components/Results/Results";
+import Reviews from "../Reviews/Reviews";
 
 export default function Home() {
   localStorage.setItem("page", "home");
   const [resultsPage, setResultsPage] = useState(0);
   const { t } = useTranslation();
+  const [isBeginning, setIsBeginning] = useState(true);
+  const [isEnd, setIsEnd] = useState(false);
+    const swiperRef = useRef(null);
   const images = [
     { before: before1, after: after1 },
     { before: before2, after: after2 },
@@ -42,6 +49,40 @@ export default function Home() {
     { before: before4, after: after4 },
     { before: before5, after: after5 },
     { before: before6, after: after6 },
+  ];
+
+    // Локальный массив отзывов
+  const reviewsData = [
+    {
+      id: 1,
+      name: t("reviews_name_1"),
+      text: t("reviews_review_1"),
+    },
+    {
+      id: 2,
+      name: t("reviews_name_2"),
+      text: t("reviews_review_2"),
+    },
+    {
+      id: 3,
+      name: t("reviews_name_3"),
+      text: t("reviews_review_3"),
+    },
+    {
+      id: 4,
+      name: t("reviews_name_4"),
+      text: t("reviews_review_4"),
+    },
+    {
+      id: 5,
+      name: t("reviews_name_5"),
+      text: t("reviews_review_5"),
+    },
+    {
+      id: 6,
+      name: t("reviews_name_6"),
+      text: t("reviews_review_6"),
+    },
   ];
 
   const slides = [
@@ -56,12 +97,14 @@ export default function Home() {
   ];
 
   const handlePrev = () => {
-    if (resultsPage > 0) setResultsPage(resultsPage - 1);
+    if (swiperRef.current) {
+      swiperRef.current.slidePrev();
+    }
   };
 
   const handleNext = () => {
-    if (resultsPage + 1 < images.length) {
-      setResultsPage(resultsPage + 1);
+    if (swiperRef.current) {
+      swiperRef.current.slideNext();
     }
   };
 
@@ -339,16 +382,83 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <div className="Reviews">
-        <header className="reviews-header">
-          <span className="tag">Reviews</span>
-          <h1 className="title">
-            What people
-            <span className="subtitle"> write about us?</span>
+      <header className="reviews-header">
+        <div className="reviews-container">
+          <span className="reviews-tag">{t("reviews_tag")}</span>
+          <h1 className="reviews-title">
+            {t("reviews_title")}{t("reviews_subtitle")}
           </h1>
-        </header>
-        <VirtualSwiper items={slides} slidesPerView={4} />
-      </div>
+        </div>
+      </header>
+
+      {/* Reviews Swiper */}
+      <section className="reviews-swiper-section">
+        <div className="reviews-container">
+          <div className="swiper-controls">
+            <button
+              className={`swiper-btn prev ${isBeginning ? "disabled" : ""}`}
+              onClick={handlePrev}
+              disabled={isBeginning}
+              aria-label={t("reviews_prev_button")}
+            >
+              ←
+            </button>
+            <button
+              className={`swiper-btn next ${isEnd ? "disabled" : ""}`}
+              onClick={handleNext}
+              disabled={isEnd}
+              aria-label={t("reviews_next_button")}
+            >
+              →
+            </button>
+          </div>
+
+          <Swiper
+            modules={[Navigation, Pagination]}
+            spaceBetween={20}
+            slidesPerView={1}
+            breakpoints={{
+              480: {
+                slidesPerView: 1,
+                spaceBetween: 16,
+              },
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 24,
+              },
+              1320: {
+                slidesPerView: 4,
+                spaceBetween: 24,
+              },
+            }}
+            onSwiper={(swiper) => {
+              swiperRef.current = swiper;
+              setIsBeginning(swiper.isBeginning);
+              setIsEnd(swiper.isEnd);
+            }}
+            onSlideChange={(swiper) => {
+              setIsBeginning(swiper.isBeginning);
+              setIsEnd(swiper.isEnd);
+            }}
+            className="reviews-swiper"
+          >
+            {reviewsData.map((review) => (
+              <SwiperSlide key={review.id}>
+                <div className="review-card">
+                  <div className="review-content">
+                    <h4 className="review-name">{review.name}</h4>
+                    <p className="review-text">{review.text}</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </section>
       <Form />
       <Footer />
     </div>

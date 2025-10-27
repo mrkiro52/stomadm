@@ -25,24 +25,24 @@ export default function ServiceApicoectomy() {
     const { t } = useTranslation();
     const journeyData = [
       {
-        title: "Examination and root canal ",
-        spanTitle: "assessment",
-        text: "The dentist performs a detailed examination, reviews X-rays or 3D scans, and evaluates the condition of the affected tooth root to confirm the need for an apicoectomy.",
+        title: t("journey_apicoectomy_step1_title"),
+        spanTitle: t("journey_apicoectomy_step1_span"),
+        text: t("journey_apicoectomy_step1_text"),
       },
       {
-        title: "Local anesthesia and root tip ",
-        spanTitle: "access",
-        text: "Local anesthesia is applied to ensure comfort. The surgeon makes a small incision in the gum to access the root tip and surrounding infected tissue.",
+        title: t("journey_apicoectomy_step2_title"),
+        spanTitle: t("journey_apicoectomy_step2_span"),
+        text: t("journey_apicoectomy_step2_text"),
       },
       {
-        title: "Removal of infection and root ",
-        spanTitle: "resection",
-        text: "The infected tissue and the very tip of the tooth root are carefully removed. The root canal is then cleaned, sealed, and filled to prevent future infection.",
+        title: t("journey_apicoectomy_step3_title"),
+        spanTitle: t("journey_apicoectomy_step3_span"),
+        text: t("journey_apicoectomy_step3_text"),
       },
       {
-        title: "Suturing and healing ",
-        spanTitle: "process",
-        text: "The incision is sutured, and healing begins. The doctor provides aftercare instructions and schedules follow-up visits to ensure full recovery and successful bone regeneration.",
+        title: t("journey_apicoectomy_step4_title"),
+        spanTitle: t("journey_apicoectomy_step4_span"),
+        text: t("journey_apicoectomy_step4_text"),
       },
     ];
     
@@ -126,9 +126,9 @@ export default function ServiceApicoectomy() {
                 <div className="wrapper">
                 <div className="topBlock">
                     <div className="tab">
-                    <span>Our Process</span>
+                    <span>{t("our_process")}</span>
                     </div>
-                    <h2>Smile Transformation<br/><span>Journey</span></h2>
+                    <h2>{t("journey_apicoectomy_title")}</h2>
                 </div>
                 <div className="bottomBlock">
                     {journeyData.map((element, index) => (
@@ -137,7 +137,7 @@ export default function ServiceApicoectomy() {
                             <span>{index + 1}</span>
                         </div>
                         <div className="texts">
-                            <h3 style={{color: 'black'}}>{element.title}<span>{element.spanTitle}</span></h3>
+                            <h3 style={{color: 'black'}}>{element.title} <span>{element.spanTitle}</span></h3>
                             <p style={{color: 'black'}}>{element.text}</p>
                         </div>
                     </div>

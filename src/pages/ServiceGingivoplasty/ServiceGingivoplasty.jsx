@@ -24,26 +24,26 @@ export default function ServiceGingivoplasty() {
   const { t } = useTranslation();
     localStorage.setItem('page', 'service');
     const journeyData = [
-      {
-        title: "Consultation and teeth ",
-        spanTitle: "evaluation",
-        text: "The dentist examines your teeth and bite, identifies signs of grinding or clenching, and determines if a night guard is the best solution for protection.",
-      },
-      {
-        title: "Impression taking and guard ",
-        spanTitle: "design",
-        text: "An impression or digital scan of your teeth is taken to create a custom-fit night guard that provides optimal comfort and protection while sleeping.",
-      },
-      {
-        title: "Night guard fabrication and trial ",
-        spanTitle: "fitting",
-        text: "The custom night guard is manufactured, then fitted and adjusted as needed to ensure proper alignment, comfort, and effectiveness in preventing tooth damage.",
-      },
-      {
-        title: "Usage instructions and long-term ",
-        spanTitle: "care",
-        text: "The dentist provides guidance on how to wear, clean, and store the night guard to ensure durability and maintain oral health over time.",
-      },
+        {
+          title: t("journey_gingivoplasty_step1_title"),
+          spanTitle: t("journey_gingivoplasty_step1_span"),
+          text: t("journey_gingivoplasty_step1_text"),
+        },
+        {
+          title: t("journey_gingivoplasty_step2_title"),
+          spanTitle: t("journey_gingivoplasty_step2_span"),
+          text: t("journey_gingivoplasty_step2_text"),
+        },
+        {
+          title: t("journey_gingivoplasty_step3_title"),
+          spanTitle: t("journey_gingivoplasty_step3_span"),
+          text: t("journey_gingivoplasty_step3_text"),
+        },
+        {
+          title: t("journey_gingivoplasty_step4_title"),
+          spanTitle: t("journey_gingivoplasty_step4_span"),
+          text: t("journey_gingivoplasty_step4_text"),
+        }
     ];
     
     
@@ -127,9 +127,9 @@ export default function ServiceGingivoplasty() {
                 <div className="wrapper">
                 <div className="topBlock">
                     <div className="tab">
-                    <span>Our Process</span>
+                    <span>{t("our_process")}</span>
                     </div>
-                    <h2>Smile Transformation<br/><span>Journey</span></h2>
+                    <h2>{t("journey_gingivoplasty_title")}</h2>
                 </div>
                 <div className="bottomBlock">
                     {journeyData.map((element, index) => (
@@ -138,7 +138,7 @@ export default function ServiceGingivoplasty() {
                             <span>{index + 1}</span>
                         </div>
                         <div className="texts">
-                            <h3 style={{color: 'black'}}>{element.title}<span>{element.spanTitle}</span></h3>
+                            <h3 style={{color: 'black'}}>{element.title} <span>{element.spanTitle}</span></h3>
                             <p style={{color: 'black'}}>{element.text}</p>
                         </div>
                     </div>

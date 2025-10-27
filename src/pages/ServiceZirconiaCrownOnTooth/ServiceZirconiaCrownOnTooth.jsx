@@ -24,26 +24,26 @@ export default function ServiceZirconiaCrownOnTooth() {
     const { t } = useTranslation();
     localStorage.setItem('page', 'service');
     const journeyData = [
-      {
-        title: "Initial consultation and tooth ",
-        spanTitle: "assessment",
-        text: "The dentist examines the tooth, takes X-rays, and evaluates its structure to determine if a zirconia crown is the most suitable restorative option.",
-      },
-      {
-        title: "Tooth preparation and impression ",
-        spanTitle: "taking",
-        text: "The tooth is shaped to accommodate the crown. An impression or digital scan is taken to create a custom zirconia crown that fits precisely and looks natural.",
-      },
-      {
-        title: "Crown fabrication and temporary ",
-        spanTitle: "placement",
-        text: "The zirconia crown is fabricated for strength and aesthetics. Meanwhile, a temporary crown may be placed to protect the tooth until the permanent crown is ready.",
-      },
-      {
-        title: "Permanent crown placement and final ",
-        spanTitle: "adjustment",
-        text: "The zirconia crown is cemented onto the tooth. The dentist makes final adjustments to bite, shape, and color, ensuring a durable and natural-looking restoration.",
-      },
+        {
+          title: t("journey_zirconia_crown_on_tooth_step1_title"),
+          spanTitle: t("journey_zirconia_crown_on_tooth_step1_span"),
+          text: t("journey_zirconia_crown_on_tooth_step1_text"),
+        },
+        {
+          title: t("journey_zirconia_crown_on_tooth_step2_title"),
+          spanTitle: t("journey_zirconia_crown_on_tooth_step2_span"),
+          text: t("journey_zirconia_crown_on_tooth_step2_text"),
+        },
+        {
+          title: t("journey_zirconia_crown_on_tooth_step3_title"),
+          spanTitle: t("journey_zirconia_crown_on_tooth_step3_span"),
+          text: t("journey_zirconia_crown_on_tooth_step3_text"),
+        },
+        {
+          title: t("journey_zirconia_crown_on_tooth_step4_title"),
+          spanTitle: t("journey_zirconia_crown_on_tooth_step4_span"),
+          text: t("journey_zirconia_crown_on_tooth_step4_text"),
+        }
     ];
     
 
@@ -126,9 +126,9 @@ export default function ServiceZirconiaCrownOnTooth() {
                 <div className="wrapper">
                 <div className="topBlock">
                     <div className="tab">
-                    <span>Our Process</span>
+                    <span>{t("our_process")}</span>
                     </div>
-                    <h2>Smile Transformation<br/><span>Journey</span></h2>
+                    <h2>{t("journey_zirconia_crown_on_tooth_title")}</h2>
                 </div>
                 <div className="bottomBlock">
                     {journeyData.map((element, index) => (
@@ -137,7 +137,7 @@ export default function ServiceZirconiaCrownOnTooth() {
                             <span>{index + 1}</span>
                         </div>
                         <div className="texts">
-                            <h3 style={{color: 'black'}}>{element.title}<span>{element.spanTitle}</span></h3>
+                            <h3 style={{color: 'black'}}>{element.title} <span>{element.spanTitle}</span></h3>
                             <p style={{color: 'black'}}>{element.text}</p>
                         </div>
                     </div>

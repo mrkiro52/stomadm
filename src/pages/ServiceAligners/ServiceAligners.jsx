@@ -25,24 +25,24 @@ export default function ServiceAligners() {
     const { t } = useTranslation();
     const journeyData = [
       {
-        title: "Consultation and dental ",
-        spanTitle: "diagnostics",
-        text: "During the first visit, the doctor examines your teeth, takes 3D scans and X-rays to evaluate your bite and determine if aligner treatment is suitable for you.",
+        title: t("journey_aligners_step1_title"),
+        spanTitle: t("journey_aligners_step1_span"),
+        text: t("journey_aligners_step1_text"),
       },
       {
-        title: "Creating a personalized ",
-        spanTitle: "treatment plan",
-        text: "Based on the digital model, the orthodontist builds a detailed treatment plan showing how your teeth will move and what the final result will look like. Once approved, your custom aligners are produced.",
+        title: t("journey_aligners_step2_title"),
+        spanTitle: t("journey_aligners_step2_span"),
+        text: t("journey_aligners_step2_text"),
       },
       {
-        title: "Wearing and replacing ",
-        spanTitle: "aligners",
-        text: "You wear the transparent trays for 20–22 hours a day, switching to a new set every 1–2 weeks. Each new aligner gradually moves your teeth into the desired position without pain or discomfort.",
+        title: t("journey_aligners_step3_title"),
+        spanTitle: t("journey_aligners_step3_span"),
+        text: t("journey_aligners_step3_text"),
       },
       {
-        title: "Monitoring and maintaining the ",
-        spanTitle: "result",
-        text: "The doctor monitors your progress throughout the treatment. After completion, retainers are prescribed to keep your teeth perfectly aligned and maintain the achieved result long-term.",
+        title: t("journey_aligners_step4_title"),
+        spanTitle: t("journey_aligners_step4_span"),
+        text: t("journey_aligners_step4_text"),
       },
     ];
     
@@ -126,9 +126,9 @@ export default function ServiceAligners() {
                 <div className="wrapper">
                 <div className="topBlock">
                     <div className="tab">
-                    <span>Our Process</span>
+                    <span>{t("our_process")}</span>
                     </div>
-                    <h2>Smile Transformation<br/><span>Journey</span></h2>
+                    <h2>{t("journey_aligners_title")}</h2>
                 </div>
                 <div className="bottomBlock">
                     {journeyData.map((element, index) => (
@@ -137,7 +137,7 @@ export default function ServiceAligners() {
                             <span>{index + 1}</span>
                         </div>
                         <div className="texts">
-                            <h3 style={{color: 'black'}}>{element.title}<span>{element.spanTitle}</span></h3>
+                            <h3 style={{color: 'black'}}>{element.title} <span>{element.spanTitle}</span></h3>
                             <p style={{color: 'black'}}>{element.text}</p>
                         </div>
                     </div>

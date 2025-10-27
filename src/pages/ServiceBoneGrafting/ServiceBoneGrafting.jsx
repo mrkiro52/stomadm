@@ -24,26 +24,26 @@ export default function ServiceBoneGrafting() {
     localStorage.setItem('page', 'service');
     const { t } = useTranslation();
     const journeyData = [
-      {
-        title: "Consultation and bone ",
-        spanTitle: "evaluation",
-        text: "The dentist conducts an oral examination and 3D imaging to assess bone volume and density, determining the type and amount of graft material required.",
-      },
-      {
-        title: "Preparation and graft ",
-        spanTitle: "placement",
-        text: "Local anesthesia is applied. The surgeon carefully opens the gum and places the grafting material into the deficient bone area to restore volume and support future implants.",
-      },
-      {
-        title: "Stabilization and tissue ",
-        spanTitle: "healing",
-        text: "The graft is secured with a protective membrane, and the gum is sutured. Over the next few months, the natural bone integrates with the graft, creating a strong foundation.",
-      },
-      {
-        title: "Follow-up and implant ",
-        spanTitle: "readiness",
-        text: "The dentist monitors healing through check-ups and imaging. Once full integration is achieved, the site becomes ready for implant placement or other restorative procedures.",
-      },
+        {
+          title: t("journey_bone_grafting_step1_title"),
+          spanTitle: t("journey_bone_grafting_step1_span"),
+          text: t("journey_bone_grafting_step1_text"),
+        },
+        {
+          title: t("journey_bone_grafting_step2_title"),
+          spanTitle: t("journey_bone_grafting_step2_span"),
+          text: t("journey_bone_grafting_step2_text"),
+        },
+        {
+          title: t("journey_bone_grafting_step3_title"),
+          spanTitle: t("journey_bone_grafting_step3_span"),
+          text: t("journey_bone_grafting_step3_text"),
+        },
+        {
+          title: t("journey_bone_grafting_step4_title"),
+          spanTitle: t("journey_bone_grafting_step4_span"),
+          text: t("journey_bone_grafting_step4_text"),
+        }
     ];
     
 
@@ -126,9 +126,9 @@ export default function ServiceBoneGrafting() {
                 <div className="wrapper">
                 <div className="topBlock">
                     <div className="tab">
-                    <span>Our Process</span>
+                    <span>{t("our_process")}</span>
                     </div>
-                    <h2>Smile Transformation<br/><span>Journey</span></h2>
+                    <h2>{t("journey_bone_grafting_title")}</h2>
                 </div>
                 <div className="bottomBlock">
                     {journeyData.map((element, index) => (
@@ -137,7 +137,7 @@ export default function ServiceBoneGrafting() {
                             <span>{index + 1}</span>
                         </div>
                         <div className="texts">
-                            <h3 style={{color: 'black'}}>{element.title}<span>{element.spanTitle}</span></h3>
+                            <h3 style={{color: 'black'}}>{element.title} <span>{element.spanTitle}</span></h3>
                             <p style={{color: 'black'}}>{element.text}</p>
                         </div>
                     </div>

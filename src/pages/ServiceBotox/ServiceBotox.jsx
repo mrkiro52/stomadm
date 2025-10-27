@@ -24,26 +24,26 @@ export default function ServiceBotox() {
     const { t } = useTranslation();
     localStorage.setItem('page', 'service');
     const journeyData = [
-      {
-        title: "Consultation and facial ",
-        spanTitle: "analysis",
-        text: "The doctor evaluates your facial structure, muscle activity, and areas of concern to create a personalized Botox treatment plan that achieves natural-looking results.",
-      },
-      {
-        title: "Preparation and injection ",
-        spanTitle: "mapping",
-        text: "Target areas are marked, and the skin is cleansed. The doctor identifies precise injection points to ensure balanced results and avoid affecting natural expressions.",
-      },
-      {
-        title: "Botox administration and muscle ",
-        spanTitle: "relaxation",
-        text: "Botox is injected using fine needles into specific facial muscles. The procedure takes just a few minutes and is virtually painless, with minimal discomfort.",
-      },
-      {
-        title: "Recovery and visible ",
-        spanTitle: "results",
-        text: "You can return to normal activities immediately. Results start to appear within 3–5 days, with full effect in about two weeks, leaving the skin smoother and refreshed.",
-      },
+        {
+          title: t("journey_botox_step1_title"),
+          spanTitle: t("journey_botox_step1_span"),
+          text: t("journey_botox_step1_text"),
+        },
+        {
+          title: t("journey_botox_step2_title"),
+          spanTitle: t("journey_botox_step2_span"),
+          text: t("journey_botox_step2_text"),
+        },
+        {
+          title: t("journey_botox_step3_title"),
+          spanTitle: t("journey_botox_step3_span"),
+          text: t("journey_botox_step3_text"),
+        },
+        {
+          title: t("journey_botox_step4_title"),
+          spanTitle: t("journey_botox_step4_span"),
+          text: t("journey_botox_step4_text"),
+        }
     ];
     
 
@@ -126,9 +126,9 @@ export default function ServiceBotox() {
                 <div className="wrapper">
                 <div className="topBlock">
                     <div className="tab">
-                    <span>Our Process</span>
+                    <span>{t("our_process")}</span>
                     </div>
-                    <h2>Smile Transformation<br/><span>Journey</span></h2>
+                    <h2>{t("journey_botox_title")}</h2>
                 </div>
                 <div className="bottomBlock">
                     {journeyData.map((element, index) => (
@@ -137,7 +137,7 @@ export default function ServiceBotox() {
                             <span>{index + 1}</span>
                         </div>
                         <div className="texts">
-                            <h3 style={{color: 'black'}}>{element.title}<span>{element.spanTitle}</span></h3>
+                            <h3 style={{color: 'black'}}>{element.title} <span>{element.spanTitle}</span></h3>
                             <p style={{color: 'black'}}>{element.text}</p>
                         </div>
                     </div>

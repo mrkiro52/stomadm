@@ -25,24 +25,24 @@ export default function ServiceCurottage() {
     localStorage.setItem('page', 'service');
     const journeyData = [
       {
-        title: "Initial examination and gum ",
-        spanTitle: "assessment",
-        text: "The dentist evaluates the health of your gums, measures pocket depths, and reviews X-rays to determine the extent of periodontal disease and plan the flap surgery.",
+        title: t("journey_curettage_step1_title"),
+        spanTitle: t("journey_curettage_step1_span"),
+        text: t("journey_curettage_step1_text"),
       },
       {
-        title: "Anesthesia and gum ",
-        spanTitle: "incision",
-        text: "Local anesthesia is applied for comfort. The surgeon makes precise incisions in the gum tissue to lift it and access the roots and underlying bone.",
+        title: t("journey_curettage_step2_title"),
+        spanTitle: t("journey_curettage_step2_span"),
+        text: t("journey_curettage_step2_text"),
       },
       {
-        title: "Cleaning and root ",
-        spanTitle: "smoothing",
-        text: "The exposed roots and bone are thoroughly cleaned, removing plaque, tartar, and infected tissue. Roots may be smoothed to promote reattachment of the gums.",
+        title: t("journey_curettage_step3_title"),
+        spanTitle: t("journey_curettage_step3_span"),
+        text: t("journey_curettage_step3_text"),
       },
       {
-        title: "Gum repositioning and healing ",
-        spanTitle: "closure",
-        text: "The gums are repositioned and sutured back into place. Postoperative instructions are provided, and follow-ups ensure proper healing and maintenance of gum health.",
+        title: t("journey_curettage_step4_title"),
+        spanTitle: t("journey_curettage_step4_span"),
+        text: t("journey_curettage_step4_text"),
       },
     ];
     
@@ -130,9 +130,9 @@ export default function ServiceCurottage() {
                 <div className="wrapper">
                 <div className="topBlock">
                     <div className="tab">
-                    <span>Our Process</span>
+                    <span>{t("our_process")}</span>
                     </div>
-                    <h2>Smile Transformation<br/><span>Journey</span></h2>
+                    <h2>{t("journey_curettage_title")}</h2>
                 </div>
                 <div className="bottomBlock">
                     {journeyData.map((element, index) => (
@@ -141,7 +141,7 @@ export default function ServiceCurottage() {
                             <span>{index + 1}</span>
                         </div>
                         <div className="texts">
-                            <h3 style={{color: 'black'}}>{element.title}<span>{element.spanTitle}</span></h3>
+                            <h3 style={{color: 'black'}}>{element.title} <span>{element.spanTitle}</span></h3>
                             <p style={{color: 'black'}}>{element.text}</p>
                         </div>
                     </div>

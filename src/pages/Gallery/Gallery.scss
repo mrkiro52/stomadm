@@ -15,9 +15,8 @@
     margin-left: 24px;
 
     @media (max-width: 768px) {
-      text-align: center;
-      margin-bottom: 40px;
-      padding-top: 30px;
+      margin: 0 0 40px 0;
+      padding-top: 120px;
     }
 
     .tag {
@@ -118,4 +117,13 @@
       flex: 1 1 100%; // на мобильных фото на всю ширину
     }
   }
+}
+
+
+@media screen and (max-width: 1320px) {
+    .gallery-header {
+      width: auto!important;
+      margin-left: 24px!important;
+      align-self: flex-start;
+    }
 }

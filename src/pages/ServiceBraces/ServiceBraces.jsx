@@ -25,24 +25,24 @@ export default function ServiceBraces() {
     localStorage.setItem('page', 'service');
     const journeyData = [
       {
-        title: "Initial consultation and bite ",
-        spanTitle: "evaluation",
-        text: "The orthodontist examines your teeth, takes X-rays and 3D scans, and evaluates your bite to determine the best braces treatment plan tailored to your needs.",
+        title: t("journey_braces_step1_title"),
+        spanTitle: t("journey_braces_step1_span"),
+        text: t("journey_braces_step1_text"),
       },
       {
-        title: "Treatment planning and bracket ",
-        spanTitle: "placement",
-        text: "A personalized plan is created showing how your teeth will move. Brackets are then carefully bonded to your teeth, and archwires are inserted to begin gradual alignment.",
+        title: t("journey_braces_step2_title"),
+        spanTitle: t("journey_braces_step2_span"),
+        text: t("journey_braces_step2_text"),
       },
       {
-        title: "Regular adjustments and teeth ",
-        spanTitle: "movement",
-        text: "Throughout treatment, periodic visits are scheduled to adjust wires and monitor progress. Each adjustment gently moves teeth toward optimal alignment over time.",
+        title: t("journey_braces_step3_title"),
+        spanTitle: t("journey_braces_step3_span"),
+        text: t("journey_braces_step3_text"),
       },
       {
-        title: "Removal and retention ",
-        spanTitle: "phase",
-        text: "Once teeth are properly aligned, braces are removed, and retainers are provided to maintain the results and prevent teeth from shifting back.",
+        title: t("journey_braces_step4_title"),
+        spanTitle: t("journey_braces_step4_span"),
+        text: t("journey_braces_step4_text"),
       },
     ];
     
@@ -126,9 +126,9 @@ export default function ServiceBraces() {
                 <div className="wrapper">
                 <div className="topBlock">
                     <div className="tab">
-                    <span>Our Process</span>
+                    <span>{t("our_process")}</span>
                     </div>
-                    <h2>Smile Transformation<br/><span>Journey</span></h2>
+                    <h2>{t("journey_braces_title")}</h2>
                 </div>
                 <div className="bottomBlock">
                     {journeyData.map((element, index) => (
@@ -137,7 +137,7 @@ export default function ServiceBraces() {
                             <span>{index + 1}</span>
                         </div>
                         <div className="texts">
-                            <h3 style={{color: 'black'}}>{element.title}<span>{element.spanTitle}</span></h3>
+                            <h3 style={{color: 'black'}}>{element.title} <span>{element.spanTitle}</span></h3>
                             <p style={{color: 'black'}}>{element.text}</p>
                         </div>
                     </div>

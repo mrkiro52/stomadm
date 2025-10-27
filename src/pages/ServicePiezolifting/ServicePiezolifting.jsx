@@ -25,24 +25,24 @@ export default function ServicePiezolifting() {
     localStorage.setItem('page', 'service');
     const journeyData = [
       {
-        title: "Initial examination and plaque ",
-        spanTitle: "assessment",
-        text: "The dentist or hygienist examines your teeth and gums, checking for plaque, tartar, and signs of gum disease to plan an effective cleaning session.",
+        title: t("journey_piezolifting_step1_title"),
+        spanTitle: t("journey_piezolifting_step1_span"),
+        text: t("journey_piezolifting_step1_text"),
       },
       {
-        title: "Scaling and tartar ",
-        spanTitle: "removal",
-        text: "Using ultrasonic and hand instruments, all plaque and tartar are carefully removed from the tooth surfaces and below the gumline.",
+        title: t("journey_piezolifting_step2_title"),
+        spanTitle: t("journey_piezolifting_step2_span"),
+        text: t("journey_piezolifting_step2_text"),
       },
       {
-        title: "Polishing and stain ",
-        spanTitle: "removal",
-        text: "Teeth are polished using a special paste to remove surface stains and smooth the enamel, leaving the teeth clean and shiny.",
+        title: t("journey_piezolifting_step3_title"),
+        spanTitle: t("journey_piezolifting_step3_span"),
+        text: t("journey_piezolifting_step3_text"),
       },
       {
-        title: "Fluoride treatment and oral ",
-        spanTitle: "care",
-        text: "A fluoride treatment is applied to strengthen enamel and prevent decay. The dentist provides personalized oral hygiene advice for long-term dental health.",
+        title: t("journey_piezolifting_step4_title"),
+        spanTitle: t("journey_piezolifting_step4_span"),
+        text: t("journey_piezolifting_step4_text"),
       },
     ];
     
@@ -129,9 +129,9 @@ export default function ServicePiezolifting() {
                 <div className="wrapper">
                 <div className="topBlock">
                     <div className="tab">
-                    <span>Our Process</span>
+                    <span>{t("our_process")}</span>
                     </div>
-                    <h2>Smile Transformation<br/><span>Journey</span></h2>
+                    <h2>{t("journey_piezolifting_title")}</h2>
                 </div>
                 <div className="bottomBlock">
                     {journeyData.map((element, index) => (
@@ -140,7 +140,7 @@ export default function ServicePiezolifting() {
                             <span>{index + 1}</span>
                         </div>
                         <div className="texts">
-                            <h3 style={{color: 'black'}}>{element.title}<span>{element.spanTitle}</span></h3>
+                            <h3 style={{color: 'black'}}>{element.title} <span>{element.spanTitle}</span></h3>
                             <p style={{color: 'black'}}>{element.text}</p>
                         </div>
                     </div>

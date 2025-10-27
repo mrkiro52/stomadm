@@ -42,12 +42,13 @@ export default function Header() {
         { path: '/gallery', label: t('header_link_gallery'), key: 'gallery' },
     ];
 
-    const [selected, setSelected] = useState('en'); // Selected language
+    const [selected, setSelected] = useState(i18n.language || 'en'); // Selected language
     const [open, setOpen] = useState(false); // Language menu open state
 
     useEffect(() => {
-        console.log(selected);
-    }, [selected]);
+        // Update selected state when i18n language changes
+        setSelected(i18n.language);
+    }, [i18n.language]);
 
     const languages = ['en', 'ru', 'tr']; // English, Russian, Turkish
     const otherLanguages = languages.filter(lang => lang !== selected);
@@ -134,7 +135,7 @@ export default function Header() {
             {showLayer && <div className="blur"></div>}
             <div className={menuLayered ? 'wrapper opened' : 'wrapper'}>
                 <div className="left">
-                    <Link to="/" onClick={() => handleNavigate('/', 'services')}>
+                    <Link to="/" onClick={() => handleNavigate('/', 'home')}>
                         <img src={logo} alt={t('header_logo_alt')} className="Header_logo" />
                     </Link>
 
@@ -150,23 +151,6 @@ export default function Header() {
                                     >
                                         <span className="Header_links__inner">
                                             {link.label}
-                                            {/* <svg
-                                                width="12"
-                                                height="6"
-                                                viewBox="0 0 12 6"
-                                                style={
-                                                    showLayer
-                                                        ? { transform: 'rotate(180deg)', transition: 'all 0.2s' }
-                                                        : { transform: 'rotate(0deg)', transition: 'all 0.2s' }
-                                                }
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <path
-                                                    d="M11.0037 0.210132C11.2949 0.490332 11.2951 0.944591 11.0037 1.22463L6.25022 5.78987C5.95855 6.07004 5.48578 6.07004 5.19412 5.78987L0.440685 1.22463C0.149194 0.944591 0.149466 0.490332 0.440685 0.210132C0.732351 -0.0700439 1.20609 -0.0700439 1.49776 0.210132L5.72217 4.26812L9.94658 0.210132C10.2382 -0.0700439 10.712 -0.0700439 11.0037 0.210132Z"
-                                                    fill="#352100"
-                                                />
-                                            </svg> */}
                                         </span>
                                     </Link>
                                 );
@@ -293,7 +277,7 @@ export default function Header() {
                         to="/"
                         onClick={(e) => {
                             e.preventDefault();
-                            handleNavigate('/', 'services');
+                            handleNavigate('/', 'home');
                         }}
                     >
                         <img src={logo} alt={t('header_logo_alt')} className="Header_mobile__logo" />
@@ -331,6 +315,23 @@ export default function Header() {
                     >
                         {t('header_link_contacts')}
                     </a>
+                </div>
+
+                <div className="Header_mobile__language">
+                    <div className="language-wrapper-mobile">
+                        <span className="language-label">{t('header_select_language_label')}</span>
+                        <div className="language-buttons">
+                            {languages.map((lang) => (
+                                <button
+                                    key={lang}
+                                    className={`lang-item-mobile ${selected === lang ? 'active' : ''}`}
+                                    onClick={() => handleSelect(lang)}
+                                >
+                                    {lang}
+                                </button>
+                            ))}
+                        </div>
+                    </div>
                 </div>
             </nav>
         </div>

@@ -25,24 +25,24 @@ export default function ServiceRootCanalTreatment() {
     localStorage.setItem('page', 'service');
     const journeyData = [
         {
-          title: "Consultation & ",
-          spanTitle: "Diagnostics",
-          text: "Examination, dental health analysis, photos/X-rays, and selection of the optimal treatment plan.",
+          title: t("journey_root_canal_treatment_step1_title"),
+          spanTitle: t("journey_root_canal_treatment_step1_span"),
+          text: t("journey_root_canal_treatment_step1_text"),
         },
         {
-          title: "Smile ",
-          spanTitle: "Planning",
-          text: "Digital Smile Design or mock-up of the future smile, choosing the ideal shape and shade.",
+          title: t("journey_root_canal_treatment_step2_title"),
+          spanTitle: t("journey_root_canal_treatment_step2_span"),
+          text: t("journey_root_canal_treatment_step2_text"),
         },
         {
-          title: "Preparation & ",
-          spanTitle: "Placement",
-          text: "Minimal tooth preparation and precise placement of veneers or crowns.",
+          title: t("journey_root_canal_treatment_step3_title"),
+          spanTitle: t("journey_root_canal_treatment_step3_span"),
+          text: t("journey_root_canal_treatment_step3_text"),
         },
         {
-          title: "Final Result & ",
-          spanTitle: "Aftercare",
-          text: "Fixation of the perfect smile, care recommendations, and follow-up visits.",
+          title: t("journey_root_canal_treatment_step4_title"),
+          spanTitle: t("journey_root_canal_treatment_step4_span"),
+          text: t("journey_root_canal_treatment_step4_text"),
         }
     ]
 
@@ -125,9 +125,9 @@ export default function ServiceRootCanalTreatment() {
                 <div className="wrapper">
                 <div className="topBlock">
                     <div className="tab">
-                    <span>Our Process</span>
+                    <span>{t("our_process")}</span>
                     </div>
-                    <h2>Smile Transformation<br/><span>Journey</span></h2>
+                    <h2>{t("journey_root_canal_treatment_title")}</h2>
                 </div>
                 <div className="bottomBlock">
                     {journeyData.map((element, index) => (
@@ -136,7 +136,7 @@ export default function ServiceRootCanalTreatment() {
                             <span>{index + 1}</span>
                         </div>
                         <div className="texts">
-                            <h3 style={{color: 'black'}}>{element.title}<span>{element.spanTitle}</span></h3>
+                            <h3 style={{color: 'black'}}>{element.title} <span>{element.spanTitle}</span></h3>
                             <p style={{color: 'black'}}>{element.text}</p>
                         </div>
                     </div>

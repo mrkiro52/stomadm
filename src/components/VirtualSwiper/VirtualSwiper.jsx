@@ -9,66 +9,22 @@ import "./VirtualSwiper.scss";
 import review1 from "./images/review1.jpg";
 import star from "./images/star.png";
 
-export default function VirtualSwiper() {
+export default function VirtualSwiper({ items = [] }) {
   const swiperRef = useRef(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [isBeginning, setIsBeginning] = useState(true);
   const [isEnd, setIsEnd] = useState(false);
+  const [currentSlidesPerView, setCurrentSlidesPerView] = useState(4);
 
-  const slidesPerView = 4;
+  // Создаем объекты отзывов с текстами из items
+  const reviews = items.map((text, index) => ({
+    name: `Review ${index + 1}`,
+    photo: review1,
+    rating: "5.0",
+    text: text,
+  }));
 
-  const reviews = [
-    {
-      name: "Anna Ivanova",
-      photo: review1,
-      rating: "5.0",
-      text: "I had a truly great experience at this dental clinic. The staff welcomed me warmly and immediately created a comfortable, trusting atmosphere. The doctor explained everything in detail, discussed different treatment options, and helped me choose the best one. The procedure was done very carefully, absolutely pain-free, and with great attention to detail. It’s clear that the clinic uses modern equipment and high-quality materials.",
-    },
-    {
-      name: "Anna Ivanova",
-      photo: review1,
-      rating: "5.0",
-      text: "I had a truly great experience at this dental clinic. The staff welcomed me warmly and immediately created a comfortable, trusting atmosphere. The doctor explained everything in detail, discussed different treatment options, and helped me choose the best one. The procedure was done very carefully, absolutely pain-free, and with great attention to detail. It’s clear that the clinic uses modern equipment and high-quality materials.",
-    },
-    {
-      name: "Anna Ivanova",
-      photo: review1,
-      rating: "5.0",
-      text: "I had a truly great experience at this dental clinic. The staff welcomed me warmly and immediately created a comfortable, trusting atmosphere. The doctor explained everything in detail, discussed different treatment options, and helped me choose the best one. The procedure was done very carefully, absolutely pain-free, and with great attention to detail. It’s clear that the clinic uses modern equipment and high-quality materials.",
-    },
-    {
-      name: "Anna Ivanova",
-      photo: review1,
-      rating: "5.0",
-      text: "I had a truly great experience at this dental clinic. The staff welcomed me warmly and immediately created a comfortable, trusting atmosphere. The doctor explained everything in detail, discussed different treatment options, and helped me choose the best one. The procedure was done very carefully, absolutely pain-free, and with great attention to detail. It’s clear that the clinic uses modern equipment and high-quality materials.",
-    },
-    {
-      name: "Anna Ivanova",
-      photo: review1,
-      rating: "5.0",
-      text: "I had a truly great experience at this dental clinic. The staff welcomed me warmly and immediately created a comfortable, trusting atmosphere. The doctor explained everything in detail, discussed different treatment options, and helped me choose the best one. The procedure was done very carefully, absolutely pain-free, and with great attention to detail. It’s clear that the clinic uses modern equipment and high-quality materials.",
-    },
-    {
-      name: "Anna Ivanova",
-      photo: review1,
-      rating: "5.0",
-      text: "I had a truly great experience at this dental clinic. The staff welcomed me warmly and immediately created a comfortable, trusting atmosphere. The doctor explained everything in detail, discussed different treatment options, and helped me choose the best one. The procedure was done very carefully, absolutely pain-free, and with great attention to detail. It’s clear that the clinic uses modern equipment and high-quality materials.",
-    },
-    {
-      name: "Anna Ivanova",
-      photo: review1,
-      rating: "5.0",
-      text: "I had a truly great experience at this dental clinic. The staff welcomed me warmly and immediately created a comfortable, trusting atmosphere. The doctor explained everything in detail, discussed different treatment options, and helped me choose the best one. The procedure was done very carefully, absolutely pain-free, and with great attention to detail. It’s clear that the clinic uses modern equipment and high-quality materials.",
-    },
-    {
-      name: "Anna Ivanova",
-      photo: review1,
-      rating: "5.0",
-      text: "I had a truly great experience at this dental clinic. The staff welcomed me warmly and immediately created a comfortable, trusting atmosphere. The doctor explained everything in detail, discussed different treatment options, and helped me choose the best one. The procedure was done very carefully, absolutely pain-free, and with great attention to detail. It’s clear that the clinic uses modern equipment and high-quality materials.",
-    },
-  ];
-
-  const totalPages = Math.ceil(reviews.length / slidesPerView);
+  const totalPages = Math.ceil(reviews.length / currentSlidesPerView);
 
   return (
     <div className="virtual-swiper-wrapper">
@@ -91,17 +47,42 @@ export default function VirtualSwiper() {
 
       <Swiper
         modules={[Navigation]}
-        slidesPerView={slidesPerView}
+        slidesPerView={1}
         spaceBetween={20}
+        breakpoints={{
+          480: {
+            slidesPerView: 1,
+            spaceBetween: 16,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          1320: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+          },
+        }}
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
           setIsBeginning(swiper.isBeginning);
           setIsEnd(swiper.isEnd);
+          setCurrentSlidesPerView(swiper.params.slidesPerView);
         }}
         onSlideChange={(swiper) => {
+          const slidesPerView = swiper.params.slidesPerView || 1;
           setCurrentPage(Math.floor(swiper.activeIndex / slidesPerView) + 1);
           setIsBeginning(swiper.isBeginning);
           setIsEnd(swiper.isEnd);
+          setCurrentSlidesPerView(slidesPerView);
+        }}
+        onBreakpoint={(swiper) => {
+          const slidesPerView = swiper.params.slidesPerView || 1;
+          setCurrentSlidesPerView(slidesPerView);
         }}
         className="custom-swiper"
       >
