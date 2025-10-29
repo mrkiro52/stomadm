@@ -20,6 +20,14 @@ import after6 from "./images/after6.jpg";
 
 export default function Results() {
   const [resultsPage, setResultsPage] = useState(0);
+  
+  const scrollToForm = () => {
+    const formElement = document.querySelector('.booking-section');
+    if (formElement) {
+      formElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+  
   const images = [
     { before: before1, after: after1 },
     { before: before2, after: after2 },
@@ -67,7 +75,7 @@ export default function Results() {
               }
             />
           </div>
-          <button>{t("results_button")}</button>
+          <button onClick={scrollToForm}>{t("results_button")}</button>
         </div>
         <div className="lastBlock">
           <div

@@ -5,10 +5,15 @@ import doctor1 from "./images/doctor1.jpg";
 import doctor2 from "./images/doctor2.jpg";
 import Form from "../../components/Form/Form";
 import { useTranslation } from "react-i18next";
+import { useEffect } from 'react';
 
 export default function Doctors() {
-  const { t } = useTranslation();
-  localStorage.setItem("page", "doctors");
+    const { t } = useTranslation();
+    localStorage.setItem('page', 'doctors');
+    
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, []);
   return (
     <div className="Doctors">
       <Header />

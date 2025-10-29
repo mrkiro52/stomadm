@@ -23,6 +23,14 @@ import Results from '../../components/Results/Results';
 export default function ServiceBoneGrafting() {
     localStorage.setItem('page', 'service');
     const { t } = useTranslation();
+    
+    const scrollToForm = () => {
+        const formElement = document.querySelector('.booking-section');
+        if (formElement) {
+            formElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    };
+    
     const journeyData = [
         {
           title: t("journey_bone_grafting_step1_title"),
@@ -96,7 +104,7 @@ export default function ServiceBoneGrafting() {
                       }}
                     >
                         <span>{t("service_bone_grafting_title")}</span>
-                        <button>{t("book_a_consultation")}</button>
+                        <button onClick={scrollToForm}>{t("book_a_consultation")}</button>
                     </div>
                 </div>
             </div>
@@ -143,6 +151,14 @@ export default function ServiceBoneGrafting() {
                     </div>
                     ))}
                 </div>
+                </div>
+            </div>
+
+            <div className="consultationSection">
+                <div className="wrapper">
+                    <div className="innerDiv">
+                        <button onClick={scrollToForm}>{t("book_a_consultation")}</button>
+                    </div>
                 </div>
             </div>
 

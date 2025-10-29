@@ -32,6 +32,7 @@ import doctor2 from "./images/doctor2.jpg";
 import Form from "../../components/Form/Form";
 import VirtualSwiper from "../../components/VirtualSwiper/VirtualSwiper";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import Results from "../../components/Results/Results";
 import Reviews from "../Reviews/Reviews";
 
@@ -41,7 +42,14 @@ export default function Home() {
   const { t } = useTranslation();
   const [isBeginning, setIsBeginning] = useState(true);
   const [isEnd, setIsEnd] = useState(false);
-    const swiperRef = useRef(null);
+  const swiperRef = useRef(null);
+  
+  const scrollToForm = () => {
+    const formElement = document.querySelector('.booking-section');
+    if (formElement) {
+      formElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
   const images = [
     { before: before1, after: after1 },
     { before: before2, after: after2 },
@@ -110,14 +118,96 @@ export default function Home() {
 
   const current = images[resultsPage];
 
+  // Все 22 услуги с их данными - взято из Services.jsx
   const services = [
-    "Hollywood Smile",
-    "Crowns",
-    "Veneers",
-    "Implants",
-    "All-on-6",
-    "Sinus Lifting",
-    "Bone Grafting",
+    {
+      title: t('service_filling_title'),
+      slug: 'filling'
+    },
+    {
+      title: t('service_teeth_cleaning_title'),
+      slug: 'teeth-cleaning'
+    },
+    {
+      title: t('service_teeth_whitening_title'),
+      slug: 'teeth-whitening'
+    },
+    {
+      title: t('service_e_max_veneers_title'),
+      slug: 'e-max-veneers'
+    },
+    {
+      title: t('service_e_max_crown_title'),
+      slug: 'e-max-crown'
+    },
+    {
+      title: t('service_gingivoplasty_title'),
+      slug: 'gingivoplasty'
+    },
+    {
+      title: t('service_botox_title'),
+      slug: 'botox'
+    },
+    {
+      title: t('service_zirconia_crown_on_tooth_title'),
+      slug: 'zirconia-crown-on-tooth'
+    },
+    {
+      title: t('service_zirconia_crown_on_implant_title'),
+      slug: 'zirconia-crown-on-implant'
+    },
+    {
+      title: t('service_bone_grafting_title'),
+      slug: 'bone-grafting'
+    },
+    {
+      title: t('service_sinus_lifting_title'),
+      slug: 'sinus-lifting'
+    },
+    {
+      title: t('service_piezolifting_title'),
+      slug: 'piezolifting'
+    },
+    {
+      title: t('service_root_canal_treatment_title'),
+      slug: 'root-canal-treatment'
+    },
+    {
+      title: t('service_tooth_extraction_title'),
+      slug: 'tooth-extraction'
+    },
+    {
+      title: t('service_wisdom_tooth_extraction_title'),
+      slug: 'wisdom-tooth-extraction'
+    },
+    {
+      title: t('service_cystectomy_title'),
+      slug: 'cystectomy'
+    },
+    {
+      title: t('service_apicoectomy_title'),
+      slug: 'apicoectomy'
+    },
+    {
+      title: t('service_flap_surgery_title'),
+      slug: 'flap-surgery'
+    },
+    {
+      title: t('service_curottage_title'),
+      slug: 'curettage'
+    },
+    {
+      title: t('service_braces_title'),
+      slug: 'braces'
+    },
+    {
+      title: t('service_aligners_title'),
+      slug: 'aligners'
+    },
+    {
+      title: t('service_night_guard_title'),
+      slug: 'night-guard'
+    }
   ];
   const journeyData = [
     {
@@ -206,7 +296,7 @@ export default function Home() {
                 <span>{t("home_promo2")}</span>
               </div>
             </div>
-            <button className="Startscreen_button">{t("home_button")}</button>
+            <button className="Startscreen_button" onClick={scrollToForm}>{t("home_button")}</button>
           </div>
           <img className="girl" src={girl} alt="smile" />
         </div>
@@ -230,17 +320,22 @@ export default function Home() {
                 <br />
                 call us to ask about a smile makeover
               </p>
-              <button>Call us</button>
+              <button onClick={scrollToForm}>Call us</button>
             </div>
           </div>
           <div className="bottomBlock">
-            {services.map((element, index) => (
-              <div key={element} className="block">
+            {services.map((service, index) => (
+              <Link 
+                key={service.slug} 
+                to={`/service/${service.slug}`} 
+                className="block"
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              >
                 <div className="circle">
-                  <span>{index < 10 ? `0${index + 1}` : index}</span>
+                  <span>{index < 9 ? `0${index + 1}` : index + 1}</span>
                 </div>
-                <span>{element}</span>
-              </div>
+                <span>{service.title}</span>
+              </Link>
             ))}
           </div>
         </div>

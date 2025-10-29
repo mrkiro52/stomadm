@@ -23,6 +23,14 @@ import Results from '../../components/Results/Results';
 export default function ServiceNightGuard() {
     const { t } = useTranslation();
     localStorage.setItem('page', 'service');
+    
+    const scrollToForm = () => {
+        const formElement = document.querySelector('.booking-section');
+        if (formElement) {
+            formElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    };
+    
     const journeyData = [
         {
           title: t("journey_night_guard_step1_title"),
@@ -95,7 +103,7 @@ export default function ServiceNightGuard() {
                       }}
                     >
                         <span>{t("service_night_guard_title")}</span>
-                        <button>{t("book_a_consultation")}</button>
+                        <button onClick={scrollToForm}>{t("book_a_consultation")}</button>
                     </div>
                 </div>
             </div>

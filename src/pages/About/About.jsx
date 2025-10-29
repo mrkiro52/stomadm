@@ -14,7 +14,7 @@ import before5 from '../Home/images/before5.png';
 import after5 from '../Home/images/after5.png';
 import before6 from '../Home/images/before6.png';
 import after6 from '../Home/images/after6.png';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Footer from '../../components/Footer/Footer';
 import Form from '../../components/Form/Form';
 import arrow from "./images/arrow.svg";
@@ -26,6 +26,10 @@ import Results from '../../components/Results/Results';
 export default function About() {
     const { t } = useTranslation();
     localStorage.setItem('page', 'about');
+    
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, []);
 
     const images = [
         {before: before1, after: after1},

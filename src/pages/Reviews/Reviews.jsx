@@ -2,7 +2,7 @@ import "./Reviews.scss";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import Form from "../../components/Form/Form";
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
@@ -14,6 +14,10 @@ export default function Reviews() {
   const { t } = useTranslation();
   const swiperRef = useRef(null);
   const [isBeginning, setIsBeginning] = useState(true);
+  
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
   const [isEnd, setIsEnd] = useState(false);
 
   localStorage.setItem("page", "reviews");

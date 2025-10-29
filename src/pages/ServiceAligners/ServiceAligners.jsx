@@ -23,6 +23,14 @@ import Results from '../../components/Results/Results';
 export default function ServiceAligners() {
     localStorage.setItem('page', 'service');
     const { t } = useTranslation();
+    
+    const scrollToForm = () => {
+        const formElement = document.querySelector('.booking-section');
+        if (formElement) {
+            formElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    };
+    
     const journeyData = [
       {
         title: t("journey_aligners_step1_title"),
@@ -96,7 +104,7 @@ export default function ServiceAligners() {
                       }}
                     >
                         <span>{t("service_aligners_title")}</span>
-                        <button>{t("book_a_consultation")}</button>
+                        <button onClick={scrollToForm}>{t("book_a_consultation")}</button>
                     </div>
                 </div>
             </div>

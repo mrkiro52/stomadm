@@ -23,6 +23,14 @@ import Results from '../../components/Results/Results';
 export default function ServiceFilling() {
     const { t } = useTranslation();
     localStorage.setItem('page', 'service');
+    
+    const scrollToForm = () => {
+        const formElement = document.querySelector('.booking-section');
+        if (formElement) {
+            formElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    };
+    
     const journeyData = [
         {
           title: t("journey_filling_step1_title"),
@@ -95,7 +103,7 @@ export default function ServiceFilling() {
                       }}
                     >
                         <span>{t("service_filling_title")}</span>
-                        <button>{t("book_a_consultation")}</button>
+                        <button onClick={scrollToForm}>{t("book_a_consultation")}</button>
                     </div>
                 </div>
             </div>

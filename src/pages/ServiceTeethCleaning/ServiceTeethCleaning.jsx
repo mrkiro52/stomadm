@@ -46,6 +46,13 @@ export default function ServiceTeethCleaning() {
         }
     ]
 
+    const scrollToForm = () => {
+        const formElement = document.querySelector('.booking-section');
+        if (formElement) {
+            formElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    };
+
     const [resultsPage, setResultsPage] = useState(0);
     const images = [
         {before: before1, after: after1},
@@ -95,7 +102,7 @@ export default function ServiceTeethCleaning() {
                       }}
                     >
                         <span>{t("service_teeth_cleaning_title")}</span>
-                        <button>{t("book_a_consultation")}</button>
+                        <button onClick={scrollToForm}>{t("book_a_consultation")}</button>
                     </div>
                 </div>
             </div>

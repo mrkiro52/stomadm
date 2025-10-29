@@ -21,8 +21,16 @@ import { useTranslation } from "react-i18next";
 import Results from '../../components/Results/Results';
 
 export default function ServiceGingivoplasty() {
-  const { t } = useTranslation();
+    const { t } = useTranslation();
     localStorage.setItem('page', 'service');
+    
+    const scrollToForm = () => {
+        const formElement = document.querySelector('.booking-section');
+        if (formElement) {
+            formElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    };
+    
     const journeyData = [
         {
           title: t("journey_gingivoplasty_step1_title"),
@@ -97,7 +105,7 @@ export default function ServiceGingivoplasty() {
                       }}
                     >
                         <span>{t("service_gingivoplasty_title")}</span>
-                        <button>{t("book_a_consultation")}</button>
+                        <button onClick={scrollToForm}>{t("book_a_consultation")}</button>
                     </div>
                 </div>
             </div>

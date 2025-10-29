@@ -2,11 +2,16 @@ import "./Contacts.scss";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import clinic from "./images/clinic.jpg";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import girlform from "./images/girlform.png";
 
 export default function Contacts() {
   localStorage.setItem("page", "contacts");
+  
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+  
   const [formData, setFormData] = useState({
       name: "",
       phone: "",

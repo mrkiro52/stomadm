@@ -23,6 +23,14 @@ import Results from '../../components/Results/Results';
 export default function ServiceRootCanalTreatment() {
     const { t } = useTranslation();
     localStorage.setItem('page', 'service');
+    
+    const scrollToForm = () => {
+        const formElement = document.querySelector('.booking-section');
+        if (formElement) {
+            formElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    };
+    
     const journeyData = [
         {
           title: t("journey_root_canal_treatment_step1_title"),
@@ -95,7 +103,7 @@ export default function ServiceRootCanalTreatment() {
                       }}
                     >
                         <span>{t("service_root_canal_treatment_title")}</span>
-                        <button>{t("book_a_consultation")}</button>
+                        <button onClick={scrollToForm}>{t("book_a_consultation")}</button>
                     </div>
                 </div>
             </div>

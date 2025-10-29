@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Gallery.scss";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
@@ -38,6 +38,11 @@ const images = [
 export default function Gallery() {
   const { t } = useTranslation();
   localStorage.setItem("page", "gallery");
+  
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+  
   return (
     <section className="gallery">
       <Header />

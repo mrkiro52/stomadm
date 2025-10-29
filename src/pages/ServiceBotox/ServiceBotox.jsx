@@ -23,6 +23,14 @@ import Results from '../../components/Results/Results';
 export default function ServiceBotox() {
     const { t } = useTranslation();
     localStorage.setItem('page', 'service');
+    
+    const scrollToForm = () => {
+        const formElement = document.querySelector('.booking-section');
+        if (formElement) {
+            formElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    };
+    
     const journeyData = [
         {
           title: t("journey_botox_step1_title"),
@@ -45,7 +53,6 @@ export default function ServiceBotox() {
           text: t("journey_botox_step4_text"),
         }
     ];
-    
 
     const [resultsPage, setResultsPage] = useState(0);
     const images = [
@@ -96,7 +103,7 @@ export default function ServiceBotox() {
                       }}
                     >
                         <span>{t("service_botox_title")}</span>
-                        <button>{t("book_a_consultation")}</button>
+                        <button onClick={scrollToForm}>{t("book_a_consultation")}</button>
                     </div>
                 </div>
             </div>

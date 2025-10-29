@@ -23,6 +23,14 @@ import Results from '../../components/Results/Results';
 export default function ServiceWisdomToothExtraction() {
     const { t } = useTranslation();
     localStorage.setItem('page', 'service');
+    
+    const scrollToForm = () => {
+        const formElement = document.querySelector('.booking-section');
+        if (formElement) {
+            formElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    };
+    
     const journeyData = [
         {
           title: t("journey_wisdom_tooth_extraction_step1_title"),
@@ -95,7 +103,7 @@ export default function ServiceWisdomToothExtraction() {
                       }}
                     >
                         <span>{t("service_wisdom_tooth_extraction_title")}</span>
-                        <button>{t("book_a_consultation")}</button>
+                        <button onClick={scrollToForm}>{t("book_a_consultation")}</button>
                     </div>
                 </div>
             </div>

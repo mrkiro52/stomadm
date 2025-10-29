@@ -8,7 +8,6 @@ export default function Form() {
     name: "",
     phone: "",
     email: "",
-    service: "",
     message: "",
   });
 
@@ -27,7 +26,6 @@ export default function Form() {
     if (!formData.name.trim()) newErrors.name = "Name is required";
     if (!formData.phone.trim()) newErrors.phone = "Phone is required";
     if (!formData.email.trim()) newErrors.email = "Email is required";
-    if (!formData.service.trim()) newErrors.service = "Service is required";
 
     setErrors(newErrors);
 
@@ -83,23 +81,6 @@ export default function Form() {
                   placeholder={t("form_email_placeholder")}
                 />
                 {errors.email && <p className="error">{errors.email}</p>}
-              </div>
-
-              <div className="input-group">
-                <label>{t("form_label_service")}</label>
-                <select
-                  name="service"
-                  value={formData.service}
-                  onChange={handleChange}
-                >
-                  <option value="">{t("form_service_service")}</option>
-                  <option>Hollywood Smile</option>
-                  <option>Implants</option>
-                  <option>Veneers</option>
-                  <option>Crowns</option>
-                  <option>All-on-6</option>
-                </select>
-                {errors.service && <p className="error">{errors.service}</p>}
               </div>
             </div>
 

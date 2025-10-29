@@ -21,8 +21,16 @@ import { useTranslation } from "react-i18next";
 import Results from '../../components/Results/Results';
 
 export default function ServiceEmaxVeneers() {
-  const { t } = useTranslation();
+    const { t } = useTranslation();
     localStorage.setItem('page', 'service');
+    
+    const scrollToForm = () => {
+        const formElement = document.querySelector('.booking-section');
+        if (formElement) {
+            formElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    };
+    
     const journeyData = [
         {
           title: t("journey_e_max_veneers_step1_title"),
@@ -95,7 +103,7 @@ export default function ServiceEmaxVeneers() {
                       }}
                     >
                         <span>{t("service_e_max_veneers_title")}</span>
-                        <button>{t("book_a_consultation")}</button>
+                        <button onClick={scrollToForm}>{t("book_a_consultation")}</button>
                     </div>
                 </div>
             </div>
