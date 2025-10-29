@@ -4,8 +4,10 @@ import Footer from "../../components/Footer/Footer";
 import clinic from "./images/clinic.jpg";
 import { useState, useEffect } from "react";
 import girlform from "./images/girlform.png";
+import { useTranslation } from 'react-i18next';
 
 export default function Contacts() {
+  const { t } = useTranslation();
   localStorage.setItem("page", "contacts");
   
   useEffect(() => {
@@ -32,10 +34,10 @@ export default function Contacts() {
       e.preventDefault();
   
       const newErrors = {};
-      if (!formData.name.trim()) newErrors.name = "Name is required";
-      if (!formData.phone.trim()) newErrors.phone = "Phone is required";
-      if (!formData.email.trim()) newErrors.email = "Email is required";
-      if (!formData.service.trim()) newErrors.service = "Service is required";
+      if (!formData.name.trim()) newErrors.name = t("contacts_form_error_name");
+      if (!formData.phone.trim()) newErrors.phone = t("contacts_form_error_phone");
+      if (!formData.email.trim()) newErrors.email = t("contacts_form_error_email");
+      if (!formData.service.trim()) newErrors.service = t("contacts_form_error_service");
   
       setErrors(newErrors);
   
@@ -54,10 +56,10 @@ export default function Contacts() {
           {" "}
           <div className="Contacts_info">
             {" "}
-            <span className="tag">Contacts</span>{" "}
+            <span className="tag">{t("contacts_tag")}</span>{" "}
             <div className="Contacts_block">
               {" "}
-              <p className="Contacts_label">Address:</p>{" "}
+              <p className="Contacts_label">{t("contacts_address_label")}</p>{" "}
               <p>
                 {" "}
                 Esentepe, Büyükdere Cd. No: 112B, 34394 Şişli/İstanbul, Türkiye{" "}
@@ -65,7 +67,7 @@ export default function Contacts() {
             </div>{" "}
             <div className="Contacts_block">
               {" "}
-              <p className="Contacts_label">Phone:</p>{" "}
+              <p className="Contacts_label">{t("contacts_phone_label")}</p>{" "}
               <p>
                 {" "}
                 <a href="tel:+902122160004">+90 (212) 216 00 04</a>{" "}
@@ -73,7 +75,7 @@ export default function Contacts() {
             </div>{" "}
             <div className="Contacts_block">
               {" "}
-              <p className="Contacts_label">E-mail:</p>{" "}
+              <p className="Contacts_label">{t("contacts_email_label")}</p>{" "}
               <p>
                 {" "}
                 <a href="mailto:info@dismimarisi.com">
@@ -94,19 +96,19 @@ export default function Contacts() {
               {" "}
               <p>
                 {" "}
-                Instagram: <br /> <span>@dismimarisi</span>{" "}
+                {t("contacts_instagram")} <br /> <span>@dismimarisi</span>{" "}
               </p>{" "}
               <p>
                 {" "}
-                Facebook: <br /> <span>@dismimarisi</span>{" "}
+                {t("contacts_facebook")} <br /> <span>@dismimarisi</span>{" "}
               </p>{" "}
               <p>
                 {" "}
-                TikTok: <br /> <span>@dismimarisi</span>{" "}
+                {t("contacts_tiktok")} <br /> <span>@dismimarisi</span>{" "}
               </p>{" "}
               <p>
                 {" "}
-                VK: <br /> <span>@dismimarisi</span>{" "}
+                {t("contacts_vk")} <br /> <span>@dismimarisi</span>{" "}
               </p>{" "}
             </div>{" "}
           </div>{" "}
@@ -121,31 +123,31 @@ export default function Contacts() {
       <div className="booking-container">
         {/* Левая часть */}
         <div className="booking-left">
-          <span className="booking-span">Booking</span>
-          <h2 className="booking-title">Online <span>appointment form</span></h2>
+          <span className="booking-span">{t("contacts_booking_tag")}</span>
+          <h2 className="booking-title">{t("contacts_booking_title")} <span>{t("contacts_booking_title_span")}</span></h2>
 
           <form onSubmit={handleSubmit}>
             <div className="row">
               <div className="input-group">
-                <label>Name</label>
+                <label>{t("contacts_form_name")}</label>
                 <input
                   type="text"
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  placeholder="Enter your name"
+                  placeholder={t("contacts_form_name_placeholder")}
                 />
                 {errors.name && <p className="error">{errors.name}</p>}
               </div>
 
               <div className="input-group">
-                <label>Phone</label>
+                <label>{t("contacts_form_phone")}</label>
                 <input
                   type="text"
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  placeholder="Enter your phone"
+                  placeholder={t("contacts_form_phone_placeholder")}
                 />
                 {errors.phone && <p className="error">{errors.phone}</p>}
               </div>
@@ -153,59 +155,59 @@ export default function Contacts() {
 
             <div className="row">
               <div className="input-group">
-                <label>Email</label>
+                <label>{t("contacts_form_email")}</label>
                 <input
                   type="email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  placeholder="Enter your email"
+                  placeholder={t("contacts_form_email_placeholder")}
                 />
                 {errors.email && <p className="error">{errors.email}</p>}
               </div>
 
               <div className="input-group">
-                <label>Service</label>
+                <label>{t("contacts_form_service")}</label>
                 <select
                   name="service"
                   value={formData.service}
                   onChange={handleChange}
                 >
-                  <option value="">Select a service</option>
-                  <option>Hollywood Smile</option>
-                  <option>Implants</option>
-                  <option>Veneers</option>
-                  <option>Crowns</option>
-                  <option>All-on-6</option>
+                  <option value="">{t("contacts_form_service_placeholder")}</option>
+                  <option>{t("contacts_form_service_hollywood")}</option>
+                  <option>{t("contacts_form_service_implants")}</option>
+                  <option>{t("contacts_form_service_veneers")}</option>
+                  <option>{t("contacts_form_service_crowns")}</option>
+                  <option>{t("contacts_form_service_all_on_6")}</option>
                 </select>
                 {errors.service && <p className="error">{errors.service}</p>}
               </div>
             </div>
 
             <div className="textarea-group">
-              <label style={{marginBottom: '8px', fontWeight: 500}}>Your message</label>
+              <label style={{marginBottom: '8px', fontWeight: 500}}>{t("contacts_form_message")}</label>
               <textarea
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                placeholder="Write your message..."
+                placeholder={t("contacts_form_message_placeholder")}
                 maxLength="300"
               />
               <span className="char-count">[{formData.message.length}/300]</span>
             </div>
 
             <button type="submit" className="send-btn">
-              Send
+              {t("contacts_form_send")}
             </button>
           </form>
 
           <div className="info-row">
             <div className="info-block">
-              <span>Instagram:</span>
+              <span>{t("contacts_info_instagram")}</span>
               <p>@dismimarisi</p>
             </div>
             <div className="info-block" style={{alignItems: 'flex-end'}}>
-              <span>Address:</span>
+              <span>{t("contacts_info_address")}</span>
               <p style={{textAlign: 'end'}}>
                 Esentepe, Büyükdere Cd. No: 112B, 34394 Şişli/İstanbul, Türkiye
               </p>

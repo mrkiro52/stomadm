@@ -315,21 +315,21 @@ export default function Header() {
                     >
                         {t('header_link_contacts')}
                     </a>
-                </div>
-
-                <div className="Header_mobile__language">
-                    <div className="language-wrapper-mobile">
-                        <span className="language-label">{t('header_select_language_label')}</span>
-                        <div className="language-buttons">
-                            {languages.map((lang) => (
-                                <button
-                                    key={lang}
-                                    className={`lang-item-mobile ${selected === lang ? 'active' : ''}`}
-                                    onClick={() => handleSelect(lang)}
-                                >
-                                    {lang}
-                                </button>
-                            ))}
+                    
+                    <div className="Header_mobile__language">
+                        <div className="language-wrapper-mobile">
+                            <span className="language-label">{t('header_select_language_label')}</span>
+                            <div className="language-buttons">
+                                {languages.map((lang) => (
+                                    <button
+                                        key={lang}
+                                        className={`lang-item-mobile ${selected === lang ? 'active' : ''}`}
+                                        onClick={() => handleSelect(lang)}
+                                    >
+                                        {lang}
+                                    </button>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>

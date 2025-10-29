@@ -303,6 +303,9 @@
         
         /* Адаптив */
         @media (max-width: 768px) {
+          margin: 60px 16px;
+          padding: 16px;
+          
           .booking-container {
             flex-direction: column;
           }

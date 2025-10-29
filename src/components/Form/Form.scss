@@ -13,6 +13,8 @@
     margin: 80px auto;
   }
   @media screen and (max-width: 685px) {
+    margin: 60px 16px;
+    width: calc(100% - 32px);
   }
 
   .booking-container {
@@ -33,6 +35,9 @@
     display: flex;
     padding: 24px;
     flex-direction: column;
+    @media screen and (max-width: 685px) {
+      padding: 16px;
+    }
   }
 
   /* Карта занимает всю высоту правого блока */
