@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   const { t } = useTranslation();
-  
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
