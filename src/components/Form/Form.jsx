@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./Form.scss";
 import { useTranslation } from "react-i18next";
 
-export default function Form() {
+export default function Form({ theme = "white" }) {
   const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: "",
@@ -36,7 +36,7 @@ export default function Form() {
   };
 
   return (
-    <section className="booking-section">
+    <section className={`booking-section booking-section--${theme}`}>
       <div className="booking-container">
         {/* Левая часть */}
         <div className="booking-left">
@@ -106,13 +106,13 @@ export default function Form() {
           </form>
 
           <div className="info-row">
-            <div className="info-block">
+            <div className="info-block-social">
               <span>Instagram:</span>
               <p>@dismimarisi</p>
             </div>
-            <div className="info-block" style={{ alignItems: "flex-end" }}>
+            <div className="info-block-address">
               <span>Address:</span>
-              <p style={{ textAlign: "end" }}>
+              <p>
                 Esentepe, Büyükdere Cd. No: 112B, 34394 Şişli/İstanbul, Türkiye
               </p>
             </div>

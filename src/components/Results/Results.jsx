@@ -18,16 +18,16 @@ import after5 from "./images/after5.jpg";
 import before6 from "./images/before6.jpg";
 import after6 from "./images/after6.jpg";
 
-export default function Results() {
+export default function Results({ theme = "gray" }) {
   const [resultsPage, setResultsPage] = useState(0);
-  
+
   const scrollToForm = () => {
-    const formElement = document.querySelector('.booking-section');
+    const formElement = document.querySelector(".booking-section");
     if (formElement) {
-      formElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      formElement.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
-  
+
   const images = [
     { before: before1, after: after1 },
     { before: before2, after: after2 },
@@ -50,7 +50,7 @@ export default function Results() {
   const current = images[resultsPage];
   const { t } = useTranslation();
   return (
-    <div className="Results">
+    <div className={`Results Results--${theme}`}>
       <div className="wrapper">
         <div className="topBlock">
           <div className="tab">

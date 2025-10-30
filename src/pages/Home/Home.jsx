@@ -43,11 +43,11 @@ export default function Home() {
   const [isBeginning, setIsBeginning] = useState(true);
   const [isEnd, setIsEnd] = useState(false);
   const swiperRef = useRef(null);
-  
+
   const scrollToForm = () => {
-    const formElement = document.querySelector('.booking-section');
+    const formElement = document.querySelector(".booking-section");
     if (formElement) {
-      formElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      formElement.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
   const images = [
@@ -59,7 +59,7 @@ export default function Home() {
     { before: before6, after: after6 },
   ];
 
-    // Локальный массив отзывов
+  // Локальный массив отзывов
   const reviewsData = [
     {
       id: 1,
@@ -121,93 +121,93 @@ export default function Home() {
   // Все 22 услуги с их данными - взято из Services.jsx
   const services = [
     {
-      title: t('service_filling_title'),
-      slug: 'filling'
+      title: t("service_filling_title"),
+      slug: "filling",
     },
     {
-      title: t('service_teeth_cleaning_title'),
-      slug: 'teeth-cleaning'
+      title: t("service_teeth_cleaning_title"),
+      slug: "teeth-cleaning",
     },
     {
-      title: t('service_teeth_whitening_title'),
-      slug: 'teeth-whitening'
+      title: t("service_teeth_whitening_title"),
+      slug: "teeth-whitening",
     },
     {
-      title: t('service_e_max_veneers_title'),
-      slug: 'e-max-veneers'
+      title: t("service_e_max_veneers_title"),
+      slug: "e-max-veneers",
     },
     {
-      title: t('service_e_max_crown_title'),
-      slug: 'e-max-crown'
+      title: t("service_e_max_crown_title"),
+      slug: "e-max-crown",
     },
     {
-      title: t('service_gingivoplasty_title'),
-      slug: 'gingivoplasty'
+      title: t("service_gingivoplasty_title"),
+      slug: "gingivoplasty",
     },
     {
-      title: t('service_botox_title'),
-      slug: 'botox'
+      title: t("service_botox_title"),
+      slug: "botox",
     },
     {
-      title: t('service_zirconia_crown_on_tooth_title'),
-      slug: 'zirconia-crown-on-tooth'
+      title: t("service_zirconia_crown_on_tooth_title"),
+      slug: "zirconia-crown-on-tooth",
     },
     {
-      title: t('service_zirconia_crown_on_implant_title'),
-      slug: 'zirconia-crown-on-implant'
+      title: t("service_zirconia_crown_on_implant_title"),
+      slug: "zirconia-crown-on-implant",
     },
     {
-      title: t('service_bone_grafting_title'),
-      slug: 'bone-grafting'
+      title: t("service_bone_grafting_title"),
+      slug: "bone-grafting",
     },
     {
-      title: t('service_sinus_lifting_title'),
-      slug: 'sinus-lifting'
+      title: t("service_sinus_lifting_title"),
+      slug: "sinus-lifting",
     },
     {
-      title: t('service_piezolifting_title'),
-      slug: 'piezolifting'
+      title: t("service_piezolifting_title"),
+      slug: "piezolifting",
     },
     {
-      title: t('service_root_canal_treatment_title'),
-      slug: 'root-canal-treatment'
+      title: t("service_root_canal_treatment_title"),
+      slug: "root-canal-treatment",
     },
     {
-      title: t('service_tooth_extraction_title'),
-      slug: 'tooth-extraction'
+      title: t("service_tooth_extraction_title"),
+      slug: "tooth-extraction",
     },
     {
-      title: t('service_wisdom_tooth_extraction_title'),
-      slug: 'wisdom-tooth-extraction'
+      title: t("service_wisdom_tooth_extraction_title"),
+      slug: "wisdom-tooth-extraction",
     },
     {
-      title: t('service_cystectomy_title'),
-      slug: 'cystectomy'
+      title: t("service_cystectomy_title"),
+      slug: "cystectomy",
     },
     {
-      title: t('service_apicoectomy_title'),
-      slug: 'apicoectomy'
+      title: t("service_apicoectomy_title"),
+      slug: "apicoectomy",
     },
     {
-      title: t('service_flap_surgery_title'),
-      slug: 'flap-surgery'
+      title: t("service_flap_surgery_title"),
+      slug: "flap-surgery",
     },
     {
-      title: t('service_curottage_title'),
-      slug: 'curettage'
+      title: t("service_curottage_title"),
+      slug: "curettage",
     },
     {
-      title: t('service_braces_title'),
-      slug: 'braces'
+      title: t("service_braces_title"),
+      slug: "braces",
     },
     {
-      title: t('service_aligners_title'),
-      slug: 'aligners'
+      title: t("service_aligners_title"),
+      slug: "aligners",
     },
     {
-      title: t('service_night_guard_title'),
-      slug: 'night-guard'
-    }
+      title: t("service_night_guard_title"),
+      slug: "night-guard",
+    },
   ];
   const journeyData = [
     {
@@ -296,7 +296,9 @@ export default function Home() {
                 <span>{t("home_promo2")}</span>
               </div>
             </div>
-            <button className="Startscreen_button" onClick={scrollToForm}>{t("home_button")}</button>
+            <button className="Startscreen_button" onClick={scrollToForm}>
+              {t("home_button")}
+            </button>
           </div>
           <img className="girl" src={girl} alt="smile" />
         </div>
@@ -325,11 +327,11 @@ export default function Home() {
           </div>
           <div className="bottomBlock">
             {services.map((service, index) => (
-              <Link 
-                key={service.slug} 
-                to={`/service/${service.slug}`} 
+              <Link
+                key={service.slug}
+                to={`/service/${service.slug}`}
                 className="block"
-                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               >
                 <div className="circle">
                   <span>{index < 9 ? `0${index + 1}` : index + 1}</span>
@@ -385,7 +387,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <Results />
+      <Results theme="white" />
       <div className="Advantages">
         <div className="wrapper">
           <div className="topBlock">
@@ -481,7 +483,8 @@ export default function Home() {
         <div className="reviews-container">
           <span className="reviews-tag">{t("reviews_tag")}</span>
           <h1 className="reviews-title">
-            {t("reviews_title")}{t("reviews_subtitle")}
+            {t("reviews_title")}
+            {t("reviews_subtitle")}
           </h1>
         </div>
       </header>

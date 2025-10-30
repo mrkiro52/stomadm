@@ -2,15 +2,13 @@
 
 .Reviews {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
 
 .reviews-container {
   max-width: 1320px;
-  margin: 0 auto;
   padding: 0 24px;
-
+  flex-direction: column;
+  width: 100%;
   @media (min-width: 1321px) {
     width: 1320px;
     padding: 0;
@@ -19,27 +17,41 @@
 
 // Reviews Header
 .reviews-header {
-  padding: 120px 0 40px;
+  padding: 80px 0 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 0 auto;
-
+  &--white {
+    background-color: white;
+    .reviews-tag {
+      background-color: #d9d9d9;
+      color: #4e3629;
+    }
+  }
+  &--gray {
+    background-color: #d9d9d9;
+    .reviews-tag {
+      background-color: white;
+      color: #4e3629;
+    }
+  }
   @media (max-width: 1024px) {
     padding: 100px 0 60px;
   }
 
   @media (max-width: 768px) {
-    padding: 120px 0 40px;
+    padding: 80px 0 40px;
   }
 
   .reviews-tag {
     display: inline-block;
-    background-color: #4E3629;
-    color: white;
     padding: 8px 16px;
     border-radius: 20px;
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 15px;
+    font-weight: 400;
     margin-bottom: 24px;
-    text-transform: uppercase;
     letter-spacing: 0.5px;
 
     @media (max-width: 768px) {
@@ -92,9 +104,13 @@
 
 // Reviews Swiper Section
 .reviews-swiper-section {
+  display: flex;
   width: 100%;
   padding: 40px 0 60px;
   flex: 1;
+  background-color: #d9d9d9;
+  flex-direction: column;
+  align-items: center;
 
   @media (max-width: 1024px) {
     padding: 60px 0 100px;
@@ -108,7 +124,7 @@
 // Swiper Controls
 .swiper-controls {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   gap: 16px;
   margin-bottom: 40px;
 

@@ -1,145 +1,147 @@
 .Services {
-    min-height: 100vh;
-    
-    .services-hero {
-        padding: 120px 0 80px;
-        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-        text-align: center;
-        
-        h1 {
-            font-size: 48px;
-            font-weight: 700;
-            color: black;
-            margin-bottom: 20px;
-            
-            @media (max-width: 768px) {
-                font-size: 36px;
-            }
-        }
-        
-        p {
-            font-size: 18px;
-            color: #6c757d;
-            max-width: 600px;
-            margin: 0 auto;
-            
-            @media (max-width: 768px) {
-                font-size: 16px;
-            }
-        }
-    }
-    
-    .services-grid {
-        padding: 80px 0;
-        
-        .container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 24px;
-            width: 100%;
-            
-            @media (max-width: 1280px) {
-                width: 100%;
-            }
-        }
-        
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 32px;
-            
-            @media (max-width: 1024px) {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 24px;
-            }
-            
-            @media (max-width: 768px) {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-        }
-        
-        .service-card {
-            background: white;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            border: 1px solid #e9ecef;
-            
-            &:hover {
-                transform: translateY(-8px);
-                box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-            }
-            
-            .service-image {
-                width: 100%;
-                height: 240px;
-                overflow: hidden;
-                
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    transition: transform 0.3s ease;
-                }
-                
-                &:hover img {
-                    transform: scale(1.05);
-                }
-            }
-            
-            .service-content {
-                padding: 24px;
-                
-                h3 {
-                    font-size: 22px;
-                    font-weight: 600;
-                    color: #2c3e50;
-                    margin-bottom: 12px;
-                    line-height: 1.3;
-                }
-                
-                p {
-                    font-size: 14px;
-                    color: #6c757d;
-                    line-height: 1.6;
-                    margin-bottom: 20px;
-                    display: -webkit-box;
-                    -webkit-line-clamp: 3;
-                    -webkit-box-orient: vertical;
-                    overflow: hidden;
-                }
-                
-                .service-button {
-                    display: inline-block;
-                    background: #4e3629;
-                    color: white;
-                    padding: 12px 24px;
-                    border-radius: 8px;
-                    text-decoration: none;
-                    font-weight: 500;
-                    font-size: 14px;
-                    transition: all 0.3s ease;
-                    
-                    &:hover {
-                        background: #3a251a;
-                        transform: translateY(-2px);
-                    }
-                }
-            }
-        }
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .services-hero {
+    padding: 120px 0 80px;
+    text-align: center;
+
+    h1 {
+      font-size: 48px;
+      font-weight: 700;
+      color: black;
+      margin-bottom: 20px;
+
+      @media (max-width: 768px) {
+        font-size: 36px;
+      }
     }
 
-    // Стили для формы в контейнере
-    .Form {
-        max-width: 1280px;
-        margin: 0 auto;
-        padding: 0 24px;
-        width: 100%;
-        
-        @media (max-width: 1280px) {
-            width: 100%;
-        }
+    p {
+      font-size: 18px;
+      color: #6c757d;
+      max-width: 600px;
+      margin: 0 auto;
+
+      @media (max-width: 768px) {
+        font-size: 16px;
+      }
     }
+  }
+
+  .services-grid {
+    padding: 80px 0;
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+      width: 100%;
+
+      @media (max-width: 1280px) {
+        width: 100%;
+      }
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+
+      @media (max-width: 1024px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+      }
+
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
+
+    .service-card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      border: 1px solid #e9ecef;
+
+      &:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+      }
+
+      .service-image {
+        width: 100%;
+        height: 240px;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.3s ease;
+        }
+
+        &:hover img {
+          transform: scale(1.05);
+        }
+      }
+
+      .service-content {
+        padding: 24px;
+
+        h3 {
+          font-size: 22px;
+          font-weight: 600;
+          color: #2c3e50;
+          margin-bottom: 12px;
+          line-height: 1.3;
+        }
+
+        p {
+          font-size: 14px;
+          color: #6c757d;
+          line-height: 1.6;
+          margin-bottom: 20px;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+
+        .service-button {
+          display: inline-block;
+          background: #4e3629;
+          color: white;
+          padding: 12px 24px;
+          border-radius: 8px;
+          text-decoration: none;
+          font-weight: 500;
+          font-size: 14px;
+          transition: all 0.3s ease;
+
+          &:hover {
+            background: #3a251a;
+            transform: translateY(-2px);
+          }
+        }
+      }
+    }
+  }
+
+  // Стили для формы в контейнере
+  .Form {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+    width: 100%;
+
+    @media (max-width: 1280px) {
+      width: 100%;
+    }
+  }
 }

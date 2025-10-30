@@ -1,10 +1,21 @@
 @import "../../styles/variables";
 
 .Results {
-  background-color: rgba(217, 217, 217, 1);
   width: 100%;
   display: flex;
   justify-content: center;
+  &--white {
+    background-color: white;
+    .tab {
+      background-color: #d9d9d9;
+    }
+  }
+  &--gray {
+    background-color: #d9d9d9;
+    .tab {
+      background-color: white;
+    }
+  }
   & > .wrapper {
     width: 1320px;
     display: flex;
@@ -23,7 +34,6 @@
       flex-direction: column;
       gap: 20px;
       .tab {
-        background-color: white;
         width: max-content;
         padding: 0px 32px;
         height: 30px;

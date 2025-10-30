@@ -10,13 +10,13 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-export default function Reviews() {
+export default function Reviews({ theme = "gray" }) {
   const { t } = useTranslation();
   const swiperRef = useRef(null);
   const [isBeginning, setIsBeginning] = useState(true);
-  
+
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
   const [isEnd, setIsEnd] = useState(false);
 
@@ -71,13 +71,14 @@ export default function Reviews() {
   return (
     <div className="Reviews">
       <Header />
-      
+
       {/* Reviews Header */}
-      <header className="reviews-header">
+      <header className={`reviews-header reviews-header--${theme}`}>
         <div className="reviews-container">
           <span className="reviews-tag">{t("reviews_tag")}</span>
           <h1 className="reviews-title">
-            {t("reviews_title")}{t("reviews_subtitle")}
+            {t("reviews_title")}
+            {t("reviews_subtitle")}
           </h1>
         </div>
       </header>
