@@ -72,17 +72,17 @@ export default function Footer() {
         <div className="Footer_bottom_wrapper">
           <p>{t("footer_rights")}</p>
           <div className="Footer_socials">
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/dismimarisi?igsh=aW1mMzByMnQ3bnc=" target="_blank" rel="noopener noreferrer">
               {t("footer_instagram")} <span>@dismimarisi</span>
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/company/dismimarisi?originalSubdomain=tr" target="_blank" rel="noopener noreferrer">
               {t("footer_facebook")} <span>@dismimarisi</span>
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              {t("footer_tiktok")} <span>@dismimarisi</span>
+            <a href="https://www.instagram.com/dis.mimarisi?igsh=MWxsM20zNXdob2Y2eg==" target="_blank" rel="noopener noreferrer">
+              {t("footer_instagram")} <span>@dis.mimarisi</span>
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              {t("footer_vk")} <span>@dismimarisi</span>
+            <a href="https://www.tiktok.com/@dis.mimarisi?_t=ZN-90Xk0jUO622&_r=1" target="_blank" rel="noopener noreferrer">
+              {t("footer_tiktok")} <span>@dis.mimarisi</span>
             </a>
           </div>
         </div>
