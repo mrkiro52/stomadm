@@ -515,6 +515,48 @@
                   display: none;
                 }
               }
+              &.botox {
+                background: url("./images/botox.jpg");
+                background-size: cover;
+                @media screen and (max-width: 880px) {
+                  display: none;
+                }
+              }
+              &.filling {
+                background: url("./images/filling.jpg");
+                background-size: cover;
+                @media screen and (max-width: 880px) {
+                  display: none;
+                }
+              }
+              &.veneers {
+                background: url("./images/veneers.jpg");
+                background-size: cover;
+                @media screen and (max-width: 880px) {
+                  display: none;
+                }
+              }
+              &.aligners {
+                background: url("./images/aligners.jpg");
+                background-size: cover;
+                @media screen and (max-width: 880px) {
+                  display: none;
+                }
+              }
+              &.braces {
+                background: url("./images/braces.jpg");
+                background-size: cover;
+                @media screen and (max-width: 880px) {
+                  display: none;
+                }
+              }
+              &.teethwhitening {
+                background: url("./images/teethwhitening.jpg");
+                background-size: cover;
+                @media screen and (max-width: 880px) {
+                  display: none;
+                }
+              }
             }
           }
         }

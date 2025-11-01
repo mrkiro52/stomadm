@@ -412,7 +412,7 @@ export default function Home() {
                 <div className="block_el doctors">
                   {/* doctors little image */}
                 </div>
-                <div className="block_el empty"></div>
+                <div className="block_el botox"></div>
                 <div className="block_el">
                   02
                   <br />
@@ -422,7 +422,7 @@ export default function Home() {
             </div>
             <div className="row">
               <div className="block">
-                <div className="block_el empty"></div>
+                <div className="block_el filling"></div>
                 <div className="block_el">
                   03
                   <br />
@@ -430,13 +430,13 @@ export default function Home() {
                   <br />
                   on TripAdvisor
                 </div>
-                <div className="block_el empty"></div>
-                <div className="block_el empty"></div>
+                <div className="block_el veneers"></div>
+                <div className="block_el aligners"></div>
               </div>
               <div className="block">
                 <div className="block_el zub">{/* teeth little image */}</div>
-                <div className="block_el empty"></div>
-                <div className="block_el empty"></div>
+                <div className="block_el braces"></div>
+                <div className="block_el teethwhitening"></div>
                 <div className="block_el">
                   04
                   <br />
