@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/stomadm/static/css/main.28e1d5c2.css",
-    "main.js": "/stomadm/static/js/main.9ebe5b9f.js",
+    "main.css": "/stomadm/static/css/main.9f867d3c.css",
+    "main.js": "/stomadm/static/js/main.ade601e2.js",
     "static/js/453.d7b3ff8f.chunk.js": "/stomadm/static/js/453.d7b3ff8f.chunk.js",
     "static/media/after2.jpg": "/stomadm/static/media/after2.21ab77f32e0dd56c059d.jpg",
     "static/media/before2.jpg": "/stomadm/static/media/before2.cc8421ab7b000caba1ad.jpg",
@@ -30,12 +30,17 @@
     "static/media/smile.jpg": "/stomadm/static/media/smile.f4c6c801b12386523d6a.jpg",
     "static/media/gallery2.jpg": "/stomadm/static/media/gallery2.fc79818f2a059b6b2413.jpg",
     "static/media/gallery10.jpg": "/stomadm/static/media/gallery10.2c26ae03747f78ee2b88.jpg",
+    "static/media/braces.jpg": "/stomadm/static/media/braces.7b98f501dc2a4064e1bb.jpg",
     "static/media/gallery1.jpg": "/stomadm/static/media/gallery1.c02cadb2e3f84a019057.jpg",
+    "static/media/teethwhitening.jpg": "/stomadm/static/media/teethwhitening.64b39e26de7561329701.jpg",
     "static/media/girl.png": "/stomadm/static/media/girl.e37d02cfc3948be68859.png",
     "static/media/before4.png": "/stomadm/static/media/before4.f3062c52ef05a40c2a32.png",
+    "static/media/filling.jpg": "/stomadm/static/media/filling.2c410feed37c7c930abc.jpg",
+    "static/media/veneers.jpg": "/stomadm/static/media/veneers.3b2a59307fb0183fa424.jpg",
     "static/media/before5.png": "/stomadm/static/media/before5.ae4428bcf6c5179f444f.png",
     "static/media/gallery4.jpg": "/stomadm/static/media/gallery4.ff657a166222fcf846d7.jpg",
     "static/media/gallery11.jpg": "/stomadm/static/media/gallery11.a665072914a81a79c4b8.jpg",
+    "static/media/botox.jpg": "/stomadm/static/media/botox.8f6b8265d84faebe3de5.jpg",
     "static/media/after1.png": "/stomadm/static/media/after1.6bda30cdf05aa7982f3c.png",
     "static/media/gallery6.jpg": "/stomadm/static/media/gallery6.e0b1dfcf999da4906349.jpg",
     "static/media/gallery7.jpg": "/stomadm/static/media/gallery7.47d2fdd8e320674e2962.jpg",
@@ -45,6 +50,7 @@
     "static/media/before1.png": "/stomadm/static/media/before1.d14327e5d02d48f7328f.png",
     "static/media/before2.png": "/stomadm/static/media/before2.8dd1fa63217a0e2b7f22.png",
     "static/media/before6.png": "/stomadm/static/media/before6.82e5c4f6be39259e6af1.png",
+    "static/media/aligners.jpg": "/stomadm/static/media/aligners.3a94893e19c888fb1f6f.jpg",
     "static/media/logoIstanbul.png": "/stomadm/static/media/logoIstanbul.d05f90073b2f35696f11.png",
     "static/media/doctor1.jpg": "/stomadm/static/media/doctor1.b211f895995e6af37e12.jpg",
     "static/media/before3.png": "/stomadm/static/media/before3.be5983cef56ba8423cf0.png",
@@ -61,12 +67,12 @@
     "static/media/arrow.svg": "/stomadm/static/media/arrow.37915ddfe17f86bd25edc528ef14653b.svg",
     "static/media/icon3.svg": "/stomadm/static/media/icon3.f135450d4be9621811b0742d3e471471.svg",
     "index.html": "/stomadm/index.html",
-    "main.28e1d5c2.css.map": "/stomadm/static/css/main.28e1d5c2.css.map",
-    "main.9ebe5b9f.js.map": "/stomadm/static/js/main.9ebe5b9f.js.map",
+    "main.9f867d3c.css.map": "/stomadm/static/css/main.9f867d3c.css.map",
+    "main.ade601e2.js.map": "/stomadm/static/js/main.ade601e2.js.map",
     "453.d7b3ff8f.chunk.js.map": "/stomadm/static/js/453.d7b3ff8f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.28e1d5c2.css",
-    "static/js/main.9ebe5b9f.js"
+    "static/css/main.9f867d3c.css",
+    "static/js/main.ade601e2.js"
   ]
 }
