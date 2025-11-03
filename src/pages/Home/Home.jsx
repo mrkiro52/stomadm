@@ -35,6 +35,28 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import Results from "../../components/Results/Results";
 import Reviews from "../Reviews/Reviews";
+import filling from "./images/filling.jpg";
+import teethcleaning from "./images/teeth-cleaning.jpg";
+import teethwhitening from "./images/teethwhitening.jpg";
+import botox from "./images/botox.jpg";
+import veneers from "./images/veneers.jpg";
+import crown from "./images/crown.jpg";
+import gingivoplasty from "./images/gingivoplasty.jpg";
+import zirconiacrowntooth from "./images/zirconiacrowntooth.jpg";
+import zirconiacrownimplant from "./images/zirconiacrownimplant.jpg";
+import grafting from "./images/grafting.jpg";
+import lifting from "./images/lifting.jpg";
+import piezolifting from "./images/piezolifting.jpg";
+import rootcanal from "./images/rootcanal.jpg";
+import extraction from "./images/extraction.jpg";
+import wisdomextraction from "./images/wisdomextraction.jpg";
+import cystectomy from "./images/cystectomy.jpg";
+import apicoectomy from "./images/apicoectomy.jpg";
+import flapsurgery from "./images/flapsurgery.jpg";
+import curettage from "./images/curettage.jpg";
+import braces from "./images/braces.jpg";
+import aligners from "./images/aligners.jpg";
+import nightguard from "./images/nightguard.jpg";
 
 export default function Home() {
   localStorage.setItem("page", "home");
@@ -123,90 +145,112 @@ export default function Home() {
     {
       title: t("service_filling_title"),
       slug: "filling",
+      image: filling,
     },
     {
       title: t("service_teeth_cleaning_title"),
       slug: "teeth-cleaning",
+      image: teethcleaning,
     },
     {
       title: t("service_teeth_whitening_title"),
       slug: "teeth-whitening",
+      image: teethwhitening,
     },
     {
       title: t("service_e_max_veneers_title"),
       slug: "e-max-veneers",
+      image: veneers,
     },
     {
       title: t("service_e_max_crown_title"),
       slug: "e-max-crown",
+      image: crown,
     },
     {
       title: t("service_gingivoplasty_title"),
       slug: "gingivoplasty",
+      image: gingivoplasty,
     },
     {
       title: t("service_botox_title"),
       slug: "botox",
+      image: botox,
     },
     {
       title: t("service_zirconia_crown_on_tooth_title"),
       slug: "zirconia-crown-on-tooth",
+      image: zirconiacrowntooth,
     },
     {
       title: t("service_zirconia_crown_on_implant_title"),
       slug: "zirconia-crown-on-implant",
+      image: zirconiacrownimplant,
     },
     {
       title: t("service_bone_grafting_title"),
       slug: "bone-grafting",
+      image: grafting,
     },
     {
       title: t("service_sinus_lifting_title"),
       slug: "sinus-lifting",
+      image: lifting,
     },
     {
       title: t("service_piezolifting_title"),
       slug: "piezolifting",
+      image: piezolifting,
     },
     {
       title: t("service_root_canal_treatment_title"),
       slug: "root-canal-treatment",
+      image: rootcanal,
     },
     {
       title: t("service_tooth_extraction_title"),
       slug: "tooth-extraction",
+      image: extraction,
     },
     {
       title: t("service_wisdom_tooth_extraction_title"),
       slug: "wisdom-tooth-extraction",
+      image: wisdomextraction,
     },
     {
       title: t("service_cystectomy_title"),
       slug: "cystectomy",
+      image: cystectomy,
     },
     {
       title: t("service_apicoectomy_title"),
       slug: "apicoectomy",
+      image: apicoectomy,
     },
     {
       title: t("service_flap_surgery_title"),
       slug: "flap-surgery",
+      image: flapsurgery,
     },
     {
       title: t("service_curottage_title"),
       slug: "curettage",
+      image: curettage,
     },
     {
       title: t("service_braces_title"),
       slug: "braces",
+      image: braces,
     },
     {
       title: t("service_aligners_title"),
       slug: "aligners",
+      image: aligners,
     },
     {
       title: t("service_night_guard_title"),
       slug: "night-guard",
+      image: nightguard,
     },
   ];
   const journeyData = [
@@ -332,6 +376,9 @@ export default function Home() {
                 to={`/service/${service.slug}`}
                 className="block"
                 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                style={{
+                  backgroundImage: `url(${service.image})`,
+                }}
               >
                 <div className="circle">
                   <span>{index < 9 ? `0${index + 1}` : index + 1}</span>

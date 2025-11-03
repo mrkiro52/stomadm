@@ -310,6 +310,7 @@
           }
           @media screen and (max-width: 985px) {
             width: 50%;
+            flex: auto;
           }
           @media screen and (max-width: 685px) {
             width: 100%;
@@ -366,12 +367,13 @@
           flex-direction: column;
           align-items: flex-end;
           justify-content: space-between;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
           cursor: pointer;
-          transition: all 0.2s;
+          transition: background-color 0.2s ease, box-shadow 0.2s ease,
+            transform 0.2s ease;
           padding: 16px;
-          &:hover {
-            background: rgba(255, 255, 255, 1);
-          }
           .circle {
             width: 40px;
             height: 40px;
@@ -379,7 +381,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            border: 1px solid $primary;
+            background: white;
             span {
               font-size: 15px;
               font-weight: 400;
@@ -393,6 +395,9 @@
             color: $primary;
             width: 100%;
             text-align: left;
+            background: white;
+            padding: 10px;
+            border-radius: 12px;
           }
         }
       }
