@@ -140,7 +140,6 @@ export default function Home() {
 
   const current = images[resultsPage];
 
-  // Все 22 услуги с их данными - взято из Services.jsx
   const services = [
     {
       title: t("service_filling_title"),
