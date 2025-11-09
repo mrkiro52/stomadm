@@ -1,0 +1,114 @@
+@import "../../styles/variables";
+
+.NotFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, $background 0%, rgba(217, 217, 217, 0.7) 100%);
+  padding: 40px 20px;
+  text-align: center;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+
+  h1 {
+    font-size: 160px;
+    font-weight: 700;
+    color: $primary;
+    margin: 0;
+    line-height: 0.8;
+    letter-spacing: -0.04em;
+    text-shadow: 0 4px 8px rgba(78, 54, 41, 0.1);
+    
+    @media screen and (max-width: 768px) {
+      font-size: 120px;
+    }
+    
+    @media screen and (max-width: 480px) {
+      font-size: 80px;
+    }
+  }
+
+  p {
+    font-size: 24px;
+    color: $text;
+    margin: 20px 0 40px 0;
+    font-weight: 400;
+    opacity: 0.8;
+    
+    @media screen and (max-width: 768px) {
+      font-size: 20px;
+      margin: 16px 0 32px 0;
+    }
+    
+    @media screen and (max-width: 480px) {
+      font-size: 18px;
+    }
+  }
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $primary;
+    color: $white;
+    padding: 16px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(78, 54, 41, 0.2);
+    
+    &:hover {
+      background-color: darken($primary, 10%);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(78, 54, 41, 0.3);
+    }
+    
+    &:active {
+      transform: translateY(0);
+    }
+    
+    @media screen and (max-width: 480px) {
+      padding: 14px 28px;
+      font-size: 15px;
+    }
+  }
+
+  // Декоративные элементы
+  &::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 100px;
+    height: 100px;
+    background: rgba(78, 54, 41, 0.05);
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+    z-index: -1;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 20%;
+    right: 15%;
+    width: 150px;
+    height: 150px;
+    background: rgba(78, 54, 41, 0.03);
+    border-radius: 50%;
+    animation: float 8s ease-in-out infinite reverse;
+    z-index: -1;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}

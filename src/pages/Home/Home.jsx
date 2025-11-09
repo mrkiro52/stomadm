@@ -289,56 +289,6 @@ export default function Home() {
             <p>{t("home_subtitle")}</p>
           </div>
           <div className="Startscreen_bottom">
-            <div className="Startscreen_blocks">
-              <div className="Startscreen_blocks__block block1">
-                <svg
-                  width="40"
-                  height="40"
-                  viewBox="0 0 40 40"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <rect
-                    x="0.5"
-                    y="0.5"
-                    width="39"
-                    height="39"
-                    rx="19.5"
-                    stroke="#020045"
-                  />
-                  <path
-                    d="M18 15L23.0781 19.2318C23.5579 19.6316 23.5579 20.3684 23.0781 20.7682L18 25"
-                    stroke="#020045"
-                    stroke-linecap="round"
-                  />
-                </svg>
-                <span>{t("home_promo1")}</span>
-              </div>
-              <div className="Startscreen_blocks__block block2">
-                <svg
-                  width="40"
-                  height="40"
-                  viewBox="0 0 40 40"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <rect
-                    x="0.5"
-                    y="0.5"
-                    width="39"
-                    height="39"
-                    rx="19.5"
-                    stroke="#ffffff"
-                  />
-                  <path
-                    d="M18 15L23.0781 19.2318C23.5579 19.6316 23.5579 20.3684 23.0781 20.7682L18 25"
-                    stroke="#ffffff"
-                    stroke-linecap="round"
-                  />
-                </svg>
-                <span>{t("home_promo2")}</span>
-              </div>
-            </div>
             <button className="Startscreen_button" onClick={scrollToForm}>
               {t("home_button")}
             </button>
@@ -351,21 +301,17 @@ export default function Home() {
           <div className="topBlock">
             <div className="topBlock_left">
               <div className="tab">
-                <span>Services</span>
+                <span>{t("header_link_services")}</span>
               </div>
-              <h2>
-                Explore the full range
-                <br />
-                of <span>dental treatments</span>
+              <h2 className="Main_services_title">
+                {t("services_section_title")}
               </h2>
             </div>
             <div className="topBlock_right">
               <p>
-                If you want a gorgeous smile,
-                <br />
-                call us to ask about a smile makeover
+                {t("services_section_description")}
               </p>
-              <button onClick={scrollToForm}>Call us</button>
+              <button onClick={scrollToForm}>{t("services_call_button")}</button>
             </div>
           </div>
           <div className="bottomBlock">
@@ -438,10 +384,10 @@ export default function Home() {
         <div className="wrapper">
           <div className="topBlock">
             <div className="tab">
-              <span>Advantages</span>
+              <span>{t("advantages_tag")}</span>
             </div>
             <h2>
-              Why people <span>choose us?</span>
+              {t("advantages_title")}
             </h2>
           </div>
           <div className="bottomGrid">
@@ -451,9 +397,7 @@ export default function Home() {
                 <div className="block_el">
                   01
                   <br />
-                  Accredited by
-                  <br />
-                  the Ministry of Health
+                  {t("advantages_accredited")}
                 </div>
                 <div className="block_el doctors">
                   {/* doctors little image */}
@@ -462,7 +406,7 @@ export default function Home() {
                 <div className="block_el">
                   02
                   <br />
-                  High Google rating
+                  {t("advantages_google_rating")}
                 </div>
               </div>
             </div>
@@ -472,9 +416,7 @@ export default function Home() {
                 <div className="block_el">
                   03
                   <br />
-                  Top-rated
-                  <br />
-                  on TripAdvisor
+                  {t("advantages_tripadvisor")}
                 </div>
                 <div className="block_el veneers"></div>
                 <div className="block_el aligners"></div>
@@ -486,7 +428,7 @@ export default function Home() {
                 <div className="block_el">
                   04
                   <br />
-                  Sertified Specialists
+                  {t("advantages_specialists")}
                 </div>
               </div>
             </div>

@@ -64,6 +64,7 @@ import ServiceBraces from "./pages/ServiceBraces/ServiceBraces";
 import ServiceAligners from "./pages/ServiceAligners/ServiceAligners";
 import ServiceNightGuard from "./pages/ServiceNightGuard/ServiceNightGuard";
 import Services from "./pages/Services/Services";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 function App() {
   return (
@@ -108,6 +109,9 @@ function App() {
           <Route path="*" element={<NotFound />} />
 
         </Routes>
+        
+        {/* Кнопка "Наверх" */}
+        <ScrollToTop />
       </div>
     </Router>
   );

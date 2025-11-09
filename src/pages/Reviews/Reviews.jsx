@@ -80,6 +80,7 @@ export default function Reviews({ theme = "gray" }) {
             {t("reviews_title")}
             {t("reviews_subtitle")}
           </h1>
+          <a target="_blank" style={{color: "black", fontWeight: 700, textDecoration: 'underline'}} href="https://www.google.com/maps/place/Diş+Mimarisi+Klinik+%7C+Dental+Architecture+Clinic+%7C+Стоматологическая+клиника/@41.0689523,29.0117353,17z/data=!4m8!3m7!1s0xab3fa96eaeb3ce59:0xc8d534192943b32b!8m2!3d41.0689523!4d29.0117353!9m1!1b1!16s%2Fg%2F11kbfmhzfc?entry=ttu&g_ep=EgoyMDI1MTEwNC4xIKXMDSoASAFQAw%3D%3D">Google maps</a>
         </div>
       </header>
 
@@ -140,12 +141,14 @@ export default function Reviews({ theme = "gray" }) {
           >
             {reviewsData.map((review) => (
               <SwiperSlide key={review.id}>
-                <div className="review-card">
+                <a target="_blank" href="https://www.google.com/maps/place/Diş+Mimarisi+Klinik+%7C+Dental+Architecture+Clinic+%7C+Стоматологическая+клиника/@41.0689523,29.0117353,17z/data=!4m8!3m7!1s0xab3fa96eaeb3ce59:0xc8d534192943b32b!8m2!3d41.0689523!4d29.0117353!9m1!1b1!16s%2Fg%2F11kbfmhzfc?entry=ttu&g_ep=EgoyMDI1MTEwNC4xIKXMDSoASAFQAw%3D%3D">
+                  <div className="review-card">
                   <div className="review-content">
                     <h4 className="review-name">{review.name}</h4>
-                    <p className="review-text">{review.text}</p>
+                    <p className="review-text">"{review.text}..."</p>
                   </div>
                 </div>
+                </a>
               </SwiperSlide>
             ))}
           </Swiper>

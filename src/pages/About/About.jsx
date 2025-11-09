@@ -143,10 +143,10 @@ export default function About() {
         <div className="wrapper">
           <div className="topBlock">
             <div className="tab">
-              <span>Advantages</span>
+              <span>{t("advantages_tag")}</span>
             </div>
             <h2>
-              Why people <span>choose us?</span>
+              {t("advantages_title")}
             </h2>
           </div>
           <div className="bottomGrid">
@@ -156,9 +156,7 @@ export default function About() {
                 <div className="block_el">
                   01
                   <br />
-                  Accredited by
-                  <br />
-                  the Ministry of Health
+                  {t("advantages_accredited")}
                 </div>
                 <div className="block_el doctors">
                   {/* doctors little image */}
@@ -167,7 +165,7 @@ export default function About() {
                 <div className="block_el">
                   02
                   <br />
-                  High Google rating
+                  {t("advantages_google_rating")}
                 </div>
               </div>
             </div>
@@ -177,9 +175,7 @@ export default function About() {
                 <div className="block_el">
                   03
                   <br />
-                  Top-rated
-                  <br />
-                  on TripAdvisor
+                  {t("advantages_tripadvisor")}
                 </div>
                 <div className="block_el veneers"></div>
                 <div className="block_el aligners"></div>
@@ -191,7 +187,7 @@ export default function About() {
                 <div className="block_el">
                   04
                   <br />
-                  Sertified Specialists
+                  {t("advantages_specialists")}
                 </div>
               </div>
             </div>

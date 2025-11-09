@@ -186,6 +186,8 @@
           background-color: $primary;
           color: $white;
           border-radius: 20px;
+          width: max-content;
+          padding: 0px 48px;
           height: 100px;
           outline: none;
           border: none;
@@ -309,7 +311,6 @@
             align-items: flex-start;
           }
           @media screen and (max-width: 985px) {
-            width: 50%;
             flex: auto;
           }
           @media screen and (max-width: 685px) {
@@ -955,5 +956,12 @@
 .Result {
   .wrapper {
     background-color: white;
+  }
+}
+
+
+@media screen and (min-width: 986px) {
+  .topBlock_left {
+    width: 50%;
   }
 }
