@@ -16,18 +16,10 @@ export default function Footer() {
           <img src={logo} alt="Logo" className="Footer_logo" />
           <p className="Footer_address">
             {t("footer_address_label")} <br />
-            {t("footer_address_text")}
+            Esentepe, Büyükdere Cd. No: 112B, 34394 Şişli/ İstanbul, Türkiye
           </p>
         </div>
         <div className="Footer_menu_wrapper">
-          <div className="Footer_list">
-            <h4 className="Footer_title">{t("footer_menu_title")}</h4>
-            <a href="#">{t("footer_menu_customer_journey")}</a>
-            <a href="#">{t("footer_menu_results")}</a>
-            <a href="#">{t("footer_menu_advantages")}</a>
-            <a href="#">{t("footer_menu_doctors")}</a>
-            <a href="#">{t("footer_menu_reviews")}</a>
-          </div>
 
           <div className="Footer_list">
             <h4 className="Footer_title">{t("footer_cosmetic_title")}</h4>
